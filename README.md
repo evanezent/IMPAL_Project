@@ -3,13 +3,13 @@
 ## Our team :
 ``` Put your data ```
 1. Pratama Yoga Santosa [1301170073]
-2. -
-3. -
-4. -
+2. ----
+3. ----
+4. ----
 
 ## TODO :
 * Page :
-```shell
+```
 	1. Register
 	2. Login
 	3. Landing
@@ -20,7 +20,7 @@
 ```
 	
 * Backend :
-```shell
+```
 	1. Register
 	2. Login
 	3. Searching
