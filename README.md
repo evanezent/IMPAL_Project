@@ -2,7 +2,7 @@
 
 ## Our team :
 ``` Put your data ```
-1. Pratama Yoga Santosa [1301170073] ----
+1. ---- Pratama Yoga Santosa [1301170073] 
 2. ----
 3. ----
 4. ----
