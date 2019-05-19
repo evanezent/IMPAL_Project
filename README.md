@@ -10,13 +10,13 @@
 ## TODO :
 * Page :
 ```
-	1. [] Register
-	2. [] Login
-	3. [] Landing
-	4. [] Admin
-	5. [] Event and Ticket Input 
-	6. [] Management Data of Event and Ticket
-	7. [] Payment Input
+	1. [ ] Register
+	2. [ ] Login
+	3. [ ] Landing
+	4. [ ] Admin
+	5. [ ] Event and Ticket Input 
+	6. [ ] Management Data of Event and Ticket
+	7. [ ] Payment Input
 ```
 	
 * Backend :
