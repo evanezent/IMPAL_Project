@@ -9,7 +9,7 @@
 
 ## TODO :
 * Page :
-```
+
 	- [ ] Register
 	- [ ] Login
 	- [ ] Landing
@@ -17,14 +17,14 @@
 	- [ ] Event and Ticket Input 
 	- [ ] Management Data of Event and Ticket
 	- [ ] Payment Input
-```
+
 	
 * Backend :
-```
-	1. Register
-	2. Login
-	3. Searching
-	4. Upload Event and Ticket
-	5. Ticket and Event data for admin
-	6. Management Event and Ticket
-```
+
+	- [ ] Register
+	- [ ] Login
+	- [ ] Searching
+	- [ ] Upload Event and Ticket
+	- [ ] Ticket and Event data for admin
+	- [ ] Management Event and Ticket
+
