@@ -9,7 +9,6 @@
 
 ## TODO :
 * Page :
-
 	- [ ] Register
 	- [ ] Login
 	- [ ] Landing
@@ -20,7 +19,6 @@
 
 	
 * Backend :
-
 	- [ ] Register
 	- [ ] Login
 	- [ ] Searching
@@ -28,3 +26,6 @@
 	- [ ] Ticket and Event data for admin
 	- [ ] Management Event and Ticket
 
+* Other Features :
+	- [ ] backsound
+	- [ ] notification when something going wrong
