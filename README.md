@@ -10,7 +10,7 @@
 ## TODO :
 * Page :
 
-	- [v] Register
+	- [ ] Register
 	- [ ] Login
 	- [ ] Landing
 	- [ ] Admin
