@@ -80,7 +80,7 @@
 
         <div class="row">
             <div class="card">
-                <img class="card-img-top" src="event5.jpg" alt="Card image cap">
+                <img class="card-img-top" src="<?php echo base_url(); ?>asset/event5.jpg" alt="Card image cap">
                 <div class="card-body text-center">
                     <a href="#" class="btn">Read More</a>
                 </div>
