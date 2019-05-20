@@ -16,7 +16,7 @@
 	- [ ] Event and Ticket Input 
 	- [ ] Management Data of Event and Ticket
 	- [ ] Payment Input
-
+	- [ ] Explain Item 
 	
 * Backend :
 	- [ ] Register
