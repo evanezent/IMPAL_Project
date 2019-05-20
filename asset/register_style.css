@@ -1,0 +1,107 @@
+.navbar-light .navbar-brand{
+    font-family: tahoma;
+    font-weight: bold;
+    color: #f4d041;
+    font-size: 1.5em;
+}
+.user_button a{
+    background-color: #f4d041;
+    color: white;
+    font-weight: bold;
+}
+.user_button .btn:hover{
+    background-color: white !important;
+    color: #f4d041 !important;
+    border: #f4d041 solid 0.1em;
+}
+.collapse .navbar-nav li a, .form-group{
+    margin-top: 0.5em;
+}
+.collapse .navbar-nav li{
+    padding-left: 1em;
+}
+body{
+    background-color: #f4d041;
+}
+.searchbar{
+    margin: auto;
+    margin-top: 1em;
+    height: 60px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+    border: #f4d041 solid 1px;
+    width: 40em;
+}
+.search_input{
+    color: black;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+}
+.searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color: #f4d041;
+    transition: width 0.4s linear;
+}
+.searchbar:hover > .search_icon{
+    background: #f4d041;
+    color: white;
+}
+.search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:#f4d041;
+}
+#event-slide{
+    margin-top: 1em;
+    margin-left: 5em;
+    margin-right: 5em;
+    border: white solid 0.3em;
+}
+.carousel-inner{
+    margin: 1em 0;
+}
+.carousel-item{
+    height: 25em !important;
+}
+#judul-slide{
+    text-align: center;
+    color: #f4d041;
+    font-family: tahoma;
+    font-weight: bold;
+}
+
+#list .row{
+    border: white solid 1px;
+    border-radius: 3em;
+    margin: 2em 0;
+    background-color: lightgoldenrodyellow
+    ;
+}
+#list .row .card{
+    width: 15em;
+    margin: 1em auto;
+    border: white solid 1em;
+    border-radius: 1em;
+}
+.card-body a{
+    background-color: #f4d041;
+    color: white;
+    font-weight: bold;
+}
+.card-body a:hover{
+    background-color: white;
+    color: #f4d041;
+    border: #f4d041 solid 1px;
+}
