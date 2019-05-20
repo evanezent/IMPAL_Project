@@ -11,7 +11,7 @@
 * Page :
 	- [ ] Register
 	- [ ] Login
-	- [ ] Landing
+	- [x] Landing
 	- [ ] Admin
 	- [ ] Event and Ticket Input 
 	- [ ] Management Data of Event and Ticket
