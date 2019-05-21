@@ -1,5 +1,7 @@
 # IMPAL_Project
 
+[BASIC WRITING README](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
+
 ## Our team :
 ``` Put your data ```
 1. Pratama Yoga Santosa (1301170073)
