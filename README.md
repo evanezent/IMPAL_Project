@@ -2,7 +2,7 @@
 
 [BASIC WRITING README](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
 
-[Font Awesome Icon](fontawesome.com/icons)
+[Font Awesome Icon](https://fontawesome.com/icons)
 
 ## Our team :
 ``` Put your data ```
