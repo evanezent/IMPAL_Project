@@ -1,0 +1,32 @@
+body{
+    background-image: url('./background_register.jpg')
+}
+#form-register{
+    background-color: white;
+    width: 40em;
+    height: 33em;
+    margin: 1.5em auto;
+    border-radius: 0.5em;
+
+}
+#background-register{
+    position: absolute;
+    z-index: -999;
+    overflow: hidden;
+}
+#form-register form .row{
+    padding: 1em 0;
+}
+#form-register form button{
+	background-color: #f4d041;
+    color: white;
+    font-weight: bold;
+}
+#form-register form button:hover{
+	background-color: white;
+    color: #f4d041;
+    border: #f4d041 solid 1px;
+}
+footer{
+    margin-bottom: 0;
+}
