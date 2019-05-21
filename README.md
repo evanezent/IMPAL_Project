@@ -1,6 +1,7 @@
 # IMPAL_Project
 
 [BASIC WRITING README](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
+[Font Awesome Icon](fontawesome.com/icons)
 
 ## Our team :
 ``` Put your data ```
