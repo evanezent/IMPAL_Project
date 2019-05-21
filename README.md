@@ -8,7 +8,7 @@
 4. ----
 
 ## TODO :
-* Page :
+* Front-end :
 	- [x] Register
 	- [ ] Login
 	- [x] Landing
@@ -18,7 +18,7 @@
 	- [ ] Payment Input
 	- [ ] Explain Item 
 	
-* Backend :
+* Back-end :
 	- [ ] Register
 	- [ ] Login
 	- [ ] Searching
