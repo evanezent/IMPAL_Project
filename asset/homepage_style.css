@@ -1,8 +1,15 @@
+.container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+}
 .navbar-light .navbar-brand{
     font-family: tahoma;
     font-weight: bold;
     color: #f4d041;
     font-size: 1.5em;
+}
+.jumbotron h3{
+    font-family: tahoma;
 }
 .user_button a{
     background-color: #f4d041;
@@ -26,12 +33,12 @@ body{
 .searchbar{
     margin: auto;
     margin-top: 1em;
-    height: 60px;
+    height: 10%;
     background-color: white;
     border-radius: 30px;
     padding: 10px;
     border: #f4d041 solid 1px;
-    width: 40em;
+    width: 70%;
 }
 .search_input{
     color: black;
@@ -105,8 +112,13 @@ body{
     color: #f4d041;
     border: #f4d041 solid 1px;
 }
-footer #modalLogin .modal-dialog .modal-content .modal-footer{
+.modal-footer .btn{
     background-color: #f4d041;
     color: white;
     font-weight: bold;
+}
+.modal-footer .btn:hover{
+    background-color: white;
+    color: #f4d041;
+    border: #f4d041 solid 1px;
 }

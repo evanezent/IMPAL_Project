@@ -108,8 +108,8 @@
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div> -->
-            <button type="submit" class="btn mx-auto">Back</button>
-            <a type="submit" href="<?= base_url('User'); ?>" class="btn mx-auto">Register</a>
+            <button type="button" class="btn mx-auto"><a href="<?= base_url(); ?>">Back</a></button>
+            <button type="submit" class="btn mx-auto">Register</button>
         </form>
     </div>
 

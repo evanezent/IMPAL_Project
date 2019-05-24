@@ -30,3 +30,10 @@ body{
 footer{
     margin-bottom: 0;
 }
+#form-register form button a{
+    text-decoration: none !important;
+    color: white !important;
+}
+#form-register form button a:hover{
+    color: #f4d041 !important;
+}
