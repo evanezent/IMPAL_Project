@@ -6,7 +6,7 @@
 
 ## Our team :
 ``` Put your data ```
-1. [Pratama Yoga Santosa (1301170073)] (https://github.com/pranapramudita)
+1. [Pratama Yoga Santosa (1301170073)](https://github.com/evanezcent)
 2. [Prana Pramudita Kusdiananggalih (1301174059)](https://github.com/pranapramudita)
 3. ----
 4. ----
