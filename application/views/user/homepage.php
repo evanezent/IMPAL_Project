@@ -61,7 +61,7 @@
             <div class="card">
                 <img class="card-img-top" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
                 <div class="card-body text-center">
-                    <a href="#" class="btn">Read More</a>
+                    <a href="<?= base_url('post'); ?>" class="btn">Read More</a>
                 </div>
             </div>
             <div class="card">
