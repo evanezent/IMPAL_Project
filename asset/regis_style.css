@@ -1,28 +1,29 @@
 body{
-    background-image: url('./background_register.jpg')
+    background-image: url('./background_register.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-#form-register{
+form{
     background-color: white;
-    width: 40em;
-    height: 33em;
-    margin: 1.5em auto;
+    margin: 1.5em;
+    padding: 2em;
     border-radius: 0.5em;
-
+    font-weight: bold;
+    width: 30em !important;
+    max-width: 100%;
 }
 #background-register{
     position: absolute;
     z-index: -999;
     overflow: hidden;
 }
-#form-register form .row{
-    padding: 1em 0;
-}
-#form-register form .btn{
+form .btn{
 	background-color: #f4d041;
     color: white;
     font-weight: bold;
 }
-#form-register form .btn:hover{
+form .btn:hover{
 	background-color: white;
     color: #f4d041;
     border: #f4d041 solid 1px;
@@ -30,10 +31,10 @@ body{
 footer{
     margin-bottom: 0;
 }
-#form-register form button a{
+form button a{
     text-decoration: none !important;
     color: white !important;
 }
-#form-register form button a:hover{
+form button a:hover{
     color: #f4d041 !important;
 }

@@ -47,69 +47,41 @@
     </nav>
 </header>
 
-<body>
+<body class="container-fluid">
     <!-- <div id="background-register">
         <img src="<?= base_url(); ?>asset/background_register.jpg" alt="UNKNOWN" width="100%">
     </div> -->
 
-    <div id="form-register" class="container">
+    <div id="form-register" class="d-flex justify-content-center">
         <form>
-            <div class="row">
-                <div class="col">
-                    <h6>Nama Lengkap</h6>
-                </div>
-                <div class="col">
-                    <input type="input" class="form-control" id="fullname">
-                </div>
-
+            <div class="form-group">
+                <label for="fullname">Nama Lengkap</label>
+                <input type="input" class="form-control" id="fullname">
             </div>
-            <div class="row">
-                <div class="col">
-                    <h6>Email</h6>
-                </div>
-                <div class="col">
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                </div>
-
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
             </div>
-            <div class="row">
-                <div class="col">
-                    <h6>Alamat</h6>
-                </div>
-                <div class="col">
-                    <textarea class="form-control" rows="3" id="comment"></textarea>
-                </div>
+            <div class="form-group">
+                <label for="alamat">Alamat</label>
+                <textarea class="form-control" rows="3" id="alamat"></textarea>
             </div>
-            <div class="row">
-                <div class="col">
-                    <h6>Nomor HP</h6>
-                </div>
-                <div class="col">
-                    <input type="input" class="form-control" id="phone">
-                </div>
+            <div class="form-group">
+                <label for="phone">Nomor HP</label>
+                <input type="input" class="form-control" id="phone">
             </div>
-            <div class="row">
-                <div class="col">
-                    <h6>Username</h6>
-                </div>
-                <div class="col">
-                    <input type="input" class="form-control" id="username">
-                </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="input" class="form-control" id="username">
             </div>
-            <div class="row">
-                <div class="col">
-                    <h6>Password</h6>
-                </div>
-                <div class="col">
-                    <input type="password" class="form-control" id="password">
-                </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password">
             </div>
-            <!-- <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div> -->
-            <button type="button" class="btn mx-auto"><a href="<?= base_url(); ?>">Back</a></button>
-            <button type="submit" class="btn mx-auto">Register</button>
+            <div class="form-group">
+                <button type="button" class="btn mx-auto"><a href="<?= base_url(); ?>">Back</a></button>
+                <button type="submit" class="btn mx-auto">Register</button>
+            </div>
         </form>
     </div>
 
