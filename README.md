@@ -13,14 +13,14 @@
 
 ## TODO :
 * Front-end :
-	- [x] Register
+	- [x] Register minus of Category
 	- [x] Login
 	- [x] Landing
 	- [ ] Admin
 	- [ ] Event and Ticket Input 
 	- [ ] Management Data of Event and Ticket
 	- [ ] Payment Input
-	- [ ] Explain Item 
+	- [x] Explain Item 
 	
 * Back-end :
 	- [ ] Register
