@@ -14,7 +14,7 @@
 ## TODO :
 * Front-end :
 	- [x] Register
-	- [ ] Login
+	- [x] Login
 	- [x] Landing
 	- [ ] Admin
 	- [ ] Event and Ticket Input 
