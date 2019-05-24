@@ -17,12 +17,12 @@ body{
 #form-register form .row{
     padding: 1em 0;
 }
-#form-register form button{
+#form-register form .btn{
 	background-color: #f4d041;
     color: white;
     font-weight: bold;
 }
-#form-register form button:hover{
+#form-register form .btn:hover{
 	background-color: white;
     color: #f4d041;
     border: #f4d041 solid 1px;

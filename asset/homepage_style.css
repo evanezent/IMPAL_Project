@@ -105,3 +105,8 @@ body{
     color: #f4d041;
     border: #f4d041 solid 1px;
 }
+footer #modalLogin .modal-dialog .modal-content .modal-footer{
+    background-color: #f4d041;
+    color: white;
+    font-weight: bold;
+}

@@ -40,7 +40,7 @@
                 </li>
             </ul>
             <div class="user_button">
-                <a href="#" class="btn btn-sm" role="button">Login</a>
+                <a href="#" class="btn btn-sm" role="button" data-toggle="modal" data-target="#modalLogin">Login</a>
                 <a href="#" class="btn btn-sm" role="button">Register</a>
             </div>
         </div>
@@ -108,8 +108,8 @@
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div> -->
-            <button type="submit" class="btn">Back</button>
-            <button type="submit" class="btn">Register</button>
+            <button type="submit" class="btn mx-auto">Back</button>
+            <a type="submit" href="<?= base_url('User'); ?>" class="btn mx-auto">Register</a>
         </form>
     </div>
 

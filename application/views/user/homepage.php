@@ -47,12 +47,14 @@
         </div>
     </div>
 
-    <!-- donlot extension fa snippet tam tinggal ketik fa"nama icon" -->
-    <i class="fa fa-music" aria-hidden="true"></i>
-    <i class="fas fa-basketball-ball    "></i>
-    <i class="fas fa-school    "></i>
-    <i class="fa fa-plane" aria-hidden="true"></i>
-    <i class="fa fa-heart" aria-hidden="true"></i>
+    <div class="jumbotron text-center">
+        <h3>Category</h3>
+        <i class="fa fa-music" aria-hidden="true"></i>
+        <i class="fas fa-basketball-ball"></i>
+        <i class="fas fa-school"></i>
+        <i class="fa fa-plane" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+    </div>
 
     <div id="list" class="container d-block">
         <div class="row">
