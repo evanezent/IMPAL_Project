@@ -16,7 +16,7 @@
 	- [x] Register minus of Category
 	- [x] Login
 	- [x] Landing
-	- [ ] Admin
+	- [x] Admin
 	- [ ] Event and Ticket Input 
 	- [ ] Management Data of Event and Ticket
 	- [ ] Payment Input
