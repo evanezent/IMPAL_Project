@@ -38,6 +38,15 @@
                             <span id="cpEvent"> +6282 226 651 838 (Rey)</span>
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <label for="">Place </label>
+                        </td>
+                        <td>:</td>
+                        <td>
+                            <span id="placeEvent">Sunset Beach HAWAI</span>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div id="desc-footer" class="d-flex justify-content-center">

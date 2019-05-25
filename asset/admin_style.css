@@ -1,0 +1,45 @@
+.container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+}
+.navbar-light .navbar-brand{
+    font-family: tahoma;
+    font-weight: bold;
+    color: #f4d041;
+    font-size: 1.5em;
+}
+.collapse .navbar-nav li a, .form-group{
+    margin-top: 0.5em;
+}
+.collapse .navbar-nav li{
+    padding-left: 1em;
+}
+body{
+    background-color: #f4d041;
+}
+#admin-list{
+    margin: 2em auto;
+    background-color: lightgoldenrodyellow;
+    border-radius: 1em;
+}
+#colImg .img-fluid{
+    width: 500px;
+}
+td ul{
+    list-style: none;
+}
+td ul li{
+    margin: 2vh 0;
+    font-size: 100%;
+    font-weight: bold;
+}
+td button{
+    margin: 0.5em;
+}
+td button a{
+    color: white;
+    font-weight: bold;
+}
+td button a:hover{
+    color: white;
+}

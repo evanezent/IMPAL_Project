@@ -143,7 +143,7 @@ body{
 #desc label{
     font-weight: bold;
 }
-#desc #namaEvent,#tanggalEvent,#cpEvent{
+#desc #namaEvent,#tanggalEvent,#cpEvent,#placeEvent{
     font-weight: bolder;
     color: #f4d041;
 }
