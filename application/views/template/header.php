@@ -33,10 +33,10 @@
                 </li>
                 <li class="nav-item">
                     <div class="form-group d-flex">
-                        <select class="form-control" id="sel1">
+                        <select class="form-control" id="sel1" onchange="window.location = this.options[this.selectedIndex].value;">
                             <option selected>pilih menu</option>
-                            <option><a href="event">Event</a></option>
-                            <option><a href="ticket">Ticket</a></option>
+                            <option value="<?= base_url('user'); ?>"><a href="">Event</a></option>
+                            <option value="<?= base_url('user/ticket'); ?>"><a href="ticket">Ticket</a></option>
                         </select>
                     </div>
                 </li>

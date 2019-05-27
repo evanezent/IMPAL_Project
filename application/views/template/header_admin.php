@@ -27,9 +27,10 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <div class="form-group d-flex">
-                        <select class="form-control" id="sel1">
-                            <option selected><a href="event">Event</a></option>
-                            <option><a href="ticket">Ticket</a></option>
+                        <select class="form-control" id="sel1" onchange="window.location = this.options[this.selectedIndex].value;">
+                            <option value="" selected>Select...</option>
+                            <option value="<?= base_url('admin'); ?>"><a href="">Event</a></option>
+                            <option value="<?= base_url('admin/ticket'); ?>"><a href="">Ticket</a></option>
                         </select>
                     </div>
                 </li>

@@ -1,4 +1,6 @@
 <body class="container-fluid">
+    <!-- TICKET -->
+    <!-- select where idTicket -->
     <div id="description">
         <div id="desc-header" class="text-center">
             <h3>DESCRIPTION</h3>

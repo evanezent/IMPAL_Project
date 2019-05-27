@@ -6,7 +6,14 @@ class User extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('template/header');
-		$this->load->view('user/homepage');
+		$this->load->view('user/homepage_event');
+		$this->load->view('template/footer');
+	}
+
+	public function ticket()
+	{
+		$this->load->view('template/header');
+		$this->load->view('user/homepage_ticket');
 		$this->load->view('template/footer');
 	}
 

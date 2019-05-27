@@ -48,9 +48,6 @@
 </header>
 
 <body class="container-fluid">
-    <!-- <div id="background-register">
-        <img src="<?= base_url(); ?>asset/background_register.jpg" alt="UNKNOWN" width="100%">
-    </div> -->
 
     <div id="form-register" class="d-flex justify-content-center">
         <form>

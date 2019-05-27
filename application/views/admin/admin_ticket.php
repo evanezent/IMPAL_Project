@@ -1,4 +1,5 @@
 <body class="container-fluid">
+    <h1>Ticket</h1>
     <div id="admin-list" class="container">
         <table class="table">
             <tbody>

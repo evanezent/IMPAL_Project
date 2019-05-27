@@ -10,7 +10,9 @@
 
             <!-- Indicators -->
             <ul class="carousel-indicators">
+                <!-- start for i -->
                 <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <!-- end for i -->
                 <li data-target="#demo" data-slide-to="1"></li>
                 <li data-target="#demo" data-slide-to="2"></li>
                 <li data-target="#demo" data-slide-to="3"></li>
@@ -19,9 +21,11 @@
 
             <!-- The slideshow -->
             <div class="carousel-inner text-center">
+                <!-- start foreach -->
                 <div class="carousel-item active">
                     <img src="<?php echo base_url(); ?>asset/event1.png" alt="UNKNOWN" height="100%">
                 </div>
+                <!-- end foreach -->
                 <div class="carousel-item">
                     <img src="<?php echo base_url(); ?>asset/event2.jpg" alt="UNKNOWN" height="100%">
                 </div>
@@ -57,6 +61,7 @@
     </div>
 
     <div id="list" class="container d-block">
+        <!-- start foreach -->
         <div class="row">
             <div class="card">
                 <img class="card-img-top" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
@@ -71,6 +76,7 @@
                 </div>
             </div>
         </div>
+        <!-- end foreach -->
 
         <div class="row">
             <div class="card">
