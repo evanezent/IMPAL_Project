@@ -1,0 +1,35 @@
+body{
+    background-image: url('./background_input.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+form{
+    background-color: white;
+    margin: 1.5em;
+    padding: 2em;
+    border-radius: 0.5em;
+    font-weight: bold;
+    width: 30em !important;
+    max-width: 100%;
+}
+form .btn{
+	background-color: #f4d041;
+    color: white;
+    font-weight: bold;
+}
+form .btn:hover{
+	background-color: white;
+    color: #f4d041;
+    border: #f4d041 solid 1px;
+}
+footer{
+    margin-bottom: 0;
+}
+form button a{
+    text-decoration: none !important;
+    color: white !important;
+}
+form button a:hover{
+    color: #f4d041 !important;
+}

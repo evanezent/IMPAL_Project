@@ -164,3 +164,13 @@ body{
     color: #f4d041;
     border: #f4d041 solid 1px;
 }
+.user_button{
+    float: right !important;
+}
+.user_button img:hover{
+    cursor: pointer;
+}
+.dropdown-menu{
+    right: 1vw !important;
+    left: unset !important;
+}
