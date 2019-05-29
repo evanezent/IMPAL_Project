@@ -13,11 +13,11 @@
 
 ## TODO :
 * Front-end :
-	- [x] Register minus of Category
+	- [x] Register ```(-) Category```
 	- [x] Login
 	- [x] Landing
 	- [x] Admin
-	- [ ] Event and Ticket Input 
+	- [x] Event and Ticket Input ```(-) select option```
 	- [ ] Management Data of Event and Ticket
 	- [ ] Payment Input
 	- [x] Explain Item 
