@@ -17,7 +17,7 @@
 	- [x] Login
 	- [x] Landing
 	- [x] Admin
-	- [x] Event and Ticket Input ```(-) select option```
+	- [x] Event and Ticket Input
 	- [ ] Management Data of Event and Ticket
 	- [ ] Payment Input
 	- [x] Explain Item 
