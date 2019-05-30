@@ -1,19 +1,12 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Member extends CI_Controller {
-
-	public function input_event()
+class Member extends CI_Controller
+{
+	public function index()
 	{
 		$this->load->view('template/header_member');
-		$this->load->view('user/input_event');
-		$this->load->view('template/footer');
-    }
-    public function input_ticket()
-	{
-		$this->load->view('template/header_member');
-		$this->load->view('user/input_ticket');
-		$this->load->view('template/footer');
-    }
-    
+		$this->load->view('user/data');
+		$this->load->view('template/footer_member');
+	}
 }

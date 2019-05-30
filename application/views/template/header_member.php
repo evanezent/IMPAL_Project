@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>asset/homepage_style.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>asset/input_style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </head>
 
 <!-- HEADER -->
@@ -31,21 +31,21 @@
                 </li>
                 <li class="nav-item">
                     <div class="form-group d-flex">
-                        <select class="form-control" id="sel_menu" onchange="window.location = this.options[this.selectedIndex].value;">
-                            <option selected>pilih menu</option>
-                            <option value=""><a href="">Input Data</a></option>
-                            <option value=""><a href="">Management Data</a></option>
-                            <option value=""><a href="">Payment</a></option>
+                        <select class="form-control" id="sel_menu">
+                            <option value="default" selected>pilih menu</option>
+                            <option value="input">Input Data</option>
+                            <option value="management"><a href="">Management Data</a></option>
+                            <option value="payment"><a href="">Payment</a></option>
                         </select>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <div class="form-group d-flex" id="select-type">
-                        <!-- <select class="form-control" id="sel_type" >
-                            <option selected>pilih menu</option>
-                            <option value="<?= base_url('user'); ?>"><a href="">Event</a></option>
-                            <option value="<?= base_url('user/ticket'); ?>"><a href="ticket">Ticket</a></option>
-                        </select> -->
+                    <div class="form-group" id="select-type" style="display: none;">
+                        <select class="form-control" id="sel_type">
+                            <option value="default" selected>pilih menu</option>
+                            <option value="event"><a href="">Event</a></option>
+                            <option value="ticket"><a href="ticket">Ticket</a></option>
+                        </select>
                     </div>
                 </li>
             </ul>
