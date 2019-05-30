@@ -9,16 +9,26 @@
     <script>
         $(document).ready(function() {
             $('#sel_menu').change(function() {
-                var selectedd = $('#sel_menu option:selected');
-                var opsi = document.getElementById("select-type");
-                if (selectedd.val() == 'input') {
-                    opsi.style.display = "block";
-                    console.log(selectedd.val());
+                var selectedd = $('#sel_menu option:selected');  //select selected menu
+                var form1 = document.getElementById("input-event");  //select type of menu input
+                var form2 = document.getElementById("input-ticket");
+                var opsi1 = document.getElementById("select-type1"); //select "select option" element of input
+                var opsi2 = document.getElementById("select-type2"); //select "select option" element of management
+                var table1 = document.getElementById("kelola-event"); //select type of menu management
+                var table2 = document.getElementById("kelola-ticket");
 
-                    $('#sel_type').change(function() {
-                        var selecteddd = $('#sel_type option:selected');
-                        var form1 = document.getElementById("input-event");
-                        var form2 = document.getElementById("input-ticket");
+                if (selectedd.val() == 'input') {
+                    opsi1.style.display = "block";
+                    console.log(selectedd.val());
+                    table2.style.display = "none";
+                    table1.style.display = "none";
+                    opsi2.style.display = "none";
+
+                    $('#sel_type1').change(function() {
+                        var selecteddd = $('#sel_type1 option:selected');
+                        // var form1 = document.getElementById("input-event");
+                        // var form2 = document.getElementById("input-ticket");
+
                         if (selecteddd.val() == 'event') {
                             form1.style.display = "flex";
                             form2.style.display = "none";
@@ -34,14 +44,19 @@
                             form1.style.display = "none";
                         }
                     });
-                } else if (selectedd.val() == 'management') {
-                    opsi.style.display = "block";
+                    selectedd = $('#sel_menu option:selected');
+                } 
+                else if (selectedd.val() == 'management') {
+                    opsi2.style.display = "block";
                     console.log(selectedd.val());
+                    form2.style.display = "none";
+                    form1.style.display = "none";
+                    opsi1.style.display = "none";
 
-                    $('#sel_type').change(function() {
-                        var selecteddd = $('#sel_type option:selected');
-                        var table1 = document.getElementById("kelola-event");
-                        var table2 = document.getElementById("kelola-ticket");
+                    $('#sel_type2').change(function() {
+                        var selecteddd = $('#sel_type2 option:selected');
+                        // var table1 = document.getElementById("kelola-event");
+                        // var table2 = document.getElementById("kelola-ticket");
                         if (selecteddd.val() == 'event') {
                             table1.style.display = "flex";
                             table2.style.display = "none";
@@ -57,7 +72,9 @@
                             table1.style.display = "none";
                         }
                     });
-                } else {
+                    selectedd = $('#sel_menu option:selected');
+                } 
+                else {
                     opsi.style.display = "none";
                     console.log(selectedd.val());
 

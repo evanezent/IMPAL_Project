@@ -40,9 +40,18 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <div class="form-group" id="select-type" style="display: none;">
-                        <select class="form-control" id="sel_type">
-                            <option value="default" selected>pilih menu</option>
+                    <div class="form-group" id="select-type1" style="display: none;">
+                        <select class="form-control" id="sel_type1">
+                            <option value="" selected>pilih menu</option>
+                            <option value="event"><a href="">Event</a></option>
+                            <option value="ticket"><a href="ticket">Ticket</a></option>
+                        </select>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="form-group" id="select-type2" style="display: none;">
+                        <select class="form-control" id="sel_type2">
+                            <option value="" selected>pilih menu</option>
                             <option value="event"><a href="">Event</a></option>
                             <option value="ticket"><a href="ticket">Ticket</a></option>
                         </select>
