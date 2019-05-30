@@ -39,6 +39,7 @@
                         </select>
                     </div>
                 </li>
+                <!-- INPUT -->
                 <li class="nav-item">
                     <div class="form-group" id="select-type1" style="display: none;">
                         <select class="form-control" id="sel_type1">
@@ -48,6 +49,7 @@
                         </select>
                     </div>
                 </li>
+                <!-- MANAGEMENT -->
                 <li class="nav-item">
                     <div class="form-group" id="select-type2" style="display: none;">
                         <select class="form-control" id="sel_type2">

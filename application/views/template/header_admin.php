@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>asset/admin_style.css">
     <!-- <link rel="stylesheet" href="<?php echo base_url(); ?>asset/regis_style.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -27,10 +27,10 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <div class="form-group d-flex">
-                        <select class="form-control" id="sel1" onchange="window.location = this.options[this.selectedIndex].value;">
-                            <option value="" selected>Select...</option>
-                            <option value="<?= base_url('admin'); ?>"><a href="">Event</a></option>
-                            <option value="<?= base_url('admin/ticket'); ?>"><a href="">Ticket</a></option>
+                        <select class="form-control" id="sel1">
+                            <option value="">Select...</option>
+                            <option value="event"><a href="">Event</a></option>
+                            <option value="ticket"><a href="">Ticket</a></option>
                         </select>
                     </div>
                 </li>

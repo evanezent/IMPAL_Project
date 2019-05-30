@@ -5,4 +5,27 @@
     <div class="footer-copyright text-center py-3 bg-light">
         © 2019 Copyright <span class="author"><a class="text-muted" href="">Evanue</a></span>
     </div>
+    <script>
+		$(document).ready(function(){
+			$('#sel1').change(function(){
+				var selectedd = $('#sel1 option:selected');
+				var elm1 = document.getElementById("admin-event");
+				var elm2 = document.getElementById("admin-ticket");
+				if (selectedd.val() == 'event'){
+					elm1.style.display = "block";
+					elm2.style.display = "none";
+					console.log(selectedd.val());
+				}
+				else if (selectedd.val() == 'ticket'){
+					elm2.style.display = "block";
+					elm1.style.display = "none";
+					console.log(selectedd.val());
+				}
+				else{
+					elm2.style.display = "block";
+					elm1.style.display = "block";
+				}
+			});
+		});
+	</script>
 </footer>

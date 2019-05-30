@@ -17,7 +17,7 @@
 body{
     background-color: #f4d041;
 }
-#admin-list{
+#admin-event, #admin-ticket{
     margin: 2em auto;
     background-color: lightgoldenrodyellow;
     border-radius: 1em;
