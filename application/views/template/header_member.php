@@ -32,10 +32,10 @@
                 <li class="nav-item">
                     <div class="form-group d-flex">
                         <select class="form-control" id="sel_menu">
-                            <option value="default" selected>pilih menu</option>
+                            <option value="">pilih menu</option>
                             <option value="input">Input Data</option>
-                            <option value="management"><a href="">Management Data</a></option>
-                            <option value="payment"><a href="">Payment</a></option>
+                            <option value="management">Management Data</option>
+                            <option value="payment">Payment</option>
                         </select>
                     </div>
                 </li>

@@ -11,9 +11,52 @@
             $('#sel_menu').change(function() {
                 var selectedd = $('#sel_menu option:selected');
                 var opsi = document.getElementById("select-type");
-                if (selectedd.val() == 'input' || selectedd.val() == 'management') {
+                if (selectedd.val() == 'input') {
                     opsi.style.display = "block";
                     console.log(selectedd.val());
+
+                    $('#sel_type').change(function() {
+                        var selecteddd = $('#sel_type option:selected');
+                        var form1 = document.getElementById("input-event");
+                        var form2 = document.getElementById("input-ticket");
+                        if (selecteddd.val() == 'event') {
+                            form1.style.display = "flex";
+                            form2.style.display = "none";
+                            console.log(selecteddd.val());
+                            console.log('11');
+                        } else if (selecteddd.val() == 'ticket') {
+                            form2.style.display = "flex";
+                            form1.style.display = "none";
+                            console.log(selecteddd.val());
+                            console.log('11');
+                        } else {
+                            form2.style.display = "none";
+                            form1.style.display = "none";
+                        }
+                    });
+                } else if (selectedd.val() == 'management') {
+                    opsi.style.display = "block";
+                    console.log(selectedd.val());
+
+                    $('#sel_type').change(function() {
+                        var selecteddd = $('#sel_type option:selected');
+                        var table1 = document.getElementById("kelola-event");
+                        var table2 = document.getElementById("kelola-ticket");
+                        if (selecteddd.val() == 'event') {
+                            table1.style.display = "flex";
+                            table2.style.display = "none";
+                            console.log(selecteddd.val());
+                            console.log('22');
+                        } else if (selecteddd.val() == 'ticket') {
+                            table2.style.display = "flex";
+                            table1.style.display = "none";
+                            console.log(selecteddd.val());
+                            console.log('22');
+                        } else {
+                            table2.style.display = "none";
+                            table1.style.display = "none";
+                        }
+                    });
                 } else {
                     opsi.style.display = "none";
                     console.log(selectedd.val());
@@ -23,25 +66,25 @@
         });
     </script>
     <!-- Pilih Tipe -->
-    <script>
+    <!-- <script>
         $(document).ready(function() {
             $('#sel_type').change(function() {
-                var selectedd = $('#sel_type option:selected');
+                var selecteddd = $('#sel_type option:selected');
                 var form1 = document.getElementById("input-event");
                 var form2 = document.getElementById("input-ticket");
-                if (selectedd.val() == 'event') {
+                if (selecteddd.val() == 'event') {
                     form1.style.display = "flex";
                     form2.style.display = "none";
-                    console.log(selectedd.val());
-                } else if (selectedd.val() == 'ticket') {
+                    console.log(selecteddd.val());
+                } else if (selecteddd.val() == 'ticket') {
                     form2.style.display = "flex";
                     form1.style.display = "none";
-                    console.log(selectedd.val());
+                    console.log(selecteddd.val());
                 } else {
                     form2.style.display = "block";
                     form1.style.display = "block";
                 }
             });
         });
-    </script>
+    </script> -->
 </footer>
