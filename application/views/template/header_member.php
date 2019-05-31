@@ -35,7 +35,6 @@
                             <option value="">pilih menu</option>
                             <option value="input">Input Data</option>
                             <option value="management">Management Data</option>
-                            <option value="payment">Payment</option>
                         </select>
                     </div>
                 </li>

@@ -9,4 +9,10 @@ class Member extends CI_Controller
 		$this->load->view('user/data');
 		$this->load->view('template/footer_member');
 	}
+	public function payment()
+	{
+		$this->load->view('template/header_member');
+		$this->load->view('user/payment');
+		$this->load->view('template/footer_member');
+	}
 }
