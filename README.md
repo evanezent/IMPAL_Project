@@ -1,9 +1,5 @@
 # IMPAL_Project
 
-[BASIC WRITING README](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
-
-[Font Awesome Icon](https://fontawesome.com/icons)
-
 ## Our team :
 ``` Put your data ```
 1. [Pratama Yoga Santosa (1301170073)](https://github.com/evanezcent)
@@ -33,3 +29,8 @@
 * Other Features :
 	- [ ] backsound
 	- [ ] notification when something going wrong
+	
+## Note
+[BASIC WRITING README](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
+
+[Font Awesome Icon](https://fontawesome.com/icons)
