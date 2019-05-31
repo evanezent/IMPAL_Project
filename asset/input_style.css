@@ -73,3 +73,8 @@ form button a:hover{
 #payment-btn a:hover{
     color: #f4d041;
 }
+#totalPembayaran p{
+    color: blue !important;
+    font-weight: bold !important;
+    padding: 0 20vw;
+}

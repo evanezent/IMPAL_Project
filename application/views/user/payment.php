@@ -4,23 +4,24 @@
             <label for="publication" class="label mr-3">Jenis Publikasi</label>
             <div class="form-check-inline">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="gold">Gold
+                    <input type="radio" class="form-check-input" name="jenisPublikasi" value="g">Gold
                 </label>
             </div>
             <div class="form-check-inline">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="Silver">Silver
+                    <input type="radio" class="form-check-input" name="jenisPublikasi" value="s">Silver
                 </label>
             </div>
             <div class="form-check-inline disabled">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="Free">Free
+                    <input type="radio" class="form-check-input" name="jenisPublikasi" value="f">Free
                 </label>
             </div>
         </div>
         <div id="totalPembayaran" class="mb-5">
             <label for="pembayaran" class="label">Total Harga </label>
-            <h4><b>xxx</b></h4>
+            <h4 id="biaya"><b>xxx</b></h4>
+            <p></p>
         </div>
         <div id="transfer" class="mb-5">
             <h4><b>Transfer Pada Rekening Berikut</b></h4>
@@ -36,3 +37,19 @@
 </body>
 
 </html>
+<script>
+$('input[type=radio][name=jenisPublikasi]').change(function() {
+    if (this.value == 'g') {
+        $("#biaya").text("IDR 150.000");
+        $("p").text("Penjelasan publikasi 'GOLD', event dengan jenis publikasi tersebut akan mendapat sebuah keuntungan yaitu, Event tersebut akan tampil di image slide show pada halaman homepage selama 10 hari");
+    }
+    else if (this.value == 's') {
+        $("#biaya").text("IDR 100.000");
+        $("p").text("Penjelasan publikasi 'SILVER', event dengan jenis publikasi tersebut akan mendapat sebuah keuntungan yaitu, Event tersebut akan tampil di image slide show pada halaman homepage selama 7 hari");
+    }
+    else{
+        $("#biaya").text("Thank You :) !");
+        $("p").text("");
+    }
+});
+</script>
