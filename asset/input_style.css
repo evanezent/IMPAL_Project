@@ -1,6 +1,5 @@
 body{
     background-image: url('./background_input.jpg');
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -77,4 +76,12 @@ form button a:hover{
     color: blue !important;
     font-weight: bold !important;
     padding: 0 20vw;
+}
+#notification{
+    background-color: red;
+    color: white;
+    border-radius: 0.5em;
+    font-size: 2vw;
+    max-width: 70vw;
+    padding: auto;
 }
