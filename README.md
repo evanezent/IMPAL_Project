@@ -15,7 +15,7 @@
 	- [x] Admin
 	- [x] Event and Ticket Input
 	- [ ] Management Data of Event and Ticket
-	- [x] Payment Input ```(-) Form Upload```
+	- [x] Payment Input
 	- [x] Explain Item 
 	
 * Back-end :
