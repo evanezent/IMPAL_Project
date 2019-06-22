@@ -14,7 +14,7 @@
 	- [x] Landing
 	- [x] Admin
 	- [x] Event and Ticket Input
-	- [ ] Management Data of Event and Ticket
+	- [x] Management Data of Event and Ticket
 	- [x] Payment Input
 	- [x] Explain Item 
 	
