@@ -85,3 +85,68 @@ form button a:hover{
     max-width: 70vw;
     padding: auto;
 }
+#kelola-event{
+    margin-bottom: 5em;
+}
+#kelola-event .gambar{
+    width: 25%;
+}
+#kelola-event label{
+    color: #f4d041;
+    font-size: 2vw;
+}
+#kelola-event .btn{
+    background-color: #f4d041;
+    border-radius: 0.3em;
+}
+#kelola-event a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2vw;
+}
+#kelola-event .btn:hover{
+    background-color: white;
+}
+#kelola-event a:hover{
+    color: #f4d041;
+}
+#kelola-event #baris{
+    margin: 2vh auto;
+    padding: 3em;
+    background-color: lightgoldenrodyellow;
+    border-radius: 0.3em;
+}
+
+#kelola-ticket{
+    margin-bottom: 5em;
+}
+#kelola-ticket .gambar{
+    width: 25%;
+}
+#kelola-ticket label{
+    color: #f4d041;
+    font-size: 2vw;
+}
+#kelola-ticket .btn{
+    background-color: #f4d041;
+    border-radius: 0.3em;
+}
+#kelola-ticket a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2vw;
+}
+#kelola-ticket .btn:hover{
+    background-color: white;
+}
+#kelola-ticket a:hover{
+    color: #f4d041;
+}
+#kelola-ticket #baris{
+    margin: 2vh auto;
+    padding: 3em;
+    background-color: lightgoldenrodyellow;
+    border-radius: 0.3em;
+}

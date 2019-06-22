@@ -58,12 +58,12 @@
                         // var table1 = document.getElementById("kelola-event");
                         // var table2 = document.getElementById("kelola-ticket");
                         if (selecteddd.val() == 'event') {
-                            table1.style.display = "flex";
+                            table1.style.display = "block";
                             table2.style.display = "none";
                             console.log(selecteddd.val());
                             console.log('22');
                         } else if (selecteddd.val() == 'ticket') {
-                            table2.style.display = "flex";
+                            table2.style.display = "block";
                             table1.style.display = "none";
                             console.log(selecteddd.val());
                             console.log('22');

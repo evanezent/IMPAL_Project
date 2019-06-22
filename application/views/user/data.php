@@ -77,71 +77,84 @@
     </div>
 
     <!-- KELOLA DATA -->
-    <div id="kelola-event" style="display: none;">
-        <table class="table table-dark">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-            </tbody>
-        </table>
+    <div id="kelola-event" class="" style="display: none;">
+    <div id="baris" class="d-flex justify-content-between container">
+            <div class="gambar">
+                <img class="card-img-top" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
+            </div>
+            <div>
+                <label class="d-block">Tanggal Event</label>
+                <label class="d-block">Judul Event</label>
+                <a class="btn" href="">Lihat Lengkap</a>
+            </div>
+            <div class="gambar">
+                <img class="card-img-top" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
+            </div>
+            <div>
+                <label class="d-block">Tanggal Event</label>
+                <label class="d-block">Judul Event</label>
+                <a class="btn" href="">Lihat Lengkap</a>
+            </div>
+        </div>
+        <div id="baris" class="d-flex justify-content-between container">
+            <div class="gambar">
+                <img class="card-img-top" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
+            </div>
+            <div>
+                <label class="d-block">Tanggal Event</label>
+                <label class="d-block">Judul Event</label>
+                <a class="btn" href="">Lihat Lengkap</a>
+            </div>
+            <div class="gambar">
+                <img class="card-img-top" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
+            </div>
+            <div>
+                <label class="d-block">Tanggal Event</label>
+                <label class="d-block">Judul Event</label>
+                <a class="btn" href="">Lihat Lengkap</a>
+            </div>
+        </div>
     </div>
 
-    <div id="kelola-ticket" style="display: none;">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-            </tbody>
-        </table>
+    <div id="kelola-ticket" class="" style="display: none;">
+        <div id="baris" class="d-flex justify-content-between container">
+            <div class="gambar">
+                <img class="card-img-top" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
+            </div>
+            <div>
+                <label class="d-block">Tanggal Ticket</label>
+                <label class="d-block">Judul Ticket</label>
+                <a class="btn" href="">Lihat Lengkap</a>
+            </div>
+            <div class="gambar">
+                <img class="card-img-top" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
+            </div>
+            <div>
+                <label class="d-block">Tanggal Ticket</label>
+                <label class="d-block">Judul Ticket</label>
+                <a class="btn" href="">Lihat Lengkap</a>
+            </div>
+        </div>
+        <div id="baris" class="d-flex justify-content-between container">
+            <div class="gambar">
+                <img class="card-img-top" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
+            </div>
+            <div>
+                <label class="d-block">Tanggal Ticket</label>
+                <label class="d-block">Judul Ticket</label>
+                <a class="btn" href="">Lihat Lengkap</a>
+            </div>
+            <div class="gambar">
+                <img class="card-img-top" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
+            </div>
+            <div>
+                <label class="d-block">Tanggal Ticket</label>
+                <label class="d-block">Judul Ticket</label>
+                <a class="btn" href="">Lihat Lengkap</a>
+            </div>
+        </div>
     </div>
+
 
 </body>
 
