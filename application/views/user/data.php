@@ -78,79 +78,81 @@
 
     <!-- KELOLA DATA -->
     <div id="kelola-event" class="" style="display: none;">
-    <div id="baris" class="d-flex justify-content-between container">
-            <div class="gambar">
-                <img class="card-img-top" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
+        <div id="baris" class="container">
+            <div class="item">
+                <div class="content">
+                    <img class="card-img" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
+                    <label class="d-block">Tanggal Event</label>
+                    <label class="d-block">Judul Event</label>
+                    <a class="btn" href="">Lihat Lengkap</a>
+                </div>
             </div>
-            <div>
-                <label class="d-block">Tanggal Event</label>
-                <label class="d-block">Judul Event</label>
-                <a class="btn" href="">Lihat Lengkap</a>
+            <div class="item">
+                <div class="content">
+                    <img class="card-img" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
+                    <label class="d-block">Tanggal Event</label>
+                    <label class="d-block">Judul Event</label>
+                    <a class="btn" href="">Lihat Lengkap</a>
+                </div>
             </div>
-            <div class="gambar">
-                <img class="card-img-top" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
-            </div>
-            <div>
-                <label class="d-block">Tanggal Event</label>
-                <label class="d-block">Judul Event</label>
-                <a class="btn" href="">Lihat Lengkap</a>
-            </div>
+
         </div>
-        <div id="baris" class="d-flex justify-content-between container">
-            <div class="gambar">
-                <img class="card-img-top" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
+        <div id="baris" class="container">
+            <div class="item">
+                <div class="content">
+                    <img class="card-img" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
+                    <label class="d-block">Tanggal Event</label>
+                    <label class="d-block">Judul Event</label>
+                    <a class="btn" href="">Lihat Lengkap</a>
+                </div>
             </div>
-            <div>
-                <label class="d-block">Tanggal Event</label>
-                <label class="d-block">Judul Event</label>
-                <a class="btn" href="">Lihat Lengkap</a>
+            <div class="item">
+                <div class="content">
+                    <img class="card-img" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
+                    <label class="d-block">Tanggal Event</label>
+                    <label class="d-block">Judul Event</label>
+                    <a class="btn" href="">Lihat Lengkap</a>
+                </div>
             </div>
-            <div class="gambar">
-                <img class="card-img-top" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
-            </div>
-            <div>
-                <label class="d-block">Tanggal Event</label>
-                <label class="d-block">Judul Event</label>
-                <a class="btn" href="">Lihat Lengkap</a>
-            </div>
+
         </div>
     </div>
 
     <div id="kelola-ticket" class="" style="display: none;">
-        <div id="baris" class="d-flex justify-content-between container">
-            <div class="gambar">
-                <img class="card-img-top" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
+        <div id="baris">
+            <div class="item">
+                <div class="content">
+                    <img class="card-img" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
+                    <label class="d-block">Tanggal Ticket</label>
+                    <label class="d-block">Judul Ticket</label>
+                    <a class="btn" href="">Lihat Lengkap</a>
+                </div>
             </div>
-            <div>
-                <label class="d-block">Tanggal Ticket</label>
-                <label class="d-block">Judul Ticket</label>
-                <a class="btn" href="">Lihat Lengkap</a>
-            </div>
-            <div class="gambar">
-                <img class="card-img-top" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
-            </div>
-            <div>
-                <label class="d-block">Tanggal Ticket</label>
-                <label class="d-block">Judul Ticket</label>
-                <a class="btn" href="">Lihat Lengkap</a>
+            <div class="item">
+                <div class="content">
+                    <img class="card-img" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
+                    <label class="d-block">Tanggal Ticket</label>
+                    <label class="d-block">Judul Ticket</label>
+                    <a class="btn" href="">Lihat Lengkap</a>
+                </div>
             </div>
         </div>
-        <div id="baris" class="d-flex justify-content-between container">
-            <div class="gambar">
-                <img class="card-img-top" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
+        <div id="baris">
+            <div class="item">
+                <div class="content">
+                    <img class="card-img" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
+                    <label class="d-block">Tanggal Ticket</label>
+                    <label class="d-block">Judul Ticket</label>
+                    <a class="btn" href="">Lihat Lengkap</a>
+                </div>
             </div>
-            <div>
-                <label class="d-block">Tanggal Ticket</label>
-                <label class="d-block">Judul Ticket</label>
-                <a class="btn" href="">Lihat Lengkap</a>
-            </div>
-            <div class="gambar">
-                <img class="card-img-top" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
-            </div>
-            <div>
-                <label class="d-block">Tanggal Ticket</label>
-                <label class="d-block">Judul Ticket</label>
-                <a class="btn" href="">Lihat Lengkap</a>
+            <div class="item">
+                <div class="content">
+                    <img class="card-img" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
+                    <label class="d-block">Tanggal Ticket</label>
+                    <label class="d-block">Judul Ticket</label>
+                    <a class="btn" href="">Lihat Lengkap</a>
+                </div>
             </div>
         </div>
     </div>

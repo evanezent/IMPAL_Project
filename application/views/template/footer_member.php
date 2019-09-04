@@ -82,26 +82,4 @@
             });
         });
     </script>
-    <!-- Pilih Tipe -->
-    <!-- <script>
-        $(document).ready(function() {
-            $('#sel_type').change(function() {
-                var selecteddd = $('#sel_type option:selected');
-                var form1 = document.getElementById("input-event");
-                var form2 = document.getElementById("input-ticket");
-                if (selecteddd.val() == 'event') {
-                    form1.style.display = "flex";
-                    form2.style.display = "none";
-                    console.log(selecteddd.val());
-                } else if (selecteddd.val() == 'ticket') {
-                    form2.style.display = "flex";
-                    form1.style.display = "none";
-                    console.log(selecteddd.val());
-                } else {
-                    form2.style.display = "block";
-                    form1.style.display = "block";
-                }
-            });
-        });
-    </script> -->
 </footer>
