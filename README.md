@@ -9,7 +9,7 @@
 
 ## TODO :
 * Front-end :
-	- [x] Register ```(-) Category```
+	- [x] Register 
 	- [x] Login
 	- [x] Landing
 	- [x] Admin
