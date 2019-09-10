@@ -31,6 +31,8 @@
 	- [ ] Upload Foto
 	- [ ] User Session
 	- [ ] Form Validator
+	- [ ] Encrypt Password
+	- [ ] Delete post when the time is done
 
 * Other Features :
 	- [ ] backsound
