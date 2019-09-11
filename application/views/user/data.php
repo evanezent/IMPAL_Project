@@ -81,7 +81,7 @@
         <div id="baris" class="container">
             <div class="item">
                 <div class="content">
-                    <img class="card-img" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
+                    <img class="card-img" src="<?= base_url() ?>asset/event1.png" alt="Card image cap">
                     <label class="d-block">Tanggal Event</label>
                     <label class="d-block">Judul Event</label>
                     <a class="btn" href="">Lihat Lengkap</a>
@@ -89,7 +89,7 @@
             </div>
             <div class="item">
                 <div class="content">
-                    <img class="card-img" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
+                    <img class="card-img" src="<?= base_url() ?>asset/event1.png" alt="Card image cap">
                     <label class="d-block">Tanggal Event</label>
                     <label class="d-block">Judul Event</label>
                     <a class="btn" href="">Lihat Lengkap</a>
@@ -100,7 +100,7 @@
         <div id="baris" class="container">
             <div class="item">
                 <div class="content">
-                    <img class="card-img" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
+                    <img class="card-img" src="<?= base_url() ?>asset/event1.png" alt="Card image cap">
                     <label class="d-block">Tanggal Event</label>
                     <label class="d-block">Judul Event</label>
                     <a class="btn" href="">Lihat Lengkap</a>
@@ -108,7 +108,7 @@
             </div>
             <div class="item">
                 <div class="content">
-                    <img class="card-img" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
+                    <img class="card-img" src="<?= base_url() ?>asset/event1.png" alt="Card image cap">
                     <label class="d-block">Tanggal Event</label>
                     <label class="d-block">Judul Event</label>
                     <a class="btn" href="">Lihat Lengkap</a>
@@ -117,12 +117,11 @@
 
         </div>
     </div>
-
     <div id="kelola-ticket" class="" style="display: none;">
         <div id="baris">
             <div class="item">
                 <div class="content">
-                    <img class="card-img" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
+                    <img class="card-img" src="<?= base_url() ?>asset/tick1.png" alt="Card image cap">
                     <label class="d-block">Tanggal Ticket</label>
                     <label class="d-block">Judul Ticket</label>
                     <a class="btn" href="">Lihat Lengkap</a>
@@ -130,7 +129,7 @@
             </div>
             <div class="item">
                 <div class="content">
-                    <img class="card-img" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
+                    <img class="card-img" src="<?= base_url() ?>asset/tick1.png" alt="Card image cap">
                     <label class="d-block">Tanggal Ticket</label>
                     <label class="d-block">Judul Ticket</label>
                     <a class="btn" href="">Lihat Lengkap</a>
@@ -140,7 +139,7 @@
         <div id="baris">
             <div class="item">
                 <div class="content">
-                    <img class="card-img" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
+                    <img class="card-img" src="<?= base_url() ?>asset/tick1.png" alt="Card image cap">
                     <label class="d-block">Tanggal Ticket</label>
                     <label class="d-block">Judul Ticket</label>
                     <a class="btn" href="">Lihat Lengkap</a>
@@ -148,7 +147,7 @@
             </div>
             <div class="item">
                 <div class="content">
-                    <img class="card-img" src="<?php echo base_url(); ?>asset/tick1.png" alt="Card image cap">
+                    <img class="card-img" src="<?= base_url() ?>asset/tick1.png" alt="Card image cap">
                     <label class="d-block">Tanggal Ticket</label>
                     <label class="d-block">Judul Ticket</label>
                     <a class="btn" href="">Lihat Lengkap</a>
@@ -156,8 +155,5 @@
             </div>
         </div>
     </div>
-
-
 </body>
-
 </html>
