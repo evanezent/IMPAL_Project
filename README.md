@@ -9,7 +9,7 @@
 
 ## TODO :
 * Front-end :
-	- [x] Register ```(-) Category```
+	- [x] Register 
 	- [x] Login
 	- [x] Landing
 	- [x] Admin
@@ -24,7 +24,15 @@
 	- [ ] Searching
 	- [ ] Upload Event and Ticket
 	- [ ] Ticket and Event data for admin
-	- [ ] Management Event and Ticket
+	- [ ] Input Event and Ticket
+	- [ ] Detail Event and Ticket
+	- [ ] Delete Event and Ticket
+	- [ ] Update Event and Ticket
+	- [ ] Upload Foto
+	- [ ] User Session
+	- [ ] Form Validator
+	- [ ] Encrypt Password
+	- [ ] Delete post when the time is done
 
 * Other Features :
 	- [ ] backsound
