@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Ticket extends CI_Model {
+class Ticket_model extends CI_Model {
     public function select(){
         $this->db->select('*');
         $this->db->from('ticket');

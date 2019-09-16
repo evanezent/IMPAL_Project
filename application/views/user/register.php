@@ -17,33 +17,33 @@
 <body class="container-fluid">
 
     <div id="form-register" class="d-flex justify-content-center">
-        <form>
+        <form action="register_db" method="post">
             <div class="form-group">
                 <label for="fullname">Nama Lengkap</label>
-                <input type="input" class="form-control" id="fullname">
+                <input type="input" class="form-control" id="fullname" name="fullname">
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
             </div>
             <div class="form-group">
                 <label for="alamat">Alamat</label>
-                <textarea class="form-control" rows="3" id="alamat"></textarea>
+                <textarea class="form-control" rows="3" id="alamat" name="alamat"></textarea>
             </div>
             <div class="form-group">
                 <label for="phone">Nomor HP</label>
-                <input type="input" class="form-control" id="phone">
+                <input type="input" class="form-control" id="phone" name="phone">
             </div>
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="input" class="form-control" id="username">
+                <input type="input" class="form-control" id="username" name="username">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password">
+                <input type="password" class="form-control" id="password" name="password">
             </div>
             <div class="form-group">
-                <button type="button" class="btn mx-auto"><a href="<?= base_url(); ?>">Back</a></button>
+                <button type="button" class="btn mx-auto"><a href="<?= base_url();?>">Back</a></button>
                 <button type="submit" class="btn mx-auto">Register</button>
             </div>
         </form>

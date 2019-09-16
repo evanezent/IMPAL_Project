@@ -1,11 +1,16 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Event extends CI_Model {
+class Member_model extends CI_Model {
     public function select(){
         $this->db->select('*');
-        $this->db->from('event');
+        $this->db->from('member');
         $query = $this->db->get();
         return $query->result();   
+    }
+
+    public function register($data){
+        $query = $this->db->insert('member', $data);
+        return $query;
     }
 }
 ?>
