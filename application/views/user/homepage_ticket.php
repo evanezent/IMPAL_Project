@@ -3,6 +3,11 @@
         <input class="search_input" type="text" name="" placeholder="Search...">
         <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
     </div>
+    <div class="jumbotron text-center mt-2">
+        <div class="title-section">
+            <h3>Tickets</h3>
+        </div>
+    </div>
     <div id="list" class="container d-block">
         <!-- start foreach -->
         <div class="row">

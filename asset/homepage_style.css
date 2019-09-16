@@ -10,6 +10,17 @@
 }
 .jumbotron h3{
     font-family: tahoma;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f4d041
+}
+.title-section::after{
+    width: 150px;
+    height: 5px;
+    background-color: #f4d041;
+    display: block;
+    content: "";
+    margin: auto;
 }
 .user_button a{
     background-color: #f4d041;

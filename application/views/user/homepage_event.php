@@ -50,16 +50,11 @@
 
         </div>
     </div>
-
-    <div class="jumbotron text-center">
-        <h3>Category</h3>
-        <i class="fa fa-music" aria-hidden="true"></i>
-        <i class="fas fa-basketball-ball"></i>
-        <i class="fas fa-school"></i>
-        <i class="fa fa-plane" aria-hidden="true"></i>
-        <i class="fa fa-heart" aria-hidden="true"></i>
+    <div class="jumbotron text-center mt-2">
+        <div class="title-section">
+            <h3>Events</h3>
+        </div>
     </div>
-
     <div id="list" class="container d-block">
         <!-- start foreach -->
         <div class="row">
@@ -77,7 +72,6 @@
             </div>
         </div>
         <!-- end foreach -->
-
         <div class="row">
             <div class="card">
                 <img class="card-img-top" src="<?php echo base_url(); ?>asset/event3.jpg" alt="Card image cap">
