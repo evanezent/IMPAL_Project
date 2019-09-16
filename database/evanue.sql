@@ -55,7 +55,7 @@ CREATE TABLE `member` (
   `username` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
   `namaMember` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `pasword` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `alamat` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `noHp` varchar(15) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -64,7 +64,7 @@ CREATE TABLE `member` (
 -- Dumping data for table `member`
 --
 
-INSERT INTO `member` (`username`, `namaMember`, `email`, `pasword`, `alamat`, `noHp`) VALUES
+INSERT INTO `member` (`username`, `namaMember`, `email`, `password`, `alamat`, `noHp`) VALUES
 ('esmeralda', 'Esmeralda Smith', 'esmeralda@gmail.com', 'TyU7h7bNm', 'Jalan Patimura no.1, NBandung, Jawa Barat', '08977456821');
 
 -- --------------------------------------------------------
