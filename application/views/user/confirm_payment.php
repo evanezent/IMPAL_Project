@@ -4,10 +4,10 @@
         <p><strong>Konfirmasi dilakukan 1x24 Jam, apabila lebih dari itu pembayaran akan dibatalkan dan otomatis menjadi publikasi tipe "FREE"</strong></p>
     </div>
     <div id="confirmation" class="d-flex justify-content-center">
-        <form action="" method="post">
+        <form action="Member/upload" method="post">
             <div class="form-group">
                 <label for="uploadFile">Upload your File</label>
-                <input type="file" class="form-control">
+                <input type="file" class="form-control" name="userfile">
             </div>
             <div id="payment">
                 <button type="submit" class="btn">Upload</button>
