@@ -19,6 +19,7 @@ class User extends CI_Controller {
 
 	public function register()
 	{
+		$this->load->view('template/header');
 		$this->load->view('user/register');
 		$this->load->view('template/footer');
 	}

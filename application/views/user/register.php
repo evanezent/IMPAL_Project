@@ -14,39 +14,6 @@
 
 </head>
 
-<!-- HEADER -->
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="<?= base_url(); ?>user">evanue</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <div class="form-group d-flex">
-                        <select class="form-control" id="sel1">
-                            <option selected>pilih menu</option>
-                            <option><a href="event">Event</a></option>
-                            <option><a href="ticket">Ticket</a></option>
-                        </select>
-                    </div>
-                </li>
-            </ul>
-            <div class="user_button">
-                <a href="#" class="btn btn-sm" role="button" data-toggle="modal" data-target="#modalLogin">Login</a>
-                <a href="#" class="btn btn-sm" role="button">Register</a>
-            </div>
-        </div>
-    </nav>
-</header>
-
 <body class="container-fluid">
 
     <div id="form-register" class="d-flex justify-content-center">
