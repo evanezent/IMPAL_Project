@@ -19,7 +19,7 @@
 <!-- HEADER -->
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="<?= base_url(); ?>user">evanue</a>
+        <a class="navbar-brand" href="<?= base_url(); ?>">evanue</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -43,7 +43,7 @@
             </ul>
             <div class="user_button">
                 <a href="#" class="btn btn-sm" role="button" data-toggle="modal" data-target="#modalLogin">Login</a>
-                <a href="<?= base_url(); ?>/user/register" class="btn btn-sm" role="button">Register</a>
+                <a href="<?= base_url(); ?>user/register" class="btn btn-sm" role="button">Register</a>
             </div>
         </div>
     </nav>
