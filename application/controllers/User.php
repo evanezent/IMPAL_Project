@@ -75,7 +75,7 @@ class User extends CI_Controller {
  
 			$this->session->set_userdata($data_session);
  
-			redirect(base_url("admin"));
+			redirect(base_url("Admin"));
  
 		}else{
 			echo "Terjadi kesalahan input username/password";
