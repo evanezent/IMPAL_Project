@@ -12,10 +12,9 @@ class Member_model extends CI_Model {
         $query = $this->db->insert('member', $data);
         return $query;
     }
-	
-	public function cek_login($table,$where)
-	{
-		return $this->db->get_where($table,$where);
-	}
+    public function cek_login($table,$where)
+    {
+	return $this->db->get_where($table,$where);
+    }
 }
 ?>
