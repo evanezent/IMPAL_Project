@@ -65,7 +65,7 @@ class User extends CI_Controller {
 			'username' => $username,
 			'password' => md5($password)
 			);
-		$cek = $this->Member_model->cek_login("admin",$where)->num_rows();
+		$cek = $this->Member_model->cek_login("Admin",$where)->num_rows();
 		if($cek > 0){
  
 			$data_session = array(
