@@ -7,5 +7,13 @@ class Event_model extends CI_Model {
         $query = $this->db->get();
         return $query->result();   
     }
+    public function SearchEvent()
+    {
+        $this->db->select('*');
+        $this->db->from('event');
+        
+        $query = $this->db->get();
+        return $query->result();   
+    }
 }
 ?>

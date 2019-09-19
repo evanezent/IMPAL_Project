@@ -11,20 +11,19 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="">
+                    <form action="<?= base_url('User/login_db')?>" method="post">
                         <div class="form-group">
                             <input class="form-control" type="text" placeholder="username" name="username">
                         </div>
                         <div class="form-group">
                             <input class="form-control" type="password" placeholder="password" name="password">
                         </div>
-
-                    </form>
                 </div>
                 <div class="modal-footer justify-content-center">
-                    <button type="submit" class="btn d-block"><a href="<?= base_url('User/login_db')?>">Login</a></button>
+                    <button type="submit" class="btn d-block">LOGIN</button>
                     <a href="#" class="text-muted d-block">Forgot your password</a>
                 </div>
+                </form>
             </div>
         </div>
     </div>

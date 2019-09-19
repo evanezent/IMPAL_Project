@@ -40,6 +40,8 @@ class Member extends CI_Controller{
         else{
             $data = array('upload_data' => $this->upload->data());
             $this->load->view('page_submit', $data);
-        }
+		}
+	
+	
     }
 }

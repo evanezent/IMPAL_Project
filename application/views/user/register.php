@@ -20,27 +20,27 @@
         <form action="register_db" method="post">
             <div class="form-group">
                 <label for="fullname">Nama Lengkap</label>
-                <input type="input" class="form-control" id="fullname" name="fullname">
+                <input type="input" class="form-control" id="fullname" name="fullname" required>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
             </div>
             <div class="form-group">
                 <label for="alamat">Alamat</label>
-                <textarea class="form-control" rows="3" id="alamat" name="alamat"></textarea>
+                <textarea class="form-control" rows="3" id="alamat" name="alamat" required></textarea>
             </div>
             <div class="form-group">
                 <label for="phone">Nomor HP</label>
-                <input type="input" class="form-control" id="phone" name="phone">
+                <input type="input" class="form-control" id="phone" name="phone" required>
             </div>
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="input" class="form-control" id="username" name="username">
+                <input type="input" class="form-control" id="username" name="username" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="password">
+                <input type="password" class="form-control" id="password" name="password" required>
             </div>
             <div class="form-group">
                 <button type="button" class="btn mx-auto"><a href="<?= base_url();?>">Back</a></button>

@@ -16,6 +16,12 @@ class Post extends CI_Controller {
 		$this->load->view('user/detail_ticket');
 		$this->load->view('template/footer');
 	}
+	public function event()
+	{
+		$this->load->view('template/header');
+		$this->load->view('user/detail_event');
+		$this->load->view('template/footer');
+	}
 }
 
 /* End of file Post.php */

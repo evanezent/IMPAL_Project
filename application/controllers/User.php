@@ -53,7 +53,7 @@ class User extends CI_Controller {
 			'username' => $username,
 			'password' => md5($password)
 			);
-		$cek = $this->Member_model->cek_login("admin",$where)->num_rows();
+		$cek = $this->Member_model->cek_login("member",$where)->num_rows();
 		if($cek > 0){
  
 			$data_session = array(
@@ -63,7 +63,7 @@ class User extends CI_Controller {
  
 			$this->session->set_userdata($data_session);
  
-			redirect(base_url("admin"));
+			redirect(base_url("member"));
  
 		}else{
 			echo "Terjadi kesalahan input username/password";
@@ -75,7 +75,7 @@ class User extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect(base_url('login'));
 	}
-
+	
 }
 
 /* End of file User.php */
