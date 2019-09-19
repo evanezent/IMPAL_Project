@@ -19,7 +19,7 @@
 	- [x] Explain Item 
 	
 * Back-end :
-	- [ ] Register
+	- [ ] Register ``` dont forget maket validation, is the username is already exists ```
 	- [ ] Login
 	- [ ] Searching
 	- [ ] Upload Event and Ticket
@@ -27,7 +27,7 @@
 	- [ ] Input Event and Ticket
 	- [ ] Detail Event and Ticket
 	- [ ] Delete Event and Ticket
-	- [ ] Update Event and Ticket
+	- [ ] Update Event and Ticket ``` dont forget maket validation, is there all or just some data is updated ```
 	- [ ] Upload Foto
 	- [ ] User Session
 	- [ ] Form Validator

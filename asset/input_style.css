@@ -2,6 +2,8 @@ body{
     background-image: url('./background_input.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 form{
     background-color: white;
@@ -22,9 +24,6 @@ form .btn:hover{
     color: #f4d041;
     border: #f4d041 solid 1px;
 }
-footer{
-    margin-bottom: 0;
-}
 form button a{
     text-decoration: none !important;
     color: white !important;
@@ -32,7 +31,16 @@ form button a{
 form button a:hover{
     color: #f4d041 !important;
 }
-
+form{
+    padding-bottom: 5px;
+}
+footer{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}
 #payment-menu{
     background-color: lightgray !important;
     opacity: 0.8;
@@ -137,6 +145,7 @@ form button a:hover{
 }
 
 @media (max-width: 600px){
+
     #kelola-event #baris, #kelola-ticket #baris{
         display: block;
     }
@@ -152,5 +161,11 @@ form button a:hover{
     }
     #kelola-event .btn, #kelola-ticket .btn{
         font-size: 10px;
+    }
+
+}
+@media (width: 360px){
+    footer{
+        position: relative;
     }
 }

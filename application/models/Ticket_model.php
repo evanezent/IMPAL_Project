@@ -7,5 +7,18 @@ class Ticket_model extends CI_Model {
         $query = $this->db->get();
         return $query->result();   
     }
+    public function inputTicket($data)
+    {
+        $this->db->insert('ticket', $data);
+    }
+    // Check if the ID is already exists
+    public function searchId($id)
+    {
+        if($this->db->where('idTicket', $id)){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
 ?>

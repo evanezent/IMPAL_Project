@@ -28,8 +28,8 @@
     font-weight: bold;
 }
 .user_button .btn:hover{
-    background-color: white !important;
-    color: #f4d041 !important;
+    background-color: white ;
+    color: #f4d041 ;
     border: #f4d041 solid 0.1em;
 }
 .collapse .navbar-nav li a, .form-group{

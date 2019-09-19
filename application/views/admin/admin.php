@@ -5,7 +5,9 @@
             <tbody>
                 <tr>
                     <td id="colImg">
-                        <img class="img-fluid" src="<?= base_url('asset/event1.png'); ?>" alt="">
+                        <div class="gambar">
+                            <img class="img" src="<?= base_url('asset/event1.png'); ?>" alt="">
+                        </div>
                     </td>
                     <td>
                         <ul>
@@ -25,7 +27,9 @@
                 </tr>
                 <tr>
                     <td id="colImg">
-                        <img class="img-fluid" src="<?= base_url('asset/event2.jpg'); ?>" alt="">
+                        <div class="gambar">
+                            <img class="img" src="<?= base_url('asset/event2.jpg'); ?>" alt="">
+                        </div>
                     </td>
                     <td>
                         <ul>
@@ -45,7 +49,9 @@
                 </tr>
                 <tr>
                     <td id="colImg">
-                        <img class="img-fluid" src="<?= base_url('asset/event3.jpg'); ?>" alt="">
+                        <div class="gambar">
+                            <img class="img" src="<?= base_url('asset/event3.jpg'); ?>" alt="">
+                        </div>
                     </td>
                     <td>
                         <ul>
@@ -75,7 +81,9 @@
             <tbody>
                 <tr>
                     <td id="colImg">
-                        <img class="img-fluid" src="<?= base_url('asset/event3.jpg'); ?>" alt="">
+                        <div class="gambar">
+                            <img class="img" src="<?= base_url('asset/event3.jpg'); ?>" alt="">
+                        </div>
                     </td>
                     <td>
                         <ul>
@@ -96,7 +104,9 @@
                 </tr>
                 <tr>
                     <td id="colImg">
-                        <img class="img-fluid" src="<?= base_url('asset/event1.png'); ?>" alt="">
+                        <div class="gambar">
+                            <img class="img-fluid" src="<?= base_url('asset/event1.png'); ?>" alt="">
+                        </div>
                     </td>
                     <td>
                         <ul>
@@ -116,7 +126,9 @@
                 </tr>
                 <tr>
                     <td id="colImg">
-                        <img class="img-fluid" src="<?= base_url('asset/event2.jpg'); ?>" alt="">
+                        <div class="gambar">
+                            <img class="img-fluid" src="<?= base_url('asset/event2.jpg'); ?>" alt="">
+                        </div>
                     </td>
                     <td>
                         <ul>
