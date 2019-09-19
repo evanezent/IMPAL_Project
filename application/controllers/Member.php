@@ -52,6 +52,7 @@ class Member extends CI_Controller
 	public function insert_event()
 	{
 		//get foto
+		ini_set('memory_limit','16M');
 		$gambar = $_FILES['poster']['name'];
 		if ($gambar) {
 			$config['upload_path']          =  './upload/event';
@@ -62,34 +63,31 @@ class Member extends CI_Controller
 
 			$this->load->library('upload', $config);
 			$foto = $this->upload->data();
-			echo $foto['file_size'];
 			$namafile = $foto['file_name'];
-
+			echo $namafile;
 			if (!$this->upload->do_upload('poster')) {
 				$error = array('error' => $this->upload->display_errors());
 				echo $error;
 			} else {
 				// Random id
-			$id = rand();
-			$ada = $this->Event_model->searchId(($id));
-			while ($ada) {
 				$id = rand();
 				$ada = $this->Event_model->searchId(($id));
+				while ($ada) {
+					$id = rand();
+					$ada = $this->Event_model->searchId(($id));
+				}
+				$data = array(
+					'idEvent' => $id,
+					'username' => "SESSION", //harusnya diisi session user login
+					'namaEvent' => $this->input->post('eventname'),
+					'tanggalEvent' => $this->input->post('date'),
+					'poster' => $namafile,
+					'validasi' => 0,
+					'delete_at' => 0 //diset jadi sebuah tanggal penghapusan, saat data tsb dihapus
+				);
+				$this->Event_model->inputEvent($data);
+				redirect('Member', 'refresh');
 			}
-			$data = array(
-				'idEvent' => $id,
-				'username' => "SESSION", //harusnya diisi session user login
-				'namaEvent' => $this->input->post('eventname'),
-				'tanggalEvent' => $this->input->post('date'),
-				'poster' => $namafile,
-				'validasi' => 0,
-				'delete_at' => 0 //diset jadi sebuah tanggal penghapusan, saat data tsb dihapus
-			);
-			$this->Event_model->inputEvent($data);
-			redirect('Member', 'refresh');
-			}
-			
-			
 		} else {
 			// Flash message foto kosong
 			echo "GAMBAR KOSONG";
