@@ -1,10 +1,10 @@
 <body class="container-fluid">
     <!-- INPUT -->
     <div id="input-event" class="justify-content-center" style="display: none;">
-        <form action="<?php echo base_url(); ?>/Member/insert_event" method="post">
+    <?php echo form_open_multipart('member/insert_event'); ?>
             <div class="form-group">
                 <label for="eventname">Nama Event</label>
-                <input type="input" class="form-control" name="eventname">
+                <input type="input" class="form-control" name="eventname" required>
             </div>
             <!-- <div class="form-group">
                 <label for="category">Kategori</label>
@@ -21,11 +21,11 @@
             </div> -->
             <div class="form-group">
                 <label for="date">Tanggal Event</label>
-                <input type="date" class="form-control" name="date">
+                <input type="date" class="form-control" name="date" required>
             </div>
             <div class="form-group">
                 <label for="poster">Foto Event / Poster</label>
-                <input type="file" class="form-control" name="poster">
+                <input class="form-control" type="file" name="poster" required>
             </div>
             <div class="form-group">
                 <button type="button" class="btn mx-auto"><a href="<?= base_url(); ?>">Back</a></button>
@@ -35,14 +35,14 @@
     </div>
 
     <div id="input-ticket" class="justify-content-center" style="display: none;">
-        <form action="<?php echo base_url(); ?>/Member/insert_ticket" method="post">
+    <?php echo form_open_multipart('member/insert_ticket'); ?>
             <div class="form-group">
                 <label for="ticketname">Nama Ticket</label>
-                <input type="input" class="form-control" name="ticketname">
+                <input type="input" class="form-control" name="ticketname" required>
             </div>
             <div class="form-group">
                 <label for="contatperson">Contact Person</label>
-                <input type="input" class="form-control" name="contatperson">
+                <input type="input" class="form-control" name="contatperson" required>
             </div>
             <!-- <div class="form-group">
                 <label for="category">Kategori</label>
@@ -59,11 +59,11 @@
             </div> -->
             <div class="form-group">
                 <label for="date">Tanggal Ticket</label>
-                <input type="date" class="form-control" name="date">
+                <input type="date" class="form-control" name="date" required>
             </div>
             <div class="form-group">
                 <label for="poster">Foto Ticket / Poster</label>
-                <input type="file" class="form-control" name="poster">
+                <input type="file" class="form-control" name="poster" required>
             </div>
             <div class="form-group">
                 <button type="button" class="btn mx-auto"><a href="<?= base_url(); ?>">Back</a></button>

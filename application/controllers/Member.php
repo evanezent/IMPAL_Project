@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Member extends CI_Controller{
+class Member extends CI_Controller
+{
 
 	public function __construct()
 	{
@@ -30,44 +31,45 @@ class Member extends CI_Controller{
 		$this->load->view('template/footer_member');
 	}
 
-	public function upload(){
-        $config['upload_path'] = './upload/payment';
-        $config['allowed_types'] = 'gif|jpg|png|jpeg';
-        $config['max_size']  = '4096';
-        $config['max_width']  = '1920';
-        $config['max_height']  = '1080';
-        
-        $this->load->library('upload', $config);
-        
-        if (!$this->upload->do_upload('userfile')){
-            $error = array('error' => $this->upload->display_errors());
-            $this->load->view('page_submit', $error);
-        }
-        else{
-            $data = array('upload_data' => $this->upload->data());
-            $this->load->view('page_submit', $data);
+	public function upload()
+	{
+		$config['upload_path'] = './upload/payment';
+		$config['allowed_types'] = 'gif|jpg|png|jpeg';
+		$config['max_size']  = '4096';
+		$config['max_width']  = '1920';
+		$config['max_height']  = '1080';
+
+		$this->load->library('upload', $config);
+
+		if (!$this->upload->do_upload('userfile')) {
+			$error = array('error' => $this->upload->display_errors());
+			$this->load->view('page_submit', $error);
+		} else {
+			$data = array('upload_data' => $this->upload->data());
+			$this->load->view('page_submit', $data);
 		}
 	}
 	public function insert_event()
 	{
 		//get foto
-		$config['upload_path']          =  './upload/event';
-		$config['allowed_types']        =  'gif|jpeg|jpg|png';
-		$config['max_size']             =  1000000000000;
-		$config['max_width']            =  5000;
-		$config['max_height']           =  5000;
+		$gambar = $_FILES['poster']['name'];
+		if ($gambar) {
+			$config['upload_path']          =  './upload/event';
+			$config['allowed_types']        =  'gif|jpeg|jpg|png';
+			$config['max_size']             =  1000000000000;
+			$config['max_width']            =  5000;
+			$config['max_height']           =  5000;
 
-		$this->load->library('upload', $config);
-
-		if (!$this->upload->do_upload('poster')){
-			// Flash message foto kosong
-            $error = array('error' => $this->upload->display_errors());
-            $this->load->view('page_submit', $error);
-        }
-        else{
-            $foto = $this->upload->data();
+			$this->load->library('upload', $config);
+			$foto = $this->upload->data();
+			echo $foto['file_size'];
 			$namafile = $foto['file_name'];
-			// Random id
+
+			if (!$this->upload->do_upload('poster')) {
+				$error = array('error' => $this->upload->display_errors());
+				echo $error;
+			} else {
+				// Random id
 			$id = rand();
 			$ada = $this->Event_model->searchId(($id));
 			while ($ada) {
@@ -85,6 +87,13 @@ class Member extends CI_Controller{
 			);
 			$this->Event_model->inputEvent($data);
 			redirect('Member', 'refresh');
+			}
+			
+			
+		} else {
+			// Flash message foto kosong
+			echo "GAMBAR KOSONG";
+			// echo $error;
 		}
 	}
 	public function insert_ticket()
@@ -98,13 +107,12 @@ class Member extends CI_Controller{
 
 		$this->load->library('upload', $config);
 
-		if (!$this->upload->do_upload('poster')){
+		if (!$this->upload->do_upload('poster')) {
 			// Flash message foto kosong
-            $error = array('error' => $this->upload->display_errors());
-            $this->load->view('page_submit', $error);
-        }
-        else{
-            $foto = $this->upload->data();
+			$error = array('error' => $this->upload->display_errors());
+			$this->load->view('page_submit', $error);
+		} else {
+			$foto = $this->upload->data();
 			$namafile = $foto['file_name'];
 			// Random id
 			$id = rand();
@@ -127,5 +135,4 @@ class Member extends CI_Controller{
 			redirect('Member', 'refresh');
 		}
 	}
-	
 }
