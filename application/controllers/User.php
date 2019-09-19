@@ -30,7 +30,7 @@ class User extends CI_Controller {
 			"username" => $this->input->post('username', true),
 			"namaMember" => $this->input->post('fullname', true),
             "email" => $this->input->post('email', true),
-            "password" => $this->input->post('password', true),
+            "password" => md5($this->input->post('password', true)),
             "alamat" => $this->input->post('alamat', true),
             "noHp" => $this->input->post('phone', true),
 		];
