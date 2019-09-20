@@ -22,7 +22,9 @@ class Event_model extends CI_Model {
     // Check if the ID is already exists
     public function searchId($id)
     {
-        if($this->db->where('idEvent', $id)){
+        $this->db->where('idEvent', $id);
+        $data = $this->db->get('events');
+        if($data){
             return true;
         }else{
             return false;

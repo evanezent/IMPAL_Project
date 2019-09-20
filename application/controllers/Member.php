@@ -9,6 +9,7 @@ class Member extends CI_Controller
 		parent::__construct();
 		//Load Dependencies
 		$this->load->model('Event_model');
+		$this->load->helper('string');
 	}
 	public function index()
 	{
@@ -52,7 +53,6 @@ class Member extends CI_Controller
 	public function insert_event()
 	{
 		//get foto
-		ini_set('memory_limit','16M');
 		$gambar = $_FILES['poster']['name'];
 		if ($gambar) {
 			$config['upload_path']          =  './upload/event';
@@ -62,27 +62,29 @@ class Member extends CI_Controller
 			$config['max_height']           =  5000;
 
 			$this->load->library('upload', $config);
-			$foto = $this->upload->data();
-			$namafile = $foto['file_name'];
-			echo $namafile;
+
 			if (!$this->upload->do_upload('poster')) {
 				$error = array('error' => $this->upload->display_errors());
 				echo $error;
 			} else {
+				// Get file name
+				$foto = $this->upload->data();
+				$namafile = $foto['file_name'];
 				// Random id
-				$id = rand();
-				$ada = $this->Event_model->searchId(($id));
-				while ($ada) {
-					$id = rand();
-					$ada = $this->Event_model->searchId(($id));
-				}
+				$id = "evt-".random_string('alnum', 5); //rand(0000, 9999);
+				//Check ID
+				// $ada = $this->Event_model->searchId(($id));
+				// while ($ada) {
+				// 	$id = random_string('alnum', 5);
+				// 	$ada = $this->Event_model->searchId(($id));
+				// }
 				$data = array(
 					'idEvent' => $id,
-					'username' => "SESSION", //harusnya diisi session user login
+					'username' => "esmeralda", //harusnya diisi session user login
 					'namaEvent' => $this->input->post('eventname'),
 					'tanggalEvent' => $this->input->post('date'),
 					'poster' => $namafile,
-					'validasi' => 0,
+					'Validasi' => 0,
 					'delete_at' => 0 //diset jadi sebuah tanggal penghapusan, saat data tsb dihapus
 				);
 				$this->Event_model->inputEvent($data);
@@ -113,15 +115,15 @@ class Member extends CI_Controller
 			$foto = $this->upload->data();
 			$namafile = $foto['file_name'];
 			// Random id
-			$id = rand();
-			$ada = $this->Event_model->searchId(($id));
-			while ($ada) {
-				$id = rand();
-				$ada = $this->Event_model->searchId(($id));
-			}
+			$id = "tkt-".random_string('alnum', 5);
+			// $ada = $this->Event_model->searchId(($id));
+			// while ($ada) {
+			// 	$id = "tkt-" . rand(0000, 9999);
+			// 	$ada = $this->Event_model->searchId(($id));
+			// }
 			$data = array(
 				'idTicket' => $id,
-				'username' => "SESSION", //harusnya diisi session user login
+				'username' => "esmeralda", //harusnya diisi session user login
 				'namaTicket' => $this->input->post('ticketname'),
 				'tanggalTicket' => $this->input->post('date'),
 				'poster' => $namafile,

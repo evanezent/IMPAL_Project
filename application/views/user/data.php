@@ -42,7 +42,7 @@
             </div>
             <div class="form-group">
                 <label for="contatperson">Contact Person</label>
-                <input type="input" class="form-control" name="contatperson" required>
+                <input type="input" class="form-control" name="contactperson" required>
             </div>
             <!-- <div class="form-group">
                 <label for="category">Kategori</label>
