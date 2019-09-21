@@ -2,6 +2,14 @@
     padding-right: 0;
     padding-left: 0;
 }
+#navbar{
+    z-index: 1070;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 .navbar-light .navbar-brand{
     font-family: tahoma;
     font-weight: bold;
@@ -123,19 +131,47 @@ body{
     color: #f4d041;
     border: #f4d041 solid 1px;
 }
-.modal-footer .btn{
+form{
+    background-color: white;
+    margin: 1.5em;
+    padding: 2em;
+    border-radius: 0.5em;
+    font-weight: bold;
+    width: 30em !important;
+    max-width: 100%;
+}
+.head-login{
+    margin: 2vh auto;
+}
+.form-login form{
+    margin: unset;
+}
+.form-login .form-control{
+    width: 300px;
+    margin: auto;
+}
+.footer-login .btn{
+    margin: auto;
+}
+.footer-login a{
+    font-weight: lighter;
+}
+.footer-login .btn{
     background-color: #f4d041;
     color: white;
     font-weight: bold;
 }
-.modal-footer .btn:hover{
+.footer-login .btn:hover{
     background-color: white;
     color: #f4d041;
     border: #f4d041 solid 1px;
 }
+#isi-data{
+    display: flex;
+}
 #img-desc{
-    max-width: 50%;
-    margin: auto;
+    max-width: 400px;
+    margin: 2vh auto;
 }
 #desc-header{
     margin: 1em auto;

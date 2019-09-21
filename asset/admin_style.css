@@ -45,26 +45,31 @@ body{
     background-color: lightgoldenrodyellow;
     border-radius: 1em;
 }
-#colImg .img{
-    width: 300px;
+.gambar, .penjelasan, .action{
+    padding: 15px;
+    margin: auto;
 }
-td ul{
+.col-gambar img{
+    width: 250px;
+}
+.penjelasan{
+    position: relative;
+    margin: auto;
+}
+.penjelasan ul li{
     list-style: none;
-}
-td ul li{
-    margin: 2vh 0;
-    font-size: 100%;
     font-weight: bold;
+    margin: 2vh auto;
 }
-td button{
-    margin: 0.5em;
+.btn-action button{
+    margin: 2vh auto;
+    display: block;
+    width: 100px;
 }
-td button a{
+.btn-action a{
     color: white;
     font-weight: bold;
-}
-td button a:hover{
-    color: white;
+    text-decoration: none;
 }
 @media (max-width: 600px){
     .gambar{
@@ -78,5 +83,11 @@ td button a:hover{
     .table td{
         display: block;
         margin: auto;
+    }
+    .gambar{
+        margin-top: 15px;
+    }
+    .gambar, .penjelasan, .action{
+        padding: 0;
     }
 }

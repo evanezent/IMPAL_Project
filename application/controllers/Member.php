@@ -65,6 +65,7 @@ class Member extends CI_Controller
 				// Random id
 				$id = "evt-".random_string('alnum', 5); //rand(0000, 9999);
 				//Check ID
+//TODO : Search duplicate ID belum jalan
 				// $ada = $this->Event_model->searchId(($id));
 				// while ($ada) {
 				// 	$id = random_string('alnum', 5);
@@ -108,6 +109,7 @@ class Member extends CI_Controller
 			$namafile = $foto['file_name'];
 			// Random id
 			$id = "tkt-".random_string('alnum', 5);
+//TODO : Search duplicate ID belum jalan
 			// $ada = $this->Event_model->searchId(($id));
 			// while ($ada) {
 			// 	$id = "tkt-" . rand(0000, 9999);
