@@ -8,10 +8,13 @@
     <title>Evanue</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>asset/input_style.css">    
     <link rel="stylesheet" href="<?php echo base_url(); ?>asset/homepage_style.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>asset/input_style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>asset/slick.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>asset/slick-theme.css">
 </head>
 
 <!-- HEADER -->
@@ -32,9 +35,8 @@
                 <li class="nav-item">
                     <div class="form-group d-flex">
                         <select class="form-control" id="sel_menu">
-                            <option value="">pilih menu</option>
-                            <option value="input">Input Data</option>
                             <option value="management">Management Data</option>
+                            <option value="input">Input Data</option>
                         </select>
                     </div>
                 </li>
@@ -42,16 +44,6 @@
                 <li class="nav-item">
                     <div class="form-group" id="select-type1" style="display: none;">
                         <select class="form-control" id="sel_type1">
-                            <option value="" selected>pilih menu</option>
-                            <option value="event"><a href="">Event</a></option>
-                            <option value="ticket"><a href="ticket">Ticket</a></option>
-                        </select>
-                    </div>
-                </li>
-                <!-- MANAGEMENT -->
-                <li class="nav-item">
-                    <div class="form-group" id="select-type2" style="display: none;">
-                        <select class="form-control" id="sel_type2">
                             <option value="" selected>pilih menu</option>
                             <option value="event"><a href="">Event</a></option>
                             <option value="ticket"><a href="ticket">Ticket</a></option>

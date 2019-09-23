@@ -58,14 +58,16 @@ class Member extends CI_Controller
 			if (!$this->upload->do_upload('poster')) {
 				$error = array('error' => $this->upload->display_errors());
 				echo $error;
+				$this->session->set_flashdata('fail_evt', 'Fail event');
+				redirect('Member', 'refresh');
 			} else {
 				// Get file name
 				$foto = $this->upload->data();
 				$namafile = $foto['file_name'];
 				// Random id
-				$id = "evt-".random_string('alnum', 5); //rand(0000, 9999);
+				$id = "evt-" . random_string('alnum', 5); //rand(0000, 9999);
 				//Check ID
-//TODO : Search duplicate ID belum jalan
+				//TODO : Search duplicate ID belum jalan
 				// $ada = $this->Event_model->searchId(($id));
 				// while ($ada) {
 				// 	$id = random_string('alnum', 5);
@@ -81,52 +83,67 @@ class Member extends CI_Controller
 					'delete_at' => 0 //diset jadi sebuah tanggal penghapusan, saat data tsb dihapus
 				);
 				$this->Event_model->inputEvent($data);
+				$this->session->set_flashdata('sukses_evt', 'Success event');
 				redirect('Member', 'refresh');
 			}
 		} else {
 			// Flash message foto kosong
 			echo "GAMBAR KOSONG";
+			$this->session->set_flashdata('fail_pic', 'Fail pic');
+			redirect('Member', 'refresh');
 			// echo $error;
 		}
 	}
 	public function insert_ticket()
 	{
-		//get foto
-		$config['upload_path']          =  './upload/ticket';
-		$config['allowed_types']        =  'gif|jpeg|jpg|png';
-		$config['max_size']             =  1000000000000;
-		$config['max_width']            =  5000;
-		$config['max_height']           =  5000;
+		$gambar = $_FILES['poster']['name'];
+		if ($gambar) {
+			//get foto
+			$config['upload_path']          =  './upload/ticket';
+			$config['allowed_types']        =  'gif|jpeg|jpg|png';
+			$config['max_size']             =  1000000000000;
+			$config['max_width']            =  5000;
+			$config['max_height']           =  5000;
 
-		$this->load->library('upload', $config);
+			$this->load->library('upload', $config);
 
-		if (!$this->upload->do_upload('poster')) {
+			if (!$this->upload->do_upload('poster')) {
+				// Flash message foto kosong
+				$error = array('error' => $this->upload->display_errors());
+				echo $error;
+				$this->session->set_flashdata('fail_tkt', 'Success ticket');
+				redirect('Member', 'refresh');
+			} else {
+				$foto = $this->upload->data();
+				$namafile = $foto['file_name'];
+				// Random id
+				$id = "tkt-" . random_string('alnum', 5);
+				//TODO : Search duplicate ID belum jalan
+				// $ada = $this->Event_model->searchId(($id));
+				// while ($ada) {
+				// 	$id = "tkt-" . rand(0000, 9999);
+				// 	$ada = $this->Event_model->searchId(($id));
+				// }
+				$data = array(
+					'idTicket' => $id,
+					'username' => "esmeralda", //harusnya diisi session user login
+					'namaTicket' => $this->input->post('ticketname'),
+					'tanggalTicket' => $this->input->post('date'),
+					'poster' => $namafile,
+					'contactPerson' => $this->input->post('contactperson'),
+					'Validasi' => 0,
+					'delete_at' => 0 //diset jadi sebuah tanggal penghapusan, saat data tsb dihapus
+				);
+				$this->Ticket_model->inputTicket($data);
+				$this->session->set_flashdata('sukses_tkt', 'Success ticket');
+				redirect('Member', 'refresh');
+			}
+		}else{
 			// Flash message foto kosong
-			$error = array('error' => $this->upload->display_errors());
-			$this->load->view('page_submit', $error);
-		} else {
-			$foto = $this->upload->data();
-			$namafile = $foto['file_name'];
-			// Random id
-			$id = "tkt-".random_string('alnum', 5);
-//TODO : Search duplicate ID belum jalan
-			// $ada = $this->Event_model->searchId(($id));
-			// while ($ada) {
-			// 	$id = "tkt-" . rand(0000, 9999);
-			// 	$ada = $this->Event_model->searchId(($id));
-			// }
-			$data = array(
-				'idTicket' => $id,
-				'username' => "esmeralda", //harusnya diisi session user login
-				'namaTicket' => $this->input->post('ticketname'),
-				'tanggalTicket' => $this->input->post('date'),
-				'poster' => $namafile,
-				'contactPerson' => $this->input->post('contactperson'),
-				'Validasi' => 0,
-				'delete_at' => 0 //diset jadi sebuah tanggal penghapusan, saat data tsb dihapus
-			);
-			$this->Ticket_model->inputTicket($data);
+			echo "GAMBAR KOSONG";
+			$this->session->set_flashdata('fail_pic', 'Fail pic');
 			redirect('Member', 'refresh');
+			// echo $error;
 		}
 	}
 }

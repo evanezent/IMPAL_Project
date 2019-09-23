@@ -14,6 +14,50 @@ form{
     width: 30em !important;
     max-width: 100%;
 }
+#input-ticket{
+    margin-bottom: 10vh;
+}
+.title-list-ticket, .title-list-member{
+    margin-top: 2vh;
+    text-align: center;
+}
+.title-list-ticket h2, .title-list-member h2{
+    font-weight: bold;
+    color: #f4d041;
+}
+.badge{
+    font-size: 45px;
+}
+.title-list-ticket::after{
+    width: 100px;
+    height: 5px;
+    background-color: white;
+    content: "";
+    display: block;
+    margin:auto;
+} 
+.title-list-member::after{
+    width: 100px;
+    height: 5px;
+    background-color: white;
+    content: "";
+    display: block;
+    margin:auto;
+}
+.member-ticket{
+    margin-bottom: 10vh;
+}
+.slick-slider{
+    margin: 20px;
+}
+.slick-prev{
+    left: 0!important;
+    z-index: 99;
+}
+.slick-next{
+    z-index: 99;
+    right: 0!important;
+}
 form .btn{
 	background-color: #f4d041;
     color: white;
@@ -93,76 +137,29 @@ footer{
     max-width: 70vw;
     padding: auto;
 }
-#kelola-event{
-    margin-bottom: 5em;
-}
-#kelola-event label, #kelola-ticket label{
-    color: #f4d041;
-    font-size: 17px;
-}
-#kelola-event .btn, #kelola-ticket .btn{
-    background-color: #f4d041;
-    border-radius: 0.2em;
+.btn-card-list .btn-danger{
+    background-color: #dc3545!important;
     color: white;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 15px;
 }
-#kelola-event a, #kelola-ticket a{
-    text-decoration: none;
-}
-#kelola-event .btn:hover{
-    background-color: white;
-    color: #f4d041;
-}
-#kelola-event #baris, #kelola-ticket #baris{
-    margin: 2vh auto;
-    padding: 3em;
-    background-color: lightgoldenrodyellow;
-    border-radius: 0.3em;
-    display: flex;
-    justify-content: center;
-}
-#kelola-ticket{
-    margin-bottom: 5em;
-}
-
-#kelola-ticket .btn:hover{
-    background-color: white;
-    color: #f4d041;
+.btn-card-list .btn-danger:hover{
+    background-color: #91131f!important;
+    border: #91131f solid 1px;
+    color: white;
 }
 .card-img{
     width: 300px!important;
     margin-bottom: 2vh
 }
-#kelola-event #baris .item, #kelola-ticket #baris .item{
-    justify-content: center;
-    display: flex;
-}
-.item .content{
-    display: block;
-    margin: 2vh 3vw;
-}
+
 
 @media (max-width: 600px){
 
-    #kelola-event #baris, #kelola-ticket #baris{
-        display: block;
-    }
-    #kelola-event #baris .item, #kelola-ticket #baris .item{
-        justify-content: center;
-        display: flex
+    .badge{
+        font-size: 30px;
     }
     .card-img{
         width: 200px!important;
     }
-    #kelola-event label, #kelola-ticket label{
-        font-size: 12px;
-    }
-    #kelola-event .btn, #kelola-ticket .btn{
-        font-size: 10px;
-    }
-
 }
 @media (width: 360px){
     footer{
