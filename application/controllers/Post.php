@@ -16,10 +16,11 @@ class Post extends CI_Controller {
 		$this->load->view('user/detail_ticket');
 		$this->load->view('template/footer');
 	}
-	public function event()
+	public function event($id)
 	{
+		$data['events']=$this->Event_model->getEventID($id);
 		$this->load->view('template/header');
-		$this->load->view('user/detail_event');
+		$this->load->view('user/detail_event',$data);
 		$this->load->view('template/footer');
 	}
 }

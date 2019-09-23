@@ -58,18 +58,14 @@
     <div id="list" class="container d-block">
         <!-- start foreach -->
         <div class="row">
+            <?php foreach ($events as $ev) :?>
             <div class="card">
-                <img class="card-img-top" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
+                <img class="card-img-top" src="<?php echo base_url(); ?>asset/<?php echo $ev['poster'] ?>" alt="Card image cap">
                 <div class="card-body text-center">
-                    <a href="<?= base_url('post'); ?>" class="btn">Read More</a>
+                    <a href="<?= base_url('post/event/'); echo $ev['idEvent']?>" class="btn">Read More</a>
                 </div>
             </div>
-            <div class="card">
-                <img class="card-img-top" src="<?php echo base_url(); ?>asset/event2.jpg" alt="Card image cap">
-                <div class="card-body text-center">
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            </div>
+            <?php endforeach ?>
         </div>
         <!-- end foreach -->
         <div class="row">
