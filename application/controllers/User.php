@@ -5,8 +5,9 @@ class User extends CI_Controller {
 
 	public function index()
 	{
+		$data['events']=$this->Event_model->getEvent();
 		$this->load->view('template/header');
-		$this->load->view('user/homepage_event');
+		$this->load->view('user/homepage_event',$data);
 		$this->load->view('template/footer');
 	}
 

@@ -1,24 +1,26 @@
 <body class="container-fluid">
     <!-- EVENT -->
     <!-- select where idEvent -->
+    <?php foreach ($events as $ev) :?>
     <div id="description">
         <div id="desc-header" class="text-center">
             <h3>DESCRIPTION</h3>
         </div>
         <div id="isi-data">
             <div id="img-desc">
-                <img src="<?= base_url('asset/event1.png'); ?>" width="100%" height="100%" alt="UNKNOWN">
+                <img src="<?= base_url('asset/'); echo $ev['poster'] ?>" width="100%" height="100%" alt="UNKNOWN">
             </div>
             <div id="desc">
+                
                 <table class="table d-flex justify-content-center">
                     <tbody>
                         <tr>
                             <td>
-                                <label>Name of Event </label>
+                                <label>Nama of Event </label>
                             </td>
                             <td>:</td>
                             <td>
-                                <span id="namaEvent"> VANS World Cup of Surfing</span>
+                                <span id="namaEvent"><?php echo $ev['namaEvent'] ?></span>
                             </td>
                         </tr>
                         <tr>
@@ -27,7 +29,7 @@
                             </td>
                             <td>:</td>
                             <td>
-                                <span id="tanggalEvent"> August, 15th 2020</span>
+                                <span id="tanggalEvent"><?php echo $ev['tanggalEvent'] ?></span>
                             </td>
                         </tr>
                         <tr>
@@ -36,7 +38,7 @@
                             </td>
                             <td>:</td>
                             <td>
-                                <span id="cpEvent"> +6282 226 651 838 (Rey)</span>
+                                <span id="cpEvent"></span>
                             </td>
                         </tr>
                         <tr>
@@ -45,11 +47,12 @@
                             </td>
                             <td>:</td>
                             <td>
-                                <span id="placeEvent">Sunset Beach HAWAI</span>
+                                <span id="placeEvent"></span>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+                <?php endforeach ?>
                 <div id="desc-footer" class="d-flex justify-content-center">
                     <button class="btn"><a href="<?= base_url(); ?>">Back</a></button>
                 </div>
