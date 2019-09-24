@@ -5,8 +5,15 @@ class Member extends CI_Controller
 {
 	public function index()
 	{
+		$event = $this->Event_model->getEventMember("esmeralda");
+		$ticket = $this->Ticket_model->getTicketMember("esmeralda");
+
+		$data = [
+			'events'=>$event,
+			'tickets'=>$ticket
+		];
 		$this->load->view('template/header_member');
-		$this->load->view('user/data');
+		$this->load->view('user/data',$data);
 		$this->load->view('template/footer_member');
 	}
 

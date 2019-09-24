@@ -14,7 +14,12 @@ class Event_model extends CI_Model {
         $query = $this->db->get();
         return $query->result_array();
     }
-
+    public function getEventMember($username)
+    {
+        $this->db->where('username',$username);
+        $resultSet = $this->db->get('events');
+        return $resultSet->result_array();
+    }
     public function inputEvent($data)
     {
         $this->db->insert('events', $data);

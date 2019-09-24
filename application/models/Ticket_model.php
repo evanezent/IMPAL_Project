@@ -20,5 +20,11 @@ class Ticket_model extends CI_Model {
             return false;
         }
     }
+    public function getTicketMember($username)
+    {
+        $this->db->where('username',$username);
+        $resultSet = $this->db->get('ticket');
+        return $resultSet->result_array();
+    }
 }
 ?>

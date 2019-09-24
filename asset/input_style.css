@@ -14,11 +14,14 @@ form{
     width: 30em !important;
     max-width: 100%;
 }
+.list-kosong{
+    margin-top: 2vh;
+}
 #input-ticket{
     margin-bottom: 10vh;
 }
 .title-list-ticket, .title-list-member{
-    margin-top: 2vh;
+    margin-top: 5vh;
     text-align: center;
 }
 .title-list-ticket h2, .title-list-member h2{
@@ -26,7 +29,7 @@ form{
     color: #f4d041;
 }
 .badge{
-    font-size: 45px;
+    font-size: 40px;
 }
 .title-list-ticket::after{
     width: 100px;
@@ -47,6 +50,7 @@ form{
 .member-ticket{
     margin-bottom: 10vh;
 }
+
 .slick-slider{
     margin: 20px;
 }
@@ -150,7 +154,19 @@ footer{
     width: 300px!important;
     margin-bottom: 2vh
 }
-
+.center .card{
+    width: 250px;
+}
+@media (min-width: 1360px){
+    .center .card{
+        width: 270px;
+    }
+}
+@media (max-width: 1280px){
+    .center .card{
+        width: 220px;
+    }
+}
 
 @media (max-width: 600px){
 
@@ -159,6 +175,9 @@ footer{
     }
     .card-img{
         width: 200px!important;
+    }
+    .center .card{
+        width: 230px!important;
     }
 }
 @media (width: 360px){

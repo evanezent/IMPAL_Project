@@ -19,9 +19,32 @@
         <div class="title-list-member">
             <h2 class="badge badge-light">Your Events</h2>
         </div>
-        <div class="center" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
-            <div>
-                <div class="card" style="width: 230px;">
+        <?php if (!empty($event)) { ?>
+            <div class="list-kosong text-center">
+                <h1 class="badge badge-danger">Data tidak ditemukan</h1>
+            </div>
+        <?php } else { ?>
+            <div class="center" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+                <?php foreach ($events as $event) : ?>
+                    <div>
+                        <div class="card">
+                            <img src="<?= base_url() ?>upload/event/<?= $event['poster'] ?>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $event['namaEvent'] ?></h5>
+                                <ul>
+                                    <li><?= $event['tanggalEvent'] ?></li>
+                                </ul>
+                                <div class="btn-card-list">
+                                    <a href="#" class="btn">Edit</a>
+                                    <a href="#" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach ?>
+            <?php } ?>
+            <!-- <div>
+                <div class="card">
                     <img src="<?= base_url() ?>asset/event1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Judul Event / Ticket</h5>
@@ -38,7 +61,7 @@
                 </div>
             </div>
             <div>
-                <div class="card" style="width: 230px;">
+                <div class="card">
                     <img src="<?= base_url() ?>asset/event1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Judul Event / Ticket</h5>
@@ -55,7 +78,7 @@
                 </div>
             </div>
             <div>
-                <div class="card" style="width: 230px;">
+                <div class="card">
                     <img src="<?= base_url() ?>asset/event1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Judul Event / Ticket</h5>
@@ -72,7 +95,7 @@
                 </div>
             </div>
             <div>
-                <div class="card" style="width: 230px;">
+                <div class="card">
                     <img src="<?= base_url() ?>asset/event1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Judul Event / Ticket</h5>
@@ -87,34 +110,41 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
             </div>
-            <div>
-                <div class="card" style="width: 230px;">
-                    <img src="<?= base_url() ?>asset/event1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Judul Event / Ticket</h5>
-                        <ul>
-                            <li>Tanggal</li>
-                            <li>Tempat</li>
-                            <li>CP / utk ticket</li>    
-                        </ul>
-                        <div class="btn-card-list">
-                            <a href="#" class="btn">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <div id="kelola-ticket" class="member-ticket">
         <div class="title-list-ticket">
             <h2 class="badge badge-light">Your Ticket</h2>
         </div>
-        <div class="center" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
-            <div>
-                <div class="card" style="width: 230px;">
-                    <img src="<?= base_url() ?>asset/event1.png" class="card-img-top" alt="...">
+        <?php if (!empty($ticket)) { ?>
+            <div class="list-kosong text-center">
+                <h1 class="badge badge-danger">Data tidak ditemukan</h1>
+            </div>
+        <?php } else { ?>
+            <div class="center" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+                <?php foreach ($tickets as $ticket) : ?>
+                    <div>
+                        <div class="card">
+                            <img src="<?= base_url() ?>upload/ticket/<?= $ticket['poster'] ?>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $ticket['namaTicket'] ?></h5>
+                                <ul>
+                                    <li><?= $ticket['tanggalTicket'] ?></li>
+                                    <li><?= $ticket['contactPerson'] ?></li>
+                                </ul>
+                                <div class="btn-card-list">
+                                    <a href="#" class="btn">Edit</a>
+                                    <a href="#" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach ?>
+            <?php } ?>
+            <!-- <div>
+                <div class="card">
+                    <img src="<?= base_url() ?>asset/tick1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Judul Event / Ticket</h5>
                         <ul>
@@ -130,8 +160,8 @@
                 </div>
             </div>
             <div>
-                <div class="card" style="width: 230px;">
-                    <img src="<?= base_url() ?>asset/event1.png" class="card-img-top" alt="...">
+                <div class="card">
+                    <img src="<?= base_url() ?>asset/tick1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Judul Event / Ticket</h5>
                         <ul>
@@ -147,8 +177,8 @@
                 </div>
             </div>
             <div>
-                <div class="card" style="width: 230px;">
-                    <img src="<?= base_url() ?>asset/event1.png" class="card-img-top" alt="...">
+                <div class="card">
+                    <img src="<?= base_url() ?>asset/tick1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Judul Event / Ticket</h5>
                         <ul>
@@ -164,8 +194,8 @@
                 </div>
             </div>
             <div>
-                <div class="card" style="width: 230px;">
-                    <img src="<?= base_url() ?>asset/event1.png" class="card-img-top" alt="...">
+                <div class="card">
+                    <img src="<?= base_url() ?>asset/tick1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Judul Event / Ticket</h5>
                         <ul>
@@ -179,25 +209,8 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
             </div>
-            <div>
-                <div class="card" style="width: 230px;">
-                    <img src="<?= base_url() ?>asset/event1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Judul Event / Ticket</h5>
-                        <ul>
-                            <li>Tanggal</li>
-                            <li>Tempat</li>
-                            <li>CP / utk ticket</li>    
-                        </ul>
-                        <div class="btn-card-list">
-                            <a href="#" class="btn">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -300,86 +313,6 @@
         </div>
         </form>
     </div>
-
-    <!-- KELOLA DATA
-    <div id="kelola-event" class="" style="display: none;">
-        <div id="baris" class="container">
-            <div class="item">
-                <div class="content">
-                    <img class="card-img" src="<?= base_url() ?>asset/event1.png" alt="Card image cap">
-                    <label class="d-block">Tanggal Event</label>
-                    <label class="d-block">Judul Event</label>
-                    <a class="btn" href="">Lihat Lengkap</a>
-                </div>
-            </div>
-            <div class="item">
-                <div class="content">
-                    <img class="card-img" src="<?= base_url() ?>asset/event1.png" alt="Card image cap">
-                    <label class="d-block">Tanggal Event</label>
-                    <label class="d-block">Judul Event</label>
-                    <a class="btn" href="">Lihat Lengkap</a>
-                </div>
-            </div>
-
-        </div>
-        <div id="baris" class="container">
-            <div class="item">
-                <div class="content">
-                    <img class="card-img" src="<?= base_url() ?>asset/event1.png" alt="Card image cap">
-                    <label class="d-block">Tanggal Event</label>
-                    <label class="d-block">Judul Event</label>
-                    <a class="btn" href="">Lihat Lengkap</a>
-                </div>
-            </div>
-            <div class="item">
-                <div class="content">
-                    <img class="card-img" src="<?= base_url() ?>asset/event1.png" alt="Card image cap">
-                    <label class="d-block">Tanggal Event</label>
-                    <label class="d-block">Judul Event</label>
-                    <a class="btn" href="">Lihat Lengkap</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div id="kelola-ticket" class="" style="display: none;">
-        <div id="baris">
-            <div class="item">
-                <div class="content">
-                    <img class="card-img" src="<?= base_url() ?>asset/tick1.png" alt="Card image cap">
-                    <label class="d-block">Tanggal Ticket</label>
-                    <label class="d-block">Judul Ticket</label>
-                    <a class="btn" href="">Lihat Lengkap</a>
-                </div>
-            </div>
-            <div class="item">
-                <div class="content">
-                    <img class="card-img" src="<?= base_url() ?>asset/tick1.png" alt="Card image cap">
-                    <label class="d-block">Tanggal Ticket</label>
-                    <label class="d-block">Judul Ticket</label>
-                    <a class="btn" href="">Lihat Lengkap</a>
-                </div>
-            </div>
-        </div>
-        <div id="baris">
-            <div class="item">
-                <div class="content">
-                    <img class="card-img" src="<?= base_url() ?>asset/tick1.png" alt="Card image cap">
-                    <label class="d-block">Tanggal Ticket</label>
-                    <label class="d-block">Judul Ticket</label>
-                    <a class="btn" href="">Lihat Lengkap</a>
-                </div>
-            </div>
-            <div class="item">
-                <div class="content">
-                    <img class="card-img" src="<?= base_url() ?>asset/tick1.png" alt="Card image cap">
-                    <label class="d-block">Tanggal Ticket</label>
-                    <label class="d-block">Judul Ticket</label>
-                    <a class="btn" href="">Lihat Lengkap</a>
-                </div>
-            </div>
-        </div>
-    </div> -->
 </body>
 
 </html>
