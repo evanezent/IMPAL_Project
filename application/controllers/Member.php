@@ -5,6 +5,8 @@ class Member extends CI_Controller
 {
 	public function index()
 	{
+		//Sementara username getEvent dan getTicket pake esmeralda
+		//Harusnya diisi username dari session
 		$event = $this->Event_model->getEventMember("esmeralda");
 		$ticket = $this->Ticket_model->getTicketMember("esmeralda");
 
@@ -74,7 +76,7 @@ class Member extends CI_Controller
 				// Random id
 				$id = "evt-" . random_string('alnum', 5); //rand(0000, 9999);
 				//Check ID
-				//TODO : Search duplicate ID belum jalan
+//TODO : Search duplicate ID belum jalan
 				// $ada = $this->Event_model->searchId(($id));
 				// while ($ada) {
 				// 	$id = random_string('alnum', 5);
@@ -86,8 +88,7 @@ class Member extends CI_Controller
 					'namaEvent' => $this->input->post('eventname'),
 					'tanggalEvent' => $this->input->post('date'),
 					'poster' => $namafile,
-					'Validasi' => 0,
-					'delete_at' => 0 //diset jadi sebuah tanggal penghapusan, saat data tsb dihapus
+					'Validasi' => 0//diset jadi sebuah tanggal penghapusan, saat data tsb dihapus
 				);
 				$this->Event_model->inputEvent($data);
 				$this->session->set_flashdata('sukses_evt', 'Success event');
@@ -100,6 +101,13 @@ class Member extends CI_Controller
 			redirect('Member', 'refresh');
 			// echo $error;
 		}
+	}
+	public function delete_event($id)
+	{
+		$tanggal_hapus = date("Y-m-d");
+		$this->Event_model->deleteEvent($id, $tanggal_hapus);
+		$this->session->set_flashdata('deleted_event', 'Deleted !');
+		redirect('Member', 'refresh');
 	}
 	public function insert_ticket()
 	{
@@ -138,8 +146,7 @@ class Member extends CI_Controller
 					'tanggalTicket' => $this->input->post('date'),
 					'poster' => $namafile,
 					'contactPerson' => $this->input->post('contactperson'),
-					'Validasi' => 0,
-					'delete_at' => 0 //diset jadi sebuah tanggal penghapusan, saat data tsb dihapus
+					'Validasi' => 0 //diset jadi sebuah tanggal penghapusan, saat data tsb dihapus
 				);
 				$this->Ticket_model->inputTicket($data);
 				$this->session->set_flashdata('sukses_tkt', 'Success ticket');

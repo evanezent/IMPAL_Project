@@ -32,11 +32,11 @@
                             <div class="card-body">
                                 <h5 class="card-title"><?= $event['namaEvent'] ?></h5>
                                 <ul>
-                                    <li><?= $event['tanggalEvent'] ?></li>
+                                    <li><b>Tanggal Event</b> : <?= $event['tanggalEvent'] ?></li>
                                 </ul>
                                 <div class="btn-card-list">
-                                    <a href="#" class="btn">Edit</a>
-                                    <a href="#" class="btn btn-danger">Delete</a>
+                                    <a href="<?php echo base_url(); ?>Member/edit_event/<?php echo $event['idEvent'] ?>" class="btn">Edit</a>
+                                    <a href="<?php echo base_url(); ?>Member/delete_event/<?php echo $event['idEvent'] ?>" class="btn btn-danger">Delete</a>
                                 </div>
                             </div>
                         </div>
@@ -130,12 +130,12 @@
                             <div class="card-body">
                                 <h5 class="card-title"><?= $ticket['namaTicket'] ?></h5>
                                 <ul>
-                                    <li><?= $ticket['tanggalTicket'] ?></li>
-                                    <li><?= $ticket['contactPerson'] ?></li>
+                                    <li><b>Tanggal Ticket</b> : <?= $ticket['tanggalTicket'] ?></li>
+                                    <li><b>Contact Person :</b> <?= $ticket['contactPerson'] ?></li>
                                 </ul>
                                 <div class="btn-card-list">
-                                    <a href="#" class="btn">Edit</a>
-                                    <a href="#" class="btn btn-danger">Delete</a>
+                                    <a href="<?php echo base_url(); ?>Member/edit_ticket/<?php echo $ticket['idTicket'] ?>" class="btn">Edit</a>
+                                    <a href="<?php echo base_url(); ?>Member/delete_ticket/<?php echo $ticket['idTicket'] ?>" class="btn btn-danger">Delete</a>
                                 </div>
                             </div>
                         </div>

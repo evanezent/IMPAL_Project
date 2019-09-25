@@ -22,9 +22,16 @@ class Ticket_model extends CI_Model {
     }
     public function getTicketMember($username)
     {
-        $this->db->where('username',$username);
+        $where = "username LIKE '".$username."' AND delete_at IS NULL";
+        $this->db->where($where);
         $resultSet = $this->db->get('ticket');
         return $resultSet->result_array();
+    }
+    public function deleteTicket($id, $tanggal)
+    {
+        $this->db->where('idTicket', $id);
+        $date['delete_at'] = $tanggal;
+        $this->db->update('ticket', $date);
     }
 }
 ?>
