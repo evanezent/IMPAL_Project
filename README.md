@@ -24,11 +24,11 @@
 	- [ ] Searching
 	- [ ] Upload Event and Ticket
 	- [ ] Ticket and Event data for admin
-	- [ ] Input Event and Ticket
+	- [x] Input Event and Ticket
 	- [ ] Detail Event and Ticket
-	- [ ] Delete Event and Ticket
+	- [x] Delete Event and Ticket
 	- [ ] Update Event and Ticket ``` dont forget maket validation, is there all or just some data is updated ```
-	- [ ] Upload Foto
+	- [x] Upload Foto
 	- [ ] User Session
 	- [ ] Form Validator
 	- [ ] Encrypt Password
