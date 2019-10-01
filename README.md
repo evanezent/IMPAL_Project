@@ -19,13 +19,13 @@
 	- [x] Explain Item 
 	
 * Back-end :
-	- [ ] Register ``` dont forget maket validation, is the username is already exists ```
-	- [ ] Login
+	- [x] Register ``` dont forget maket validation, is the username is already exists ```
+	- [x] Login
 	- [ ] Searching
-	- [ ] Upload Event and Ticket
+	- [x] Upload Event and Ticket
 	- [ ] Ticket and Event data for admin
 	- [x] Input Event and Ticket
-	- [ ] Detail Event and Ticket
+	- [x] Detail Event and Ticket
 	- [x] Delete Event and Ticket
 	- [ ] Update Event and Ticket ``` dont forget maket validation, is there all or just some data is updated ```
 	- [x] Upload Foto
@@ -34,7 +34,7 @@
 	- [ ] Encrypt Password
 	- [ ] Delete post when the time is done
 
-* Other Features :
+* Other Features (additional) :
 	- [ ] backsound
 	- [ ] notification when something going wrong
 	
