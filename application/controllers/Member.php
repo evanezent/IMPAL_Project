@@ -66,7 +66,7 @@ class Member extends CI_Controller
 
 			if (!$this->upload->do_upload('poster')) {
 				$error = array('error' => $this->upload->display_errors());
-				echo $error;
+				// echo $error;
 				$this->session->set_flashdata('fail_evt', 'Fail event');
 				redirect('Member', 'refresh');
 			} else {
@@ -146,7 +146,7 @@ class Member extends CI_Controller
 					'tanggalTicket' => $this->input->post('date'),
 					'poster' => $namafile,
 					'contactPerson' => $this->input->post('contactperson'),
-					'Validasi' => 0 //diset jadi sebuah tanggal penghapusan, saat data tsb dihapus
+					'Validasi' => 0 
 				);
 				$this->Ticket_model->inputTicket($data);
 				$this->session->set_flashdata('sukses_tkt', 'Success ticket');
@@ -159,5 +159,12 @@ class Member extends CI_Controller
 			redirect('Member', 'refresh');
 			// echo $error;
 		}
+	}
+	public function delete_ticket($id)
+	{
+		$tanggal_hapus = date("Y-m-d");
+		$this->Ticket_model->deleteTicket($id, $tanggal_hapus);
+		$this->session->set_flashdata('deleted_ticket', 'Deleted !');
+		redirect('Member', 'refresh');
 	}
 }

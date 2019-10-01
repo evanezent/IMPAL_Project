@@ -159,6 +159,10 @@ footer{
 .center .card{
     width: 250px;
 }
+.alert-pesan{
+    width: 500px;
+    margin: 1vh auto;
+}
 @media (min-width: 1360px){
     .center .card{
         width: 270px;

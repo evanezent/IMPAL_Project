@@ -1,19 +1,28 @@
 <body class="container-fluid">
-    <?php
-    if (isset($_SESSION['sukses_evt'])) {
-        $this->load->view('alert/success_event');
-    } else if (isset($_SESSION['fail_evt'])) {
-        $this->load->view('alert/fail_event');
-    }
-    if (isset($_SESSION['sukses_tkt'])) {
-        $this->load->view('alert/success_ticket');
-    } else if (isset($_SESSION['fail_tkt'])) {
-        $this->load->view('alert/fail_ticket');
-    }
-    if (isset($_SESSION['fail_pic'])) {
-        $this->load->view('alert/no_pict');
-    }
-    ?>
+    <div class="alert-pesan">
+        <?php
+        if (isset($_SESSION['sukses_evt'])) {
+            $this->load->view('alert/success_event');
+        } else if (isset($_SESSION['fail_evt'])) {
+            $this->load->view('alert/fail_event');
+        }
+        if (isset($_SESSION['sukses_tkt'])) {
+            $this->load->view('alert/success_ticket');
+        } else if (isset($_SESSION['fail_tkt'])) {
+            $this->load->view('alert/fail_ticket');
+        }
+        if (isset($_SESSION['fail_pic'])) {
+            $this->load->view('alert/no_pict');
+        }
+        if (isset($_SESSION['deleted_event'])) {
+            $this->load->view('alert/deleted_event');
+        }
+        if (isset($_SESSION['deleted_ticket'])) {
+            $this->load->view('alert/deleted_ticket');
+        }
+        ?>
+    </div>
+
     <!-- DATA EVENT dan TICKET milik Member -->
     <div id="kelola-event" class="member-event">
         <div class="title-list-member">
