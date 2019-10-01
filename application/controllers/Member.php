@@ -51,9 +51,9 @@ class Member extends CI_Controller
 			$this->load->view('page_submit', $data);
 		}
 	}
-	public function insert_event()
+
+	public function insertEvent()
 	{
-		//get foto
 		$gambar = $_FILES['poster']['name'];
 		if ($gambar) {
 			$config['upload_path']          =  './upload/event';
@@ -66,15 +66,14 @@ class Member extends CI_Controller
 
 			if (!$this->upload->do_upload('poster')) {
 				$error = array('error' => $this->upload->display_errors());
-				// echo $error;
+				echo $error;
 				$this->session->set_flashdata('fail_evt', 'Fail event');
 				redirect('Member', 'refresh');
 			} else {
-				// Get file name
 				$foto = $this->upload->data();
 				$namafile = $foto['file_name'];
 				// Random id
-				$id = "evt-" . random_string('alnum', 5); //rand(0000, 9999);
+				$id = "evt-" . random_string('alnum', 5);
 				//Check ID
 //TODO : Search duplicate ID belum jalan
 				// $ada = $this->Event_model->searchId(($id));
@@ -102,18 +101,20 @@ class Member extends CI_Controller
 			// echo $error;
 		}
 	}
-	public function delete_event($id)
+
+	public function deleteEvent($id)
 	{
 		$tanggal_hapus = date("Y-m-d");
 		$this->Event_model->deleteEvent($id, $tanggal_hapus);
 		$this->session->set_flashdata('deleted_event', 'Deleted !');
 		redirect('Member', 'refresh');
 	}
-	public function insert_ticket()
+
+	public function insertTicket()
 	{
 		$gambar = $_FILES['poster']['name'];
+
 		if ($gambar) {
-			//get foto
 			$config['upload_path']          =  './upload/ticket';
 			$config['allowed_types']        =  'gif|jpeg|jpg|png';
 			$config['max_size']             =  1000000000000;
@@ -123,7 +124,6 @@ class Member extends CI_Controller
 			$this->load->library('upload', $config);
 
 			if (!$this->upload->do_upload('poster')) {
-				// Flash message foto kosong
 				$error = array('error' => $this->upload->display_errors());
 				echo $error;
 				$this->session->set_flashdata('fail_tkt', 'Success ticket');
@@ -131,7 +131,6 @@ class Member extends CI_Controller
 			} else {
 				$foto = $this->upload->data();
 				$namafile = $foto['file_name'];
-				// Random id
 				$id = "tkt-" . random_string('alnum', 5);
 				//TODO : Search duplicate ID belum jalan
 				// $ada = $this->Event_model->searchId(($id));
@@ -153,14 +152,13 @@ class Member extends CI_Controller
 				redirect('Member', 'refresh');
 			}
 		}else{
-			// Flash message foto kosong
 			echo "GAMBAR KOSONG";
 			$this->session->set_flashdata('fail_pic', 'Fail pic');
 			redirect('Member', 'refresh');
-			// echo $error;
 		}
 	}
-	public function delete_ticket($id)
+
+	public function deleteTicket($id)
 	{
 		$tanggal_hapus = date("Y-m-d");
 		$this->Ticket_model->deleteTicket($id, $tanggal_hapus);

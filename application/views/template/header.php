@@ -44,6 +44,13 @@
             <div class="user_button">
                 <a href="#" class="btn btn-sm" role="button" data-toggle="modal" data-target="#modalLogin">Login</a>
                 <a href="<?= base_url(); ?>user/register" class="btn btn-sm" role="button">Register</a>
+                
+                <!-- DI GANTI JADI INI JIKA UDAH LOGIN
+                <img class="dropdown-toggle" id="account-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<?= base_url('asset/default_pic.png'); ?>" width="40vw" alt="">
+                <div class="dropdown-menu" aria-labelledby="account-dropdown">
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div> -->
             </div>
         </div>
     </nav>

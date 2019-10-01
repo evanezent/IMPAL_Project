@@ -44,82 +44,14 @@
                                     <li><b>Tanggal Event</b> : <?= $event['tanggalEvent'] ?></li>
                                 </ul>
                                 <div class="btn-card-list">
-                                    <a href="<?php echo base_url(); ?>Member/edit_event/<?php echo $event['idEvent'] ?>" class="btn">Edit</a>
-                                    <a href="<?php echo base_url(); ?>Member/delete_event/<?php echo $event['idEvent'] ?>" class="btn btn-danger">Delete</a>
+                                    <a href="<?php echo base_url(); ?>Member/editEvent/<?php echo $event['idEvent'] ?>" class="btn">Edit</a>
+                                    <a href="<?php echo base_url(); ?>Member/deleteEvent/<?php echo $event['idEvent'] ?>" class="btn btn-danger">Delete</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 <?php endforeach ?>
             <?php } ?>
-            <!-- <div>
-                <div class="card">
-                    <img src="<?= base_url() ?>asset/event1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Judul Event / Ticket</h5>
-                        <ul>
-                            <li>Tanggal</li>
-                            <li>Tempat</li>
-                            <li>CP / utk ticket</li>    
-                        </ul>
-                        <div class="btn-card-list">
-                            <a href="#" class="btn">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="card">
-                    <img src="<?= base_url() ?>asset/event1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Judul Event / Ticket</h5>
-                        <ul>
-                            <li>Tanggal</li>
-                            <li>Tempat</li>
-                            <li>CP / utk ticket</li>    
-                        </ul>
-                        <div class="btn-card-list">
-                            <a href="#" class="btn">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="card">
-                    <img src="<?= base_url() ?>asset/event1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Judul Event / Ticket</h5>
-                        <ul>
-                            <li>Tanggal</li>
-                            <li>Tempat</li>
-                            <li>CP / utk ticket</li>    
-                        </ul>
-                        <div class="btn-card-list">
-                            <a href="#" class="btn">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="card">
-                    <img src="<?= base_url() ?>asset/event1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Judul Event / Ticket</h5>
-                        <ul>
-                            <li>Tanggal</li>
-                            <li>Tempat</li>
-                            <li>CP / utk ticket</li>    
-                        </ul>
-                        <div class="btn-card-list">
-                            <a href="#" class="btn">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             </div>
     </div>
     <div id="kelola-ticket" class="member-ticket">
@@ -143,82 +75,14 @@
                                     <li><b>Contact Person :</b> <?= $ticket['contactPerson'] ?></li>
                                 </ul>
                                 <div class="btn-card-list">
-                                    <a href="<?php echo base_url(); ?>Member/edit_ticket/<?php echo $ticket['idTicket'] ?>" class="btn">Edit</a>
-                                    <a href="<?php echo base_url(); ?>Member/delete_ticket/<?php echo $ticket['idTicket'] ?>" class="btn btn-danger">Delete</a>
+                                    <a href="<?php echo base_url(); ?>Member/editTicket/<?php echo $ticket['idTicket'] ?>" class="btn">Edit</a>
+                                    <a href="<?php echo base_url(); ?>Member/deleteTicket/<?php echo $ticket['idTicket'] ?>" class="btn btn-danger">Delete</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 <?php endforeach ?>
             <?php } ?>
-            <!-- <div>
-                <div class="card">
-                    <img src="<?= base_url() ?>asset/tick1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Judul Event / Ticket</h5>
-                        <ul>
-                            <li>Tanggal</li>
-                            <li>Tempat</li>
-                            <li>CP / utk ticket</li>    
-                        </ul>
-                        <div class="btn-card-list">
-                            <a href="#" class="btn">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="card">
-                    <img src="<?= base_url() ?>asset/tick1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Judul Event / Ticket</h5>
-                        <ul>
-                            <li>Tanggal</li>
-                            <li>Tempat</li>
-                            <li>CP / utk ticket</li>    
-                        </ul>
-                        <div class="btn-card-list">
-                            <a href="#" class="btn">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="card">
-                    <img src="<?= base_url() ?>asset/tick1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Judul Event / Ticket</h5>
-                        <ul>
-                            <li>Tanggal</li>
-                            <li>Tempat</li>
-                            <li>CP / utk ticket</li>    
-                        </ul>
-                        <div class="btn-card-list">
-                            <a href="#" class="btn">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="card">
-                    <img src="<?= base_url() ?>asset/tick1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Judul Event / Ticket</h5>
-                        <ul>
-                            <li>Tanggal</li>
-                            <li>Tempat</li>
-                            <li>CP / utk ticket</li>    
-                        </ul>
-                        <div class="btn-card-list">
-                            <a href="#" class="btn">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             </div>
     </div>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -252,24 +116,11 @@
     </script>
     <!-- INPUT -->
     <div id="input-event" class="justify-content-center" style="display: none;">
-        <?php echo form_open_multipart('member/insert_event'); ?>
+        <?php echo form_open_multipart('member/insertEvent'); ?>
         <div class="form-group">
             <label for="eventname">Nama Event</label>
             <input type="input" class="form-control" name="eventname" required>
         </div>
-        <!-- <div class="form-group">
-                <label for="category">Kategori</label>
-                <select name="" class="form-control" name="category">
-                    <option value="Music">Musik</option>
-                    <option value="Party">Pesta</option>
-                    <option value="Sport">Olahraga</option>
-                    <option value="Education">Edukasi</option>
-                    <option value="Charity">Amal</option>
-                    <option value="Travel">Travel</option>
-                    <option value="Art">Seni</option>
-                    <option value="Seminar">Seminar & Workshop</option>
-                </select>
-            </div> -->
         <div class="form-group">
             <label for="date">Tanggal Event</label>
             <input type="date" class="form-control" name="date" required>
@@ -286,7 +137,7 @@
     </div>
 
     <div id="input-ticket" class="justify-content-center" style="display: none;">
-        <?php echo form_open_multipart('member/insert_ticket'); ?>
+        <?php echo form_open_multipart('member/insertTicket'); ?>
         <div class="form-group">
             <label for="ticketname">Nama Ticket</label>
             <input type="input" class="form-control" name="ticketname" required>
@@ -295,19 +146,6 @@
             <label for="contatperson">Contact Person</label>
             <input type="input" class="form-control" name="contactperson" required>
         </div>
-        <!-- <div class="form-group">
-                <label for="category">Kategori</label>
-                <select name="" class="form-control" name="category">
-                    <option value="Music">Musik</option>
-                    <option value="Party">Pesta</option>
-                    <option value="Sport">Olahraga</option>
-                    <option value="Education">Edukasi</option>
-                    <option value="Charity">Amal</option>
-                    <option value="Travel">Travel</option>
-                    <option value="Art">Seni</option>
-                    <option value="Seminar">Seminar & Workshop</option>
-                </select>
-            </div> -->
         <div class="form-group">
             <label for="date">Tanggal Ticket</label>
             <input type="date" class="form-control" name="date" required>

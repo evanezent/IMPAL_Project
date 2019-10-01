@@ -14,24 +14,27 @@ class Event_model extends CI_Model {
         $query = $this->db->get();
         return $query->result_array();
     }
+
     public function getEventMember($username)
     {
-        $where = "username LIKE '".$username."' AND delete_at IS NULL";
-        $this->db->where($where);
+        $condition = "username LIKE '".$username."' AND delete_at IS NULL";
+        $this->db->where($condition);
         $resultSet = $this->db->get('events');
         return $resultSet->result_array();
     }
+
     public function inputEvent($data)
     {
         $this->db->insert('events', $data);
     }
+
     public function deleteEvent($id, $tanggal)
     {
         $this->db->where('idEvent', $id);
         $date['delete_at'] = $tanggal;
         $this->db->update('events', $date);
     }
-    // Check if the ID is already exists
+
     public function searchId($id)
     {
         $this->db->where('idEvent', $id);
@@ -42,6 +45,7 @@ class Event_model extends CI_Model {
             return false;
         }
     }
+
     public function SearchNamaEvent(){
         $keyword = $this->input->post('keyword', true);
         $where = "namaEvent like '%" .$keyword. "%' ";
