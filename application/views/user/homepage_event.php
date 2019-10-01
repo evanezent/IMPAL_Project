@@ -66,8 +66,9 @@
     </div>
     <div id="list" class="container d-block">
         <!-- start foreach -->
+        <?php for ($i=0; $i < count($events,0); $i = $i+2) { ?>
         <div class="row">
-            <?php foreach ($events as $ev) : ?>
+            <?php foreach (array_slice($events,$i,2) as $ev) : ?>
                 <div class="card">
                     <img class="card-img-top" src="<?php echo base_url(); ?>asset/<?php echo $ev['poster'] ?>" alt="Card image cap">
                     <div class="card-body text-center">
@@ -76,9 +77,11 @@
                     </div>
                 </div>
             <?php endforeach ?>
+            
         </div>
+        <?php } ?>
         <!-- end foreach -->
-        <div class="row">
+        <!-- <div class="row">
             <div class="card">
                 <img class="card-img-top" src="<?php echo base_url(); ?>asset/event3.jpg" alt="Card image cap">
                 <div class="card-body text-center">
@@ -106,7 +109,7 @@
                     <a href="#" class="btn">Read More</a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 </body>
