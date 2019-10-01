@@ -11,24 +11,29 @@
             <!-- Indicators -->
             <ul class="carousel-indicators">
                 <!-- start for i -->
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <?php for ($i=0; $i < 5; $i++) { ?>
+                <li data-target="#demo" data-slide-to="<?php echo $i ?>" class="active"></li>
                 <!-- end for i -->
-                <li data-target="#demo" data-slide-to="1"></li>
+                <?php } ?>
+                <!-- <li data-target="#demo" data-slide-to="1"></li>
                 <li data-target="#demo" data-slide-to="2"></li>
                 <li data-target="#demo" data-slide-to="3"></li>
-                <li data-target="#demo" data-slide-to="4"></li>
+                <li data-target="#demo" data-slide-to="4"></li> -->
             </ul>
 
             <!-- The slideshow -->
             <div class="carousel-inner text-center">
                 <!-- start foreach -->
+                <?php foreach ($events as $ev) : ?>
                 <div class="carousel-item active" data-ride="false">
-                    <div class="bg-carousel" style="background:url('<?php echo base_url(); ?>asset/event1.png');filter: blur(8px);-webkit-filter: blur(8px);">
+                    <div class="bg-carousel" style="background:url('<?php echo base_url(); ?>asset/<?php echo $ev['poster'] ?>');filter: blur(8px);-webkit-filter: blur(8px);">
                     </div>
                     <div class="img-carousel">
-                        <img src="<?php echo base_url(); ?>asset/event1.png" alt="UNKNOWN" height="100%">
+                        <img src="<?php echo base_url(); ?>asset/<?php echo $ev['poster'] ?>" alt="UNKNOWN" height="100%">
                     </div>
                 </div>
+                <?php endforeach ?>
+                
                 <!-- end foreach -->
                 <!-- <div class="carousel-item" data-ride="false">
                     <img src="<?php echo base_url(); ?>asset/event2.jpg" alt="UNKNOWN" height="100%">

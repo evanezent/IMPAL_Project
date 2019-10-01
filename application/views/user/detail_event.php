@@ -32,24 +32,6 @@
                                 <span id="tanggalEvent"><?php echo $ev['tanggalEvent'] ?></span>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                <label>Contact Person </label>
-                            </td>
-                            <td>:</td>
-                            <td>
-                                <span id="cpEvent"></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="">Place </label>
-                            </td>
-                            <td>:</td>
-                            <td>
-                                <span id="placeEvent"></span>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
                 <?php endforeach ?>

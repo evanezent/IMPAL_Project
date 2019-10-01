@@ -43,13 +43,12 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`idEvent`, `username`, `namaEvent`, `tanggalEvent`, `poster`, `Validasi`, `delete_at`) VALUES
-('A6jJKQyCfn', 'esmeralda', 'adasdad', NULL, 'Good_Menu_Sistem5.PNG', NULL, NULL),
-('BX188', 'esmeralda', 'konser Dangdut', '2015-08-12', 'ho.jpg', 1, '2015-08-22'),
-('evt-', 'esmeralda', 'adasdad', NULL, '', NULL, NULL),
-('evt-000', 'esmeralda', 'p', NULL, '', NULL, NULL),
-('evt-cGSRA', 'esmeralda', 'hjkgf', '2019-09-14', 'Good_Menu_Sistem7.PNG', 0, '0000-00-00'),
-('evt-WTdox', 'esmeralda', 'hjkgf', NULL, 'Alif2.jpg', NULL, NULL),
-('iwEDx6OzpG', 'esmeralda', 'asdaf', NULL, '', NULL, NULL);
+('event1', 'esmeralda', 'Vans World Cup of Surfing', '2018-11-25', 'event1.png', NULL, NULL),
+('event2', 'esmeralda', 'Seminar Born To Be Developer', '2015-04-26', 'event2.jpg', NULL, NULL),
+('event3-', 'esmeralda', 'Freestyle on Jam', '2012-11-11', 'event3.jpg', NULL, NULL),
+('event4', 'esmeralda', 'Jak Cloth 2014', '2014-05-28', 'event4.jpg', NULL, NULL),
+('event5', 'esmeralda', 'Futsal Competition 2018', '2018-01-14', 'event5.jpg', NULL, NULL),
+('event6', 'esmeralda', 'Inception Saturdays', '2014-03-22', 'event6.jpg', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -71,7 +70,8 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`username`, `namaMember`, `email`, `password`, `alamat`, `noHp`) VALUES
-('esmeralda', 'Esmeralda Smith', 'esmeralda@gmail.com', 'TyU7h7bNm', 'Jalan Patimura no.1, NBandung, Jawa Barat', '08977456821');
+('esmeralda', 'Esmeralda Smith', 'esmeralda@gmail.com', 'TyU7h7bNm', 'Jalan Patimura no.1, Bandung, Jawa Barat', '08977456821'),
+('pranapramudita', 'Prana Pramudita Kusdiananggalih', 'pranapramudita@gmail.com', 'password', 'Batununggal, Bandung', '081273470046');
 
 -- --------------------------------------------------------
 
