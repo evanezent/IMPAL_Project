@@ -13,8 +13,9 @@ class User extends CI_Controller {
 
 	public function ticket()
 	{
+		$data['events']=$this->Ticket_model->getTicket();
 		$this->load->view('template/header');
-		$this->load->view('user/homepage_ticket');
+		$this->load->view('user/homepage_ticket',$data);
 		$this->load->view('template/footer');
 	}
 

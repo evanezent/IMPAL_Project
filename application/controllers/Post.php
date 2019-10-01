@@ -10,8 +10,9 @@ class Post extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function ticket()
+	public function ticket($id)
 	{
+		$data['ticket']=$this->Ticket_model->getTicketID($id);
 		$this->load->view('template/header');
 		$this->load->view('user/detail_ticket');
 		$this->load->view('template/footer');

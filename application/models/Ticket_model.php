@@ -1,11 +1,17 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Ticket_model extends CI_Model {
-    public function select(){
+    public function getTicket(){
         $this->db->select('*');
         $this->db->from('ticket');
         $query = $this->db->get();
         return $query->result();   
+    }
+    public function getTicketID($id){
+        $this->db->where('idTicket', $id);
+        $this->db->from('ticket');
+        $query = $this->db->get();
+        return $query->result_array();
     }
     public function inputTicket($data)
     {

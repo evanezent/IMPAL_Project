@@ -10,7 +10,7 @@
     </div>
     <div id="list" class="container d-block">
         <!-- start foreach -->
-        <div class="row">
+        <!-- <div class="row">
             <div class="card">
                 <img class="card-img-top" src="<?php echo base_url(); ?>asset/event1.png" alt="Card image cap">
                 <div class="card-body text-center">
@@ -23,10 +23,10 @@
                     <a href="#" class="btn">Read More</a>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- end foreach -->
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="card">
                 <img class="card-img-top" src="<?php echo base_url(); ?>asset/event3.jpg" alt="Card image cap">
                 <div class="card-body text-center">
@@ -54,7 +54,7 @@
                     <a href="#" class="btn">Read More</a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 </body>
