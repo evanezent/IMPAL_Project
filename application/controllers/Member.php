@@ -88,7 +88,7 @@ class Member extends CI_Controller
 					'namaEvent' => $this->input->post('eventname'),
 					'tanggalEvent' => $this->input->post('date'),
 					'poster' => $namafile,
-					'Validasi' => 0//diset jadi sebuah tanggal penghapusan, saat data tsb dihapus
+					'Validasi' => 0
 				);
 				$this->Event_model->inputEvent($data);
 				$this->session->set_flashdata('sukses_evt', 'Success event');

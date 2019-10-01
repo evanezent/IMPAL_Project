@@ -25,7 +25,7 @@ class Post extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 }
-}
+
 
 /* End of file Post.php */
 /* Location: ./application/controllers/Post.php */
