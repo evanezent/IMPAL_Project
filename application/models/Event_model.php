@@ -42,5 +42,14 @@ class Event_model extends CI_Model {
             return false;
         }
     }
+    public function SearchNamaEvent(){
+        $keyword = $this->input->post('keyword', true);
+        $where = "namaEvent like '%" .$keyword. "%' ";
+        $this->db->select('*');
+        $this->db->from('events');
+        $this->db->where($where);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
 }
 ?>
