@@ -25,7 +25,8 @@
 	- [x] Upload Event and Ticket
 	- [ ] Ticket and Event data for admin
 	- [x] Input Event and Ticket
-	- [x] Detail Event and Ticket
+	- [x] Detail Event
+	- [ ] Detail Ticket
 	- [x] Delete Event and Ticket
 	- [ ] Update Event and Ticket ``` dont forget maket validation, is there all or just some data is updated ```
 	- [x] Upload Foto
