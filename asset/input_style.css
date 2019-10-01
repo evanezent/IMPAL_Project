@@ -53,6 +53,9 @@ form{
 .member-event .slick-slide img{
     height: 300px;
 }
+.member-ticket .slick-slide img {
+    height: 130px;
+}
 .slick-slider{
     margin: 20px;
 }
