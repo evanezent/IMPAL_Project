@@ -43,13 +43,12 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`idEvent`, `username`, `namaEvent`, `tanggalEvent`, `poster`, `Validasi`, `delete_at`) VALUES
-('evt-30gAB', 'esmeralda', 'Sabyan', '2019-09-28', 'event6.jpg', 0, '2019-09-25'),
-('evt-6f3Fa', 'esmeralda', 'NYOBA SI', '2019-10-05', 'event4.jpg', 0, NULL),
-('evt-6SPQI', 'esmeralda', 'NYOBA KOK', '2019-10-16', 'login.PNG', 0, '2019-10-01'),
-('evt-8ZFgB', 'esmeralda', 'HMMMMM', '2019-10-17', 'login1.PNG', 0, NULL),
-('evt-hKRov', 'esmeralda', 'SI NYOBA', '2019-10-04', 'event5.jpg', 0, NULL),
-('evt-sd9vj', 'esmeralda', 'NYOBA LAGI', '2019-11-02', '44916249_2357618624253459_8748134120300740608_n.jpg', 0, '2019-10-01'),
-('evt-SHwyf', 'esmeralda', 'AMAN KOK', '2019-10-19', 'menu_tiket_user.PNG', 0, '2019-10-01');
+('event1', 'esmeralda', 'Vans World Cup of Surfing', '2018-11-25', 'event1.png', NULL, NULL),
+('event2', 'esmeralda', 'Seminar Born To Be Developer', '2015-04-26', 'event2.jpg', NULL, NULL),
+('event3-', 'esmeralda', 'Freestyle on Jam', '2012-11-11', 'event3.jpg', NULL, NULL),
+('event4', 'esmeralda', 'Jak Cloth 2014', '2014-05-28', 'event4.jpg', NULL, NULL),
+('event5', 'esmeralda', 'Futsal Competition 2018', '2018-01-14', 'event5.jpg', NULL, NULL),
+('event6', 'esmeralda', 'Inception Saturdays', '2014-03-22', 'event6.jpg', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -71,7 +70,8 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`username`, `namaMember`, `email`, `password`, `alamat`, `noHp`) VALUES
-('esmeralda', 'Esmeralda Smith', 'esmeralda@gmail.com', 'TyU7h7bNm', 'Jalan Patimura no.1, NBandung, Jawa Barat', '08977456821');
+('esmeralda', 'Esmeralda Smith', 'esmeralda@gmail.com', 'TyU7h7bNm', 'Jalan Patimura no.1, Bandung, Jawa Barat', '08977456821'),
+('pranapramudita', 'Prana Pramudita Kusdiananggalih', 'pranapramudita@gmail.com', 'ac43724f16e9241d9904', 'Pegadaian Cikudapateuh, Jl. Jendral Ahmad Yani, Su', '081273470046');
 
 -- --------------------------------------------------------
 
