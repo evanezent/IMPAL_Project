@@ -24,10 +24,7 @@ class Post extends CI_Controller {
 		$this->load->view('user/detail_event',$data);
 		$this->load->view('template/footer');
 	}
-	public function searchEvent(){
-        $data['event']=$this->Event_model->SearchNamaEvent();
-        $this->load->view('homepage_Event',$data);
-    }
+}
 }
 
 /* End of file Post.php */

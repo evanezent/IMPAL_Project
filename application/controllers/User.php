@@ -77,6 +77,14 @@ class User extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect(base_url('login'));
 	}
+	public function searchEvent(){
+        $data['event']=$this->Event_model->SearchNamaEvent();
+        $this->load->view('homepage_Event',$data);
+	}
+	public function searchTicket(){
+        $data['ticket']=$this->Ticket_model->SearchNamaTicket();
+        $this->load->view('homepage_Ticket',$data);
+	}
 	
 }
 
