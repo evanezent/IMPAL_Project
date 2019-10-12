@@ -166,6 +166,11 @@ footer{
     width: 500px;
     margin: 1vh auto;
 }
+#edit-event, #edit-ticket{
+    margin: 1vh;
+    display: flex;
+    justify-content: center;
+}
 @media (min-width: 1360px){
     .center .card{
         width: 270px;

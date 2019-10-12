@@ -35,6 +35,12 @@ class Event_model extends CI_Model {
         $this->db->update('events', $date);
     }
 
+    public function editEvent($id, $data)
+    {
+        $this->db->where('idEvent', $id);
+        $this->db->update('events', $data);
+    }
+
     public function searchId($id)
     {
         $this->db->where('idEvent', $id);

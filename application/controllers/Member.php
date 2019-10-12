@@ -11,11 +11,11 @@ class Member extends CI_Controller
 		$ticket = $this->Ticket_model->getTicketMember("esmeralda");
 
 		$data = [
-			'events'=>$event,
-			'tickets'=>$ticket
+			'events' => $event,
+			'tickets' => $ticket
 		];
 		$this->load->view('template/header_member');
-		$this->load->view('user/data',$data);
+		$this->load->view('user/data', $data);
 		$this->load->view('template/footer_member');
 	}
 
@@ -75,7 +75,7 @@ class Member extends CI_Controller
 				// Random id
 				$id = "evt-" . random_string('alnum', 5);
 				//Check ID
-//TODO : Search duplicate ID belum jalan
+				//TODO : Search duplicate ID belum jalan
 				// $ada = $this->Event_model->searchId(($id));
 				// while ($ada) {
 				// 	$id = random_string('alnum', 5);
@@ -108,6 +108,65 @@ class Member extends CI_Controller
 		$this->Event_model->deleteEvent($id, $tanggal_hapus);
 		$this->session->set_flashdata('deleted_event', 'Deleted !');
 		redirect('Member', 'refresh');
+	}
+
+	public function editEvent($id)
+	{
+		$data['events'] = $this->Event_model->getEventID($id);
+
+		$this->load->view('template/header_member');
+		$this->load->view('user/edit_event', $data);
+		$this->load->view('template/footer_member');
+	}
+
+	public function editEventHandle()
+	{
+		$id = $this->input->post('idevent');
+		$gambar = $_FILES['poster']['name'];
+
+		if ($gambar) {
+			$config['upload_path']          =  './upload/event';
+			$config['allowed_types']        =  'gif|jpeg|jpg|png';
+			$config['max_size']             =  1000000000000;
+			$config['max_width']            =  5000;
+			$config['max_height']           =  5000;
+
+			$this->load->library('upload', $config);
+
+			if (!$this->upload->do_upload('poster')) {
+				$error = array('error' => $this->upload->display_errors());
+				echo $error;
+				$this->session->set_flashdata('fail_evt', 'Fail event');
+				redirect('Member', 'refresh');
+			} else {
+				$foto = $this->upload->data();
+				$namafile = $foto['file_name'];
+				//Check ID
+				//TODO : Search duplicate ID belum jalan
+				// $ada = $this->Event_model->searchId(($id));
+				// while ($ada) {
+				// 	$id = random_string('alnum', 5);
+				// 	$ada = $this->Event_model->searchId(($id));
+				// }
+				$data = array(
+					'namaEvent' => $this->input->post('eventname'),
+					'tanggalEvent' => $this->input->post('date'),
+					'poster' => $namafile
+				);
+				$this->Event_model->editEvent($id, $data);
+				$this->session->set_flashdata('sukses_evt', 'Success event');
+				redirect('Member', 'refresh');
+			}
+		} else {
+			$data = array(
+				'namaEvent' => $this->input->post('eventname'),
+				'tanggalEvent' => $this->input->post('date')
+			);
+
+			$this->Event_model->editEvent($id, $data);
+			$this->session->set_flashdata('sukses_evt', 'Success event');
+			redirect('Member', 'refresh');
+		}
 	}
 
 	public function insertTicket()
@@ -145,13 +204,13 @@ class Member extends CI_Controller
 					'tanggalTicket' => $this->input->post('date'),
 					'poster' => $namafile,
 					'contactPerson' => $this->input->post('contactperson'),
-					'Validasi' => 0 
+					'Validasi' => 0
 				);
 				$this->Ticket_model->inputTicket($data);
 				$this->session->set_flashdata('sukses_tkt', 'Success ticket');
 				redirect('Member', 'refresh');
 			}
-		}else{
+		} else {
 			echo "GAMBAR KOSONG";
 			$this->session->set_flashdata('fail_pic', 'Fail pic');
 			redirect('Member', 'refresh');
@@ -164,5 +223,66 @@ class Member extends CI_Controller
 		$this->Ticket_model->deleteTicket($id, $tanggal_hapus);
 		$this->session->set_flashdata('deleted_ticket', 'Deleted !');
 		redirect('Member', 'refresh');
+	}
+
+	public function editTicket($id)
+	{
+		$data['tickets'] = $this->Ticket_model->getTicketID($id);
+
+		$this->load->view('template/header_member');
+		$this->load->view('user/edit_ticket', $data);
+		$this->load->view('template/footer_member');
+	}
+
+	public function editTicketHandle()
+	{
+		$id = $this->input->post('idticket');
+		$gambar = $_FILES['poster']['name'];
+
+		if ($gambar) {
+			$config['upload_path']          =  './upload/ticket';
+			$config['allowed_types']        =  'gif|jpeg|jpg|png';
+			$config['max_size']             =  1000000000000;
+			$config['max_width']            =  5000;
+			$config['max_height']           =  5000;
+
+			$this->load->library('upload', $config);
+
+			if (!$this->upload->do_upload('poster')) {
+				$error = array('error' => $this->upload->display_errors());
+				echo $error;
+				$this->session->set_flashdata('fail_tkt', 'Fail ticket');
+				redirect('Member', 'refresh');
+			} else {
+				$foto = $this->upload->data();
+				$namafile = $foto['file_name'];
+				//Check ID
+				//TODO : Search duplicate ID belum jalan
+				// $ada = $this->Event_model->searchId(($id));
+				// while ($ada) {
+				// 	$id = random_string('alnum', 5);
+				// 	$ada = $this->Event_model->searchId(($id));
+				// }
+				$data = array(
+					'namaTicket' => $this->input->post('ticketname'),
+					'tanggalTicket' => $this->input->post('date'),
+					'poster' => $namafile,
+					'contactPerson' => $this->input->post('contactperson')
+				);
+				$this->Ticket_model->editTicket($id, $data);
+				$this->session->set_flashdata('sukses_tkt', 'Success Ticket');
+				redirect('Member', 'refresh');
+			}
+		} else {
+			$data = array(
+				'namaTicket' => $this->input->post('ticketname'),
+				'tanggalTicket' => $this->input->post('date'),
+				'contactPerson' => $this->input->post('contactperson')
+			);
+
+			$this->Ticket_model->editTicket($id, $data);
+			$this->session->set_flashdata('sukses_evt', 'Success Ticket');
+			redirect('Member', 'refresh');
+		}
 	}
 }

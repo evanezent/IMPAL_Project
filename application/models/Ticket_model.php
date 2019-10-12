@@ -39,5 +39,11 @@ class Ticket_model extends CI_Model {
         $date['delete_at'] = $tanggal;
         $this->db->update('ticket', $date);
     }
+
+    public function editTicket($id, $data)
+    {
+        $this->db->where('idTicket', $id);
+        $this->db->update('ticket', $data);
+    }
 }
 ?>
