@@ -45,5 +45,15 @@ class Ticket_model extends CI_Model {
         $this->db->where('idTicket', $id);
         $this->db->update('ticket', $data);
     }
+
+    public function SearchTicket(){
+        $keyword = $this->input->post('keyword', true);
+        $where = "namaTicket like '%" .$keyword. "%' ";
+        $this->db->select('*');
+        $this->db->from('ticket');
+        $this->db->where($where);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
 }
 ?>
