@@ -63,19 +63,20 @@ class User extends CI_Controller {
 				'status' => "login"
 				);
  
-			$this->session->set_userdata($data_session);
+			$this->session->set_userdata('user',$data_session);
  
 			redirect(base_url("member"));
  
 		}else{
 			echo "Terjadi kesalahan input username/password";
+			echo(md5($password));
 		}
 
 	}
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		redirect(base_url('login'));
+		redirect('User');
 	}
 	public function searchEvent(){
         $data['event']=$this->Event_model->SearchNamaEvent();

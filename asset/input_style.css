@@ -171,6 +171,9 @@ footer{
     display: flex;
     justify-content: center;
 }
+.user-login{
+    justify-content: space-between;
+}
 @media (min-width: 1360px){
     .center .card{
         width: 270px;
