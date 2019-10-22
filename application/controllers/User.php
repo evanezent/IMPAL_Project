@@ -73,20 +73,27 @@ class User extends CI_Controller {
 		}
 
 	}
+
 	public function logout()
 	{
 		$this->session->sess_destroy();
 		redirect('User');
 	}
+
 	public function searchEvent(){
         $data['event']=$this->Event_model->SearchNamaEvent();
         $this->load->view('homepage_Event',$data);
 	}
+	
 	public function searchTicket(){
         $data['ticket']=$this->Ticket_model->SearchNamaTicket();
         $this->load->view('homepage_Ticket',$data);
 	}
 	
+	public function forbiden(){
+		$this->session->set_flashdata('login_first', 'Silahkan login terlebih dahulu');
+		redirect('User');
+	}
 }
 
 /* End of file User.php */
