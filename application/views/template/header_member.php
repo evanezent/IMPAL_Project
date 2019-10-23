@@ -17,12 +17,9 @@
 </head>
 <!-- Check session -->
 <?php
-    if (!$_SESSION['user']){
-        redirect('User/forbiden');
-    }
-    if(isset($_SESSION['login_first'])){
-        $this->load->view('alert/login_first');
-    }
+if (!$_SESSION['user']) {
+    redirect('User/forbiden');
+}
 ?>
 <!-- HEADER -->
 <header>
@@ -33,12 +30,6 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
                     <div class="form-group d-flex">
                         <select class="form-control" id="sel_menu">
@@ -64,11 +55,10 @@
                         <?= $_SESSION['user']['nama'] ?>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="account-dropdown">
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="<?= base_url('User/logout') ?>">Logout</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="<?= base_url('User/logout') ?>">Logout</a>
+                    </div>
                 </div>
-                </div>
-                
             </div>
         </div>
     </nav>

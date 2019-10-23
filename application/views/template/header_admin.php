@@ -18,9 +18,6 @@
     if (!$_SESSION['user']){
         redirect('User/forbiden');
     }
-    if($_SESSION['login_first']){
-        $this->load->view('alert/login_first');
-    }
 ?>
 <!-- HEADER -->
 <header>

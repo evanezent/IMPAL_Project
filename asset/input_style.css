@@ -162,10 +162,6 @@ footer{
 .center .card{
     width: 250px;
 }
-.alert-pesan{
-    width: 500px;
-    margin: 1vh auto;
-}
 #edit-event, #edit-ticket{
     margin: 1vh;
     display: flex;

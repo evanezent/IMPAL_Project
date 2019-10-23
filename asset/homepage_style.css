@@ -2,6 +2,10 @@
     padding-right: 0;
     padding-left: 0;
 }
+.alert-pesan{
+    width: 500px;
+    margin: 1vh auto;
+}
 #navbar{
     z-index: 1070;
 }

@@ -7,8 +7,9 @@ class Member extends CI_Controller
 	{
 		//Sementara username getEvent dan getTicket pake esmeralda
 		//Harusnya diisi username dari session
-		$event = $this->Event_model->getEventMember("esmeralda");
-		$ticket = $this->Ticket_model->getTicketMember("esmeralda");
+		$user =  $_SESSION['user'];
+		$event = $this->Event_model->getEventMember($user['nama']);
+		$ticket = $this->Ticket_model->getTicketMember($user['nama']);
 
 		$data = [
 			'events' => $event,
@@ -54,6 +55,7 @@ class Member extends CI_Controller
 
 	public function insertEvent()
 	{
+		$user =  $_SESSION['user']['nama'];
 		$gambar = $_FILES['poster']['name'];
 		if ($gambar) {
 			$config['upload_path']          =  './upload/event';
@@ -83,7 +85,7 @@ class Member extends CI_Controller
 				// }
 				$data = array(
 					'idEvent' => $id,
-					'username' => "esmeralda", //harusnya diisi session user login
+					'username' => $user, //harusnya diisi session user login
 					'namaEvent' => $this->input->post('eventname'),
 					'tanggalEvent' => $this->input->post('date'),
 					'poster' => $namafile,
@@ -172,7 +174,7 @@ class Member extends CI_Controller
 	public function insertTicket()
 	{
 		$gambar = $_FILES['poster']['name'];
-
+		$user =  $_SESSION['user']['nama'];
 		if ($gambar) {
 			$config['upload_path']          =  './upload/ticket';
 			$config['allowed_types']        =  'gif|jpeg|jpg|png';
@@ -199,7 +201,7 @@ class Member extends CI_Controller
 				// }
 				$data = array(
 					'idTicket' => $id,
-					'username' => "esmeralda", //harusnya diisi session user login
+					'username' => $user, //harusnya diisi session user login
 					'namaTicket' => $this->input->post('ticketname'),
 					'tanggalTicket' => $this->input->post('date'),
 					'poster' => $namafile,
