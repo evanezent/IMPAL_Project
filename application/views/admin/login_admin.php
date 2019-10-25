@@ -4,7 +4,7 @@
             <h3>Admin Login <b>EVANUE</b></h3>
         </div>
         <div class="form-login">
-        <form action="<?= base_url("admin") ?>" method="post">
+        <form action="<?= base_url("admin/login_db") ?>" method="post">
             <div class="form-group">
                 <input type="input" class="form-control" name="user-admin" placeholder="Username">
             </div>

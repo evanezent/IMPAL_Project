@@ -32,10 +32,22 @@
                     </div>
                 </li>
             </ul>
-            <form id="search-admin" class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn" type="submit" hidden>Search</button>
-            </form>
+            <?php
+                if (isset($_SESSION['user'])) {
+            ?>
+                <div class="admin-session">
+                    <div>
+                        <form id="search-admin" class="form-inline">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn" type="submit" hidden>Search</button>
+                        </form>
+                    </div>
+                    <div class="session-admin">
+                        <a class="btn admin_button" href="<?= base_url('admin/logout') ?>">Logout</a>
+                    </div>
+
+                </div>
+            <?php } ?>
         </div>
     </nav>
 </header>

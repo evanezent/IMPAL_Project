@@ -2,6 +2,9 @@
     padding-right: 0;
     padding-left: 0;
 }
+.admin-session{
+    display: flex;
+}
 .box-login{
     width: 300px;
     margin: 10px auto;
@@ -14,14 +17,14 @@
 .login-title{
     margin-bottom: 2vh;
 }
-.user_button{
-    background-color: white ;
-    color: #f4d041 ;
-    font-weight: bold;
-}
-.user_button:hover{
+.admin_button{
     background-color: #f4d041;
     color: white;
+    font-weight: bold;
+}
+.admin_button:hover{ 
+    background-color: white ;
+    color: #f4d041 ;
     border: #f4d041 solid 0.1em;
     border: 2px solid white;
 }

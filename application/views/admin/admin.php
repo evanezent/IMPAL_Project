@@ -2,7 +2,7 @@
     <!-- Check session -->
     <?php
     if (!$_SESSION['user']) {
-        redirect('User/forbiden');
+        redirect('admin/login');
     }
     ?>
     <!-- EVENT -->
