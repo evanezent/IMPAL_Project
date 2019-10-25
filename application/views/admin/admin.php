@@ -1,4 +1,10 @@
 <body class="container-fluid">
+    <!-- Check session -->
+    <?php
+    if (!$_SESSION['user']) {
+        redirect('User/forbiden');
+    }
+    ?>
     <!-- EVENT -->
     <div id="admin-event" class="container">
         <!-- Perulangan for each -->
