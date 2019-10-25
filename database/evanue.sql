@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2019 at 07:04 AM
+-- Generation Time: Oct 25, 2019 at 10:54 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -43,12 +43,14 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`idEvent`, `username`, `namaEvent`, `tanggalEvent`, `poster`, `Validasi`, `delete_at`) VALUES
-('event1', 'esmeralda', 'Vans World Cup of Surfing', '2018-11-25', 'event1.png', NULL, NULL),
-('event2', 'esmeralda', 'Seminar Born To Be Developer', '2015-04-26', 'event2.jpg', NULL, NULL),
-('event3-', 'esmeralda', 'Freestyle on Jam', '2012-11-11', 'event3.jpg', NULL, NULL),
-('event4', 'esmeralda', 'Jak Cloth 2014', '2014-05-28', 'event4.jpg', NULL, NULL),
-('event5', 'esmeralda', 'Futsal Competition 2018', '2018-01-14', 'event5.jpg', NULL, NULL),
-('event6', 'esmeralda', 'Inception Saturdays', '2014-03-22', 'event6.jpg', NULL, NULL);
+('evt-17hCW', 'meliod', 'ini event dummy ', '2019-10-26', 'myhome.jpg', 0, NULL),
+('evt-30gAB', 'esmeralda', 'Sabyan', '2019-09-28', 'event6.jpg', 0, '2019-09-25'),
+('evt-6f3Fa', 'esmeralda', 'NYOBA SI', '2019-10-05', 'event4.jpg', 0, NULL),
+('evt-6SPQI', 'esmeralda', 'NYOBA KOK', '2019-10-16', 'login.PNG', 0, '2019-10-01'),
+('evt-8ZFgB', 'esmeralda', 'HMMMMMWKWK', '2019-10-17', 'login1.PNG', 0, NULL),
+('evt-hKRov', 'esmeralda', 'SI NYOBA', '2019-10-04', 'event5.jpg', 0, NULL),
+('evt-sd9vj', 'esmeralda', 'NYOBA LAGI', '2019-11-02', '44916249_2357618624253459_8748134120300740608_n.jpg', 0, '2019-10-01'),
+('evt-SHwyf', 'esmeralda', 'AMAN KOK', '2019-10-19', 'menu_tiket_user.PNG', 0, '2019-10-01');
 
 -- --------------------------------------------------------
 
@@ -60,7 +62,7 @@ CREATE TABLE `member` (
   `username` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `namaMember` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `password` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `alamat` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `noHp` varchar(15) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -70,8 +72,8 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`username`, `namaMember`, `email`, `password`, `alamat`, `noHp`) VALUES
-('esmeralda', 'Esmeralda Smith', 'esmeralda@gmail.com', 'TyU7h7bNm', 'Jalan Patimura no.1, Bandung, Jawa Barat', '08977456821'),
-('pranapramudita', 'Prana Pramudita Kusdiananggalih', 'pranapramudita@gmail.com', 'ac43724f16e9241d9904', 'Pegadaian Cikudapateuh, Jl. Jendral Ahmad Yani, Su', '081273470046');
+('esmeralda', 'Esmeralda Smith', 'esmeralda@gmail.com', 'TyU7h7bNm', 'Jalan Patimura no.1, NBandung, Jawa Barat', '08977456821'),
+('meliod', 'meliodas', 'mel@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 'Sukabirus 1', '089123456789');
 
 -- --------------------------------------------------------
 
@@ -118,8 +120,9 @@ CREATE TABLE `ticket` (
 INSERT INTO `ticket` (`idTicket`, `username`, `namaTicket`, `tanggalTicket`, `poster`, `contactPerson`, `Validasi`, `delete_at`) VALUES
 ('1301188', 'esmeralda', 'konser Sabyan', '2019-03-13', 'o.jpg', '089324678234', 1, '2020-03-03'),
 ('tkt-0Inab', 'esmeralda', 'adadad', '2019-09-25', 'Bad_Menu_Sistem.PNG', '08932424', 0, NULL),
-('tkt-10gFM', 'esmeralda', 'ini ticket', '2019-09-30', '2.PNG', '089234142134', 0, NULL),
+('tkt-10gFM', 'esmeralda', 'ini ticket', '2019-09-30', '1.PNG', '089234142134', 0, '2019-10-23'),
 ('tkt-2kHwa', 'esmeralda', 'TICKET', '2019-10-26', '44916249_2357618624253459_8748134120300740608_n.jpg', '0891981313', 0, NULL),
+('tkt-I0ynj', 'esmeralda', 'TICKET again', '2019-10-19', 'dashboard_user.PNG', '0992137914', 0, NULL),
 ('tkt-Ulp8j', 'esmeralda', 'ahay', '2019-09-21', 'Alif.jpg', NULL, 0, '2019-10-01'),
 ('tkt-WYHv0', 'esmeralda', 'COBA 1', '2019-10-18', 'tick1.png', '098291091', 0, NULL);
 

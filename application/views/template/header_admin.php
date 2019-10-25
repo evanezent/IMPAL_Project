@@ -32,9 +32,7 @@
                     </div>
                 </li>
             </ul>
-            <?php
-                if (isset($_SESSION['user'])) {
-            ?>
+            <?php if (isset($_SESSION['user'])) { ?>
                 <div class="admin-session">
                     <div>
                         <form id="search-admin" class="form-inline">
@@ -45,7 +43,6 @@
                     <div class="session-admin">
                         <a class="btn admin_button" href="<?= base_url('admin/logout') ?>">Logout</a>
                     </div>
-
                 </div>
             <?php } ?>
         </div>
