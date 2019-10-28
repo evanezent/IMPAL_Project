@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </head>
-
 <!-- HEADER -->
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -33,10 +32,19 @@
                     </div>
                 </li>
             </ul>
-            <form id="search-admin" class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn" type="submit" hidden>Search</button>
-            </form>
+            <?php if (isset($_SESSION['user'])) { ?>
+                <div class="admin-session">
+                    <div>
+                        <form id="search-admin" class="form-inline">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn" type="submit" hidden>Search</button>
+                        </form>
+                    </div>
+                    <div class="session-admin">
+                        <a class="btn admin_button" href="<?= base_url('admin/logout') ?>">Logout</a>
+                    </div>
+                </div>
+            <?php } ?>
         </div>
     </nav>
 </header>

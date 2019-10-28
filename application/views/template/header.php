@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 </head>
-
 <!-- HEADER -->
 <header>
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,10 +25,11 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+                    <?php if (isset($_SESSION['user'])) { ?>
+                        <a class="nav-link" href="<?= base_url('member'); ?>">My data<span class="sr-only">(current)</span></a>
+                    <?php } else { ?>
+                        <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+                    <?php } ?>
                 </li>
                 <li class="nav-item">
                     <div class="form-group d-flex">
@@ -42,16 +42,28 @@
                 </li>
             </ul>
             <div class="user_button">
-                <a href="#" class="btn btn-sm" role="button" data-toggle="modal" data-target="#modalLogin">Login</a>
-                <a href="<?= base_url(); ?>user/register" class="btn btn-sm" role="button">Register</a>
-                
-                <!-- DI GANTI JADI INI JIKA UDAH LOGIN
-                <img class="dropdown-toggle" id="account-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<?= base_url('asset/default_pic.png'); ?>" width="40vw" alt="">
-                <div class="dropdown-menu" aria-labelledby="account-dropdown">
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Logout</a>
-                </div> -->
+                <?php if (isset($_SESSION['user'])) { ?>
+                    <div class="user-login">
+                        <a class="nav-link dropdown-toggle" href="#" id="account-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <?= $_SESSION['user']['nama'] ?>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="account-dropdown">
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="<?= base_url('User/logout') ?>">Logout</a>
+                        </div>
+                    </div>
+                <?php } else { ?>
+                    <a href="#" class="btn btn-sm" role="button" data-toggle="modal" data-target="#modalLogin">Login</a>
+                    <a href="<?= base_url(); ?>user/register" class="btn btn-sm" role="button">Register</a>
+                <?php } ?>
             </div>
         </div>
     </nav>
 </header>
+<div class="alert-pesan">
+    <?php
+    if (isset($_SESSION['login_first'])) {
+        $this->load->view('alert/login_first');
+    }
+    ?>
+</div>

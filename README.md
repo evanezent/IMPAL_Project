@@ -4,7 +4,7 @@
 ``` Put your data ```
 1. [Pratama Yoga Santosa (1301170073)](https://evanezcent.github.io/)
 2. [Prana Pramudita Kusdiananggalih (1301174059)](https://github.com/pranapramudita)
-3. ----
+3. [Muhammad Fadhil Zakaria (1301174096)](https://github.com/Fadhilzkr)
 4. ----
 
 ## TODO :
@@ -25,15 +25,16 @@
 	- [x] Upload Event and Ticket
 	- [ ] Ticket and Event data for admin
 	- [x] Input Event and Ticket
-	- [x] Detail Event
+	- [ ] Detail Event
 	- [ ] Detail Ticket
 	- [x] Delete Event and Ticket
-	- [ ] Update Event and Ticket ``` dont forget maket validation, is there all or just some data is updated ```
+	- [x] Update Event and Ticket ``` dont forget maket validation, is there all or just some data is updated ```
 	- [x] Upload Foto
-	- [ ] User Session
+	- [x] User Session
 	- [ ] Form Validator
-	- [ ] Encrypt Password
+	- [x] Encrypt Password
 	- [ ] Delete post when the time is done
+	- [ ] Check session isset 
 
 * Other Features (additional) :
 	- [ ] backsound

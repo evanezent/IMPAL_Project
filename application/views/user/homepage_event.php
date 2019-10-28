@@ -11,9 +11,9 @@
             <!-- Indicators -->
             <ul class="carousel-indicators">
                 <!-- start for i -->
-                <?php for ($i=0; $i < 5; $i++) { ?>
-                <li data-target="#demo" data-slide-to="<?php echo $i ?>" class="active"></li>
-                <!-- end for i -->
+                <?php for ($i = 0; $i < 5; $i++) { ?>
+                    <li data-target="#demo" data-slide-to="<?php echo $i ?>" class="active"></li>
+                    <!-- end for i -->
                 <?php } ?>
                 <!-- <li data-target="#demo" data-slide-to="1"></li>
                 <li data-target="#demo" data-slide-to="2"></li>
@@ -25,15 +25,15 @@
             <div class="carousel-inner text-center">
                 <!-- start foreach -->
                 <?php foreach ($events as $ev) : ?>
-                <div class="carousel-item active" data-ride="false">
-                    <div class="bg-carousel" style="background:url('<?php echo base_url(); ?>asset/<?php echo $ev['poster'] ?>');filter: blur(8px);-webkit-filter: blur(8px);">
+                    <div class="carousel-item active" data-ride="false">
+                        <div class="bg-carousel" style="background:url('<?php echo base_url(); ?>asset/<?php echo $ev['poster'] ?>');filter: blur(8px);-webkit-filter: blur(8px);">
+                        </div>
+                        <div class="img-carousel">
+                            <img src="<?php echo base_url(); ?>asset/<?php echo $ev['poster'] ?>" alt="UNKNOWN" height="100%">
+                        </div>
                     </div>
-                    <div class="img-carousel">
-                        <img src="<?php echo base_url(); ?>asset/<?php echo $ev['poster'] ?>" alt="UNKNOWN" height="100%">
-                    </div>
-                </div>
                 <?php endforeach ?>
-                
+
                 <!-- end foreach -->
                 <!-- <div class="carousel-item" data-ride="false">
                     <img src="<?php echo base_url(); ?>asset/event2.jpg" alt="UNKNOWN" height="100%">
@@ -66,51 +66,19 @@
     </div>
     <div id="list" class="container d-block">
         <!-- start foreach -->
-        <?php for ($i=0; $i < count($events,0); $i = $i+2) { ?>
-        <div class="row">
-            <?php foreach (array_slice($events,$i,2) as $ev) : ?>
-                <div class="card">
-                    <img class="card-img-top" src="<?php echo base_url(); ?>asset/<?php echo $ev['poster'] ?>" alt="Card image cap">
-                    <div class="card-body text-center">
-                        <a href="<?= base_url('post/event/');
-                                        echo $ev['idEvent'] ?>" class="btn">Read More</a>
+        <?php for ($i = 0; $i < count($events, 0); $i = $i + 2) { ?>
+            <div class="row">
+                <?php foreach (array_slice($events, $i, 2) as $ev) : ?>
+                    <div class="card">
+                        <img class="card-img-top" src="<?php echo base_url(); ?>upload/event/<?php echo $ev['poster'] ?>" alt="Card image cap">
+                        <div class="card-body text-center">
+                            <a href="<?= base_url('post/event/');
+                                                echo $ev['idEvent'] ?>" class="btn">Read More</a>
+                        </div>
                     </div>
-                </div>
-            <?php endforeach ?>
-            
-        </div>
+                <?php endforeach ?>
+            </div>
         <?php } ?>
-        <!-- end foreach -->
-        <!-- <div class="row">
-            <div class="card">
-                <img class="card-img-top" src="<?php echo base_url(); ?>asset/event3.jpg" alt="Card image cap">
-                <div class="card-body text-center">
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="<?php echo base_url(); ?>asset/event4.jpg" alt="Card image cap">
-                <div class="card-body text-center">
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="card">
-                <img class="card-img-top" src="<?php echo base_url(); ?>asset/event5.jpg" alt="Card image cap">
-                <div class="card-body text-center">
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="<?php echo base_url(); ?>asset/event6.jpg" alt="Card image cap">
-                <div class="card-body text-center">
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            </div>
-        </div> -->
-
     </div>
 </body>
 

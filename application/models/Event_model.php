@@ -2,9 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Event_model extends CI_Model {
     public function getEvent(){
-        $this->db->select('*');
-        $this->db->from('events');
-        $query = $this->db->get();
+        $query = $this->db->get('events');
         return $query->result_array();
     }
 

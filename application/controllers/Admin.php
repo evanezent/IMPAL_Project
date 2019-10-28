@@ -17,6 +17,34 @@ class Admin extends CI_Controller {
 		$this->load->view('template/footer_admin');
 	}
 
+	public function login_db()
+	{
+		$username = $this->input->post('user-admin');
+		$password = $this->input->post('pass-admin');
+		if ($username == "admin" && $password == "1234567") {
+
+			$data_session = array(
+				'nama' => "Administrator",
+				'status' => "login"
+			);
+
+			$this->session->set_userdata('user', $data_session);
+
+			redirect(base_url("admin"));
+		}else if ($username != "admin") {
+			$this->session->set_flashdata('salah_admin', 'Password salah !');
+			redirect(base_url("admin/login"));
+		}else{
+			$this->session->set_flashdata('salah_admin', 'Username salah !');
+			redirect(base_url("admin/login"));
+		}
+	}
+
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect('admin/login');
+	}
 }
 
 /* End of file Admin.php */

@@ -10,12 +10,17 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>asset/slick-theme.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>asset/input_style.css">    
+    <link rel="stylesheet" href="<?php echo base_url(); ?>asset/input_style.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>asset/homepage_style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </head>
-
+<!-- Check session -->
+<?php
+if (!$_SESSION['user']) {
+    redirect('User/forbiden');
+}
+?>
 <!-- HEADER -->
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -25,12 +30,6 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
                     <div class="form-group d-flex">
                         <select class="form-control" id="sel_menu">
@@ -51,10 +50,14 @@
                 </li>
             </ul>
             <div class="user_button">
-                <img class="dropdown-toggle" id="account-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<?= base_url('asset/default_pic.png'); ?>" width="40vw" alt="">
-                <div class="dropdown-menu" aria-labelledby="account-dropdown">
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Logout</a>
+                <div class="user-login">
+                    <a class="nav-link dropdown-toggle" href="#" id="account-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <?= $_SESSION['user']['nama'] ?>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="account-dropdown">
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="<?= base_url('User/logout') ?>">Logout</a>
+                    </div>
                 </div>
             </div>
         </div>
