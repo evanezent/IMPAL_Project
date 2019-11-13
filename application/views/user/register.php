@@ -21,10 +21,12 @@
             <div class="form-group">
                 <label for="fullname">Nama Lengkap</label>
                 <input type="input" class="form-control" id="fullname" name="fullname" required>
+                <!-- <?= form_error("fullname", '<small class="text-danger pl-3">', '</small>'); ?>    -->
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
+                <?= form_error("email", '<small class="text-danger pl-3">', '</small>'); ?> 
             </div>
             <div class="form-group">
                 <label for="alamat">Alamat</label>

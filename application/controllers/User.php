@@ -3,7 +3,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class User extends CI_Controller
 {
-
+	// public function __construct()
+	// {
+	// 	parent::__construct();
+	// 	$this->load->library('form_validation');
+	// }
+	
 	public function index()
 	{
 		$event = $this->Event_model->getEvent();
@@ -25,9 +30,16 @@ class User extends CI_Controller
 
 	public function register()
 	{
-		$this->load->view('template/header');
-		$this->load->view('user/register');
-		$this->load->view('template/footer');
+		// $this->form_validation->set_rules('fullname', 'FullName',  'required|trim');
+		// $this->form_validation->set_rules('email', 'Email',  'required|trim|valid_email');
+
+		// if ($this->form_validation->run() == false){
+			$this->load->view('template/header');
+			$this->load->view('user/register');
+			$this->load->view('template/footer');
+		// }else{
+
+		// }
 	}
 
 	public function register_db()
