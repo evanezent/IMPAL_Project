@@ -47,6 +47,8 @@ class User extends CI_Controller
 				// 	"noHp" => $this->input->post('phone', true),
 				// ];
 				// $this->Member_model->register($data);
+				// $this->session->set-flashdata('massage', '<div class="alert alert-success" roles="alert"> Congratulations! 
+				// your account has been created. Please Login </div>);
 				// redirect('User', 'refresh');
 		// }
 	}
