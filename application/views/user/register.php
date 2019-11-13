@@ -20,29 +20,29 @@
         <form action="register_db" method="post">
             <div class="form-group">
                 <label for="fullname">Nama Lengkap</label>
-                <input type="input" class="form-control" id="fullname" name="fullname" required>
+                <input type="input" class="form-control" id="fullname" name="fullname" placeholder="Nama Lengkap" value="<?= set_value('fullname'); ?>" required>
                 <!-- <?= form_error("fullname", '<small class="text-danger pl-3">', '</small>'); ?>    -->
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email" value="<?= set_value('email'); ?>" required>
                 <!-- <?= form_error("email", '<small class="text-danger pl-3">', '</small>'); ?>  -->
             </div>
             <div class="form-group">
                 <label for="alamat">Alamat</label>
-                <textarea class="form-control" rows="3" id="alamat" name="alamat" required></textarea>
+                <textarea class="form-control" rows="3" id="alamat" name="alamat" placeholder="Alamat tinggal anda" required></textarea>
             </div>
             <div class="form-group">
                 <label for="phone">Nomor HP</label>
-                <input type="input" class="form-control" id="phone" name="phone" required>
+                <input type="input" class="form-control" id="phone" name="phone" placeholder="Nomor HP aktif" required>
             </div>
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="input" class="form-control" id="username" name="username" required>
+                <input type="input" class="form-control" id="username" name="username" placeholder="Username" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="password" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
             </div>
             <div class="form-group">
                 <button type="button" class="btn mx-auto"><a href="<?= base_url();?>">Back</a></button>

@@ -7,7 +7,7 @@
     <div id="event-slide">
         <h3 id="judul-slide"> EVENT </h3>
         <div id="demo" class="carousel slide" data-ride="carousel">
-
+        
             <!-- Indicators -->
             <ul class="carousel-indicators">
                 <!-- start for i -->
