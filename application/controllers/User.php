@@ -38,7 +38,16 @@ class User extends CI_Controller
 			$this->load->view('user/register');
 			$this->load->view('template/footer');
 		// }else{
-
+			// $data = [
+			// 	"username" => $this->input->post('username', true),
+			// 	"namaMember" => $this->input->post('fullname', true),
+			// 	"email" => $this->input->post('email', true),
+			// 	"password" => md5($this->input->post('password', true)),
+			// 	"alamat" => $this->input->post('alamat', true),
+			// 	"noHp" => $this->input->post('phone', true),
+			// ];
+			// $this->Member_model->register($data);
+			// redirect('User', 'refresh');
 		// }
 	}
 
