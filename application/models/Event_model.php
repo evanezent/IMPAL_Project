@@ -8,8 +8,7 @@ class Event_model extends CI_Model {
 
     public function getEventID($id){
         $this->db->where('idEvent', $id);
-        $this->db->from('events');
-        $query = $this->db->get();
+        $query = $this->db->get('events');
         return $query->result_array();
     }
 

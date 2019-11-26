@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>asset/homepage_style.css">
     <!-- <link rel="stylesheet" href="<?php echo base_url(); ?>asset/regis_style.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </head>
 <!-- HEADER -->
 <header>
@@ -67,3 +65,18 @@
     }
     ?>
 </div>
+<?php if ($salah == 2) { ?>
+    <div class="justify-content-center d-flex">
+        <div class="alert alert-danger alert-dismissible fade show text-center" role="alert" style="width:50vw">
+            <b>Wrong Username or Password !</b>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+    <script>
+        $(".alert").fadeTo(2000, 500).slideUp(500, function() {
+            $(".alert").slideUp(500);
+        });
+    </script>
+<?php } ?>

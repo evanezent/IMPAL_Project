@@ -7,18 +7,14 @@
     <div id="event-slide">
         <h3 id="judul-slide"> EVENT </h3>
         <div id="demo" class="carousel slide" data-ride="carousel">
-        
+
             <!-- Indicators -->
             <ul class="carousel-indicators">
                 <!-- start for i -->
                 <?php for ($i = 0; $i < 5; $i++) { ?>
                     <li data-target="#demo" data-slide-to="<?php echo $i ?>" class="active"></li>
                     <!-- end for i -->
-                <?php } ?>
-                <!-- <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-                <li data-target="#demo" data-slide-to="3"></li>
-                <li data-target="#demo" data-slide-to="4"></li> -->
+                    <?php } ?>]
             </ul>
 
             <!-- The slideshow -->
@@ -34,19 +30,6 @@
                     </div>
                 <?php endforeach ?>
 
-                <!-- end foreach -->
-                <!-- <div class="carousel-item" data-ride="false">
-                    <img src="<?php echo base_url(); ?>asset/event2.jpg" alt="UNKNOWN" height="100%">
-                </div>
-                <div class="carousel-item" data-ride="false">
-                    <img src="<?php echo base_url(); ?>asset/event3.jpg" alt="UNKNOWN" height="100%">
-                </div>
-                <div class="carousel-item" data-ride="false">
-                    <img src="<?php echo base_url(); ?>asset/event4.jpg" alt="UNKNOWN" height="100%">
-                </div>
-                <div class="carousel-item" data-ride="false">
-                    <img src="<?php echo base_url(); ?>asset/event5.jpg" alt="UNKNOWN" height="100%">
-                </div> -->
             </div>
 
             <!-- Left and right controls -->
@@ -70,10 +53,12 @@
             <div class="row">
                 <?php foreach (array_slice($events, $i, 2) as $ev) : ?>
                     <div class="card">
-                        <img class="card-img-top" src="<?php echo base_url(); ?>upload/event/<?php echo $ev['poster'] ?>" alt="Card image cap">
+                        <div class="img-card">
+                            <img class="card-img-top" src="<?php echo base_url(); ?>upload/event/<?php echo $ev['poster'] ?>" alt="Card image cap">
+                        </div>
+                        <div class="card-title"><?= $ev['namaEvent'] ?></div>
                         <div class="card-body text-center">
-                            <a href="<?= base_url('post/event/');
-                                                echo $ev['idEvent'] ?>" class="btn">Read More</a>
+                            <a href="<?= base_url('post/event/');echo $ev['idEvent'] ?>" class="btn">Read More</a>
                         </div>
                     </div>
                 <?php endforeach ?>

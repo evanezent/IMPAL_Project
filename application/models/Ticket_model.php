@@ -7,8 +7,7 @@ class Ticket_model extends CI_Model {
     }
     public function getTicketID($id){
         $this->db->where('idTicket', $id);
-        $this->db->from('ticket');
-        $query = $this->db->get();
+        $query = $this->db->get('ticket');
         return $query->result_array();
     }
     public function inputTicket($data)

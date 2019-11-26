@@ -13,10 +13,10 @@ class User extends CI_Controller
 	{
 		$event = $this->Event_model->getEvent();
 		$ticket = $this->Ticket_model->getTicket();
-
+		$data['salah'] = 0;
 		$data['events'] = $this->Event_model->getEvent();
-		$this->load->view('template/header');
-		$this->load->view('user/homepage_event', $data);
+		$this->load->view('template/header',$data);
+		$this->load->view('user/homepage_event');
 		$this->load->view('template/footer');
 	}
 
@@ -94,8 +94,14 @@ class User extends CI_Controller
 
 			redirect(base_url("member"));
 		} else {
-			echo "Terjadi kesalahan input username/password";
-			echo (md5($password));
+			$event = $this->Event_model->getEvent();
+			$ticket = $this->Ticket_model->getTicket();
+
+			$data['events'] = $this->Event_model->getEvent();
+			$data['salah'] = 2;
+			$this->load->view('template/header', $data);
+			$this->load->view('user/homepage_event');
+			$this->load->view('template/footer');
 		}
 	}
 

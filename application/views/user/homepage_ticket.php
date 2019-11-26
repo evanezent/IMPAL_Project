@@ -13,10 +13,12 @@
             <div class="row">
                 <?php foreach (array_slice($tickets, $i, 2) as $ev) : ?>
                     <div class="card">
-                        <img class="card-img-top" src="<?php echo base_url(); ?>upload/ticket/<?php echo $ev['poster'] ?>" alt="Card image cap">
+                        <div class="img-card">
+                            <img class="card-img-top" src="<?php echo base_url(); ?>upload/ticket/<?php echo $ev['poster'] ?>" alt="UNKNOWN">
+                        </div>
+                        <div class="card-title"><?= $ev['namaTicket'] ?></div>
                         <div class="card-body text-center">
-                            <a href="<?= base_url('post/ticket/');
-                                                echo $ev['idTicket'] ?>" class="btn">Read More</a>
+                            <a href="<?= base_url('post/ticket/');echo $ev['idTicket'] ?>" class="btn">Read More</a>
                         </div>
                     </div>
                 <?php endforeach ?>

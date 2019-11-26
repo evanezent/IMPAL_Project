@@ -53,6 +53,13 @@
 body{
     background-color: #f4d041;
 }
+.card-title{
+    margin-top: 10px;
+    background-color: #f4d041!important;
+    color: white!important;
+    font-weight: bold;
+    text-align: center;
+}
 .searchbar{
     margin: auto;
     margin-top: 1em;
@@ -134,7 +141,7 @@ when minimize event-slide margin left dan right = 0 */
     ;
 }
 #list .row .card{
-    width: 15em;
+    width: 20em;
     margin: 1em auto;
     border: white solid 1em;
     border-radius: 1em;
