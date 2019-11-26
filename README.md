@@ -25,8 +25,8 @@
 	- [x] Upload Event and Ticket
 	- [ ] Ticket and Event data for admin
 	- [x] Input Event and Ticket
-	- [ ] Detail Event
-	- [ ] Detail Ticket
+	- [x] Detail Event
+	- [x] Detail Ticket
 	- [x] Delete Event and Ticket
 	- [x] Update Event and Ticket ``` dont forget maket validation, is there all or just some data is updated ```
 	- [x] Upload Foto
@@ -34,11 +34,7 @@
 	- [ ] Form Validator
 	- [x] Encrypt Password
 	- [ ] Delete post when the time is done
-	- [ ] Check session isset 
-
-* Other Features (additional) :
-	- [ ] backsound
-	- [ ] notification when something going wrong
+	- [x] Check session isset 
 	
 ## Note
 	- [BASIC WRITING README](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
