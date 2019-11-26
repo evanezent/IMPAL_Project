@@ -20,6 +20,6 @@ class Member_model extends CI_Model {
     {
         $this->db->where('username', $username);
         $data = $this->db->get('member');
-        return $data;
+        return $data->result_array();
     }
 }
