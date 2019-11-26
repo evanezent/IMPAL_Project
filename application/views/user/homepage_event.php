@@ -19,11 +19,12 @@
             <div class="carousel-inner text-center">
                 <!-- start foreach -->
                 <?php foreach ($events as $ev) : ?>
+                    <!-- TODO : BELOM JALAN, RUSAK LAGI -->
                     <div class="carousel-item active" data-ride="false">
-                        <div class="bg-carousel" style="background:url('<?php echo base_url(); ?>asset/<?php echo $ev['poster'] ?>');filter: blur(8px);-webkit-filter: blur(8px);">
+                        <div class="bg-carousel" style="background:url('<?php echo base_url(); ?>upload/event/<?php echo $ev['poster'] ?>');filter: blur(8px);-webkit-filter: blur(8px);">
                         </div>
                         <div class="img-carousel">
-                            <img src="<?php echo base_url(); ?>asset/<?php echo $ev['poster'] ?>" alt="UNKNOWN" height="100%">
+                            <img src="<?php echo base_url(); ?>upload/event/<?php echo $ev['poster'] ?>" alt="UNKNOWN" height="100%">
                         </div>
                     </div>
                 <?php endforeach ?>
