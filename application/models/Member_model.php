@@ -16,5 +16,10 @@ class Member_model extends CI_Model {
     {
 	    return $this->db->get_where($table,$where);
     }
+    public function seachUsername($username)
+    {
+        $this->db->where('username', $username);
+        $data = $this->db->get('member');
+        return $data;
+    }
 }
-?>

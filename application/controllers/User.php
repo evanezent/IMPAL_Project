@@ -8,14 +8,14 @@ class User extends CI_Controller
 	// 	parent::__construct();
 	// 	$this->load->library('form_validation');
 	// }
-	
+
 	public function index()
 	{
 		$event = $this->Event_model->getEvent();
 		$ticket = $this->Ticket_model->getTicket();
 		$data['salah'] = 0;
 		$data['events'] = $this->Event_model->getEvent();
-		$this->load->view('template/header',$data);
+		$this->load->view('template/header', $data);
 		$this->load->view('user/homepage_event');
 		$this->load->view('template/footer');
 	}
@@ -33,38 +33,49 @@ class User extends CI_Controller
 		// $this->form_validation->set_rules('fullname', 'FullName',  'required|trim');
 		// $this->form_validation->set_rules('email', 'Email',  'required|trim|valid_email');
 
-		// if ($this->form_validation->run() == false){
-				$this->load->view('template/header');
-				$this->load->view('user/register');
-				$this->load->view('template/footer');	
-		// }else{
-				// $data = [
-				// 	"username" => $this->input->post('username', true),
-				// 	"namaMember" => $this->input->post('fullname', true),
-				// 	"email" => $this->input->post('email', true),
-				// 	"password" => md5($this->input->post('password', true)),
-				// 	"alamat" => $this->input->post('alamat', true),
-				// 	"noHp" => $this->input->post('phone', true),
-				// ];
-				// $this->Member_model->register($data);
-				// $this->session->set-flashdata('massage', '<div class="alert alert-success" roles="alert"> Congratulations! 
-				// your account has been created. Please Login </div>);
-				// redirect('User', 'refresh');
+		// if ($this->form_validation->run() == false) {
+		$data['salah'] = 0;
+		$this->load->view('template/header', $data);
+		$this->load->view('user/register');
+		$this->load->view('template/footer');
+		// } else {
+		// 	$data = [
+		// 		"username" => $this->input->post('username', true),
+		// 		"namaMember" => $this->input->post('fullname', true),
+		// 		"email" => $this->input->post('email', true),
+		// 		"password" => md5($this->input->post('password', true)),
+		// 		"alamat" => $this->input->post('alamat', true),
+		// 		"noHp" => $this->input->post('phone', true),
+		// 	];
+		// 	$this->Member_model->register($data);
+		// 	redirect('User', 'refresh');
 		// }
 	}
 
 	public function register_db()
 	{
-		$data = [
-			"username" => $this->input->post('username', true),
-			"namaMember" => $this->input->post('fullname', true),
-			"email" => $this->input->post('email', true),
-			"password" => md5($this->input->post('password', true)),
-			"alamat" => $this->input->post('alamat', true),
-			"noHp" => $this->input->post('phone', true),
-		];
-		$this->Member_model->register($data);
-		redirect('User', 'refresh');
+		$username = $this->input->post('username', true);
+		$user = $this->Member_model->seachUsername($username);
+		if (empty($user)) {
+			$data = [
+				"username" => $this->input->post('username', true),
+				"namaMember" => $this->input->post('fullname', true),
+				"email" => $this->input->post('email', true),
+				"password" => md5($this->input->post('password', true)),
+				"alamat" => $this->input->post('alamat', true),
+				"noHp" => $this->input->post('phone', true),
+			];
+			$this->Member_model->register($data);
+			$data['salah'] = 1;
+			$this->load->view('template/header', $data);
+			$this->load->view('user/register');
+			$this->load->view('template/footer');
+		} else {
+			$data['salah'] = 3;
+			$this->load->view('template/header', $data);
+			$this->load->view('user/register');
+			$this->load->view('template/footer');
+		}
 	}
 
 	public function login()

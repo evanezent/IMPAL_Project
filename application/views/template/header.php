@@ -74,9 +74,27 @@
             </button>
         </div>
     </div>
-    <script>
-        $(".alert").fadeTo(2000, 500).slideUp(500, function() {
-            $(".alert").slideUp(500);
-        });
-    </script>
+<?php } else if ($salah == 1) { ?>
+    <div class="justify-content-center d-flex">
+        <div class="alert alert-success alert-dismissible fade show text-center" role="alert" style="width:50vw">
+            <b>Your account has been success to registered !, Try to login now !</b>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+<?php } else if ($salah == 3) { ?>
+    <div class="justify-content-center d-flex">
+        <div class="alert alert-danger alert-dismissible fade show text-center" role="alert" style="width:50vw">
+            <b>Username has been registered !, Try another username</b>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
 <?php } ?>
+<script>
+    $(".alert").fadeTo(2000, 500).slideUp(500, function() {
+        $(".alert").slideUp(500);
+    });
+</script>
