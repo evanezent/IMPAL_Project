@@ -12,6 +12,7 @@ class Post extends CI_Controller {
 
 	public function ticket($id)
 	{
+		$data['salah'] = 0;
 		$data['ticket']=$this->Ticket_model->getTicketID($id);
 		$this->load->view('template/header', $data);
 		$this->load->view('user/detail_ticket');
