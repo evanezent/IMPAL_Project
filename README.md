@@ -23,7 +23,8 @@
 	- [x] Login
 	- [ ] Searching
 	- [x] Upload Event and Ticket
-	- [ ] Ticket and Event data for admin
+	- [X] View Ticket and Event data for admin
+	- [X] Validation Ticket and Event data for admin
 	- [x] Input Event and Ticket
 	- [x] Detail Event
 	- [x] Detail Ticket
