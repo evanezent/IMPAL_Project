@@ -80,5 +80,6 @@ class Event_model extends CI_Model {
         $this->db->update('events', $data);
         redirect('Admin','refresh');
     }
+
 }
 ?>

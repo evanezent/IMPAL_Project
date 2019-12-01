@@ -63,5 +63,21 @@ class Ticket_model extends CI_Model {
         $query = $this->db->get();
         return $query->result_array();
     }
+
+    public function validationAccept($id)
+    {
+        $this->db->where('idTicket', $id);
+        $data['validasi'] = 1;
+        $this->db->update('ticket', $data);
+        redirect('Admin','refresh');
+    }
+
+    public function validationDecline($id)
+    {
+        $this->db->where('idTicket', $id);
+        $data['validasi'] = 0;
+        $this->db->update('ticket', $data);
+        redirect('Admin','refresh');
+    }
 }
 ?>

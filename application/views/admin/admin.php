@@ -29,8 +29,8 @@
             </div>
             <div class="col-md-4 action">
                 <div class="btn-action">
-                    <button class="btn btn-sm btn-success"><a href="<?php echo base_url('Admin/validationAccept/');echo $ev['idEvent'] ?>">Accept</a></button>
-                    <button class="btn btn-sm btn-danger"><a href="<?php echo base_url('Admin/validationDecline/');echo $ev['idEvent'] ?>">Decline</a></button>
+                    <button class="btn btn-sm btn-success"><a href="<?php echo base_url('Admin/validationAcceptEvent/');echo $ev['idEvent'] ?>">Accept</a></button>
+                    <button class="btn btn-sm btn-danger"><a href="<?php echo base_url('Admin/validationDeclineEvent/');echo $ev['idEvent'] ?>">Decline</a></button>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
     
 
     <!-- TICKET -->
-    <div id="admin-ticket" class="container" style="display: none">
+    <div id="admin-ticket" class="container" style="display">
         <?php foreach ($tickets as $tc) : ?>
         <div class="row">
             <div class="col-md-4 gambar">
@@ -50,10 +50,10 @@
             <div class="col-md-4 penjelasan">
                 <ul>
                     <li>
-                        <?php echo $tc['namaEvent'] ?>
+                        <?php echo $tc['namaTicket'] ?>
                     </li>
                     <li>
-                        <?php echo $tc['tanggalEvent'] ?>
+                        <?php echo $tc['tanggalTicket'] ?>
                     </li>
                     <li>
                         <?php echo $tc['contactPerson'] ?>
@@ -62,15 +62,14 @@
             </div>
             <div class="col-md-4 action">
                 <div class="btn-action">
-                    <button class="btn btn-sm btn-success"><a href="">Accept</a></button>
-                    <button class="btn btn-sm btn-danger"><a href="">Decline</a></button>
+                    <button class="btn btn-sm btn-success"><a href="<?php echo base_url('Admin/validationAcceptTicket/');echo $tc['idTicket'] ?>">Accept</a></button>
+                    <button class="btn btn-sm btn-danger"><a href="<?php echo base_url('Admin/validationDeclineTicket/');echo $tc['idTicket'] ?>">Decline</a></button>
                 </div>
             </div>
         </div>
         <!-- end for each -->
     <?php endforeach ?>
-    </div>
-    </div>
+
 </body>
 
 </html>

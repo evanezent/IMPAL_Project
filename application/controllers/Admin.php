@@ -48,14 +48,24 @@ class Admin extends CI_Controller {
 		redirect('admin/login');
 	}
 
-	public function validationAccept($id)
+	public function validationAcceptEvent($id)
 	{
 		$this->Event_model->validationAccept($id);
 	}
 
-	public function validationDecline($id)
+	public function validationDeclineEvent($id)
 	{
 		$this->Event_model->validationDecline($id);
+	}
+
+	public function validationAcceptTicket($id)
+	{
+		$this->Ticket_model->validationAccept($id);
+	}
+
+	public function validationDeclineTicket($id)
+	{
+		$this->Ticket_model->validationDecline($id);
 	}
 }
 
