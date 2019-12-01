@@ -12,7 +12,7 @@ class User extends CI_Controller
 	public function index()
 	{
 		$data['salah'] = 0;
-		$data['events'] = $this->Event_model->getEvent();
+		$data['events'] = $this->Event_model->getEventValidation();
 		$this->load->view('template/header', $data);
 		$this->load->view('user/homepage_event');
 		$this->load->view('template/footer');
@@ -21,7 +21,7 @@ class User extends CI_Controller
 	public function ticket()
 	{
 		$data['salah'] = 0;
-		$data['tickets'] = $this->Ticket_model->getTicket();
+		$data['tickets'] = $this->Ticket_model->getTicketValidation();
 		$this->load->view('template/header', $data);
 		$this->load->view('user/homepage_ticket');
 		$this->load->view('template/footer');

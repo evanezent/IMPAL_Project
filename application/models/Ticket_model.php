@@ -5,15 +5,24 @@ class Ticket_model extends CI_Model {
         $query = $this->db->get('ticket');
         return $query->result_array();   
     }
+
+    public function getTicketValidation(){
+        $this->db->where('validasi', 1);
+        $query = $this->db->get('ticket');
+        return $query->result_array();   
+    }
+
     public function getTicketID($id){
         $this->db->where('idTicket', $id);
         $query = $this->db->get('ticket');
         return $query->result_array();
     }
+
     public function inputTicket($data)
     {
         $this->db->insert('ticket', $data);
     }
+
     // Check if the ID is already exists
     public function searchId($id)
     {
@@ -23,6 +32,7 @@ class Ticket_model extends CI_Model {
             return false;
         }
     }
+
     public function getTicketMember($username)
     {
         $where = "username LIKE '".$username."' AND delete_at IS NULL";
@@ -30,6 +40,7 @@ class Ticket_model extends CI_Model {
         $resultSet = $this->db->get('ticket');
         return $resultSet->result_array();
     }
+
     public function deleteTicket($id, $tanggal)
     {
         $this->db->where('idTicket', $id);

@@ -6,6 +6,12 @@ class Event_model extends CI_Model {
         return $query->result_array();
     }
 
+    public function getEventValidation(){
+        $this->db->where('validasi', 1);
+        $query = $this->db->get('events');
+        return $query->result_array();
+    }
+
     public function getEventID($id){
         $this->db->where('idEvent', $id);
         $query = $this->db->get('events');
