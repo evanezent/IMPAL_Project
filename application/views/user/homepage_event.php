@@ -57,7 +57,7 @@
                         </div>
                         <div class="card-title"><?= $ev['namaEvent'] ?></div>
                         <div class="card-body text-center">
-                            <a href="<?= base_url('post/event/');echo $ev['idEvent'] ?>" class="btn">Read More</a>
+                            <a href="<?= base_url('Post/event/');echo $ev['idEvent'] ?>" class="btn">Read More</a>
                         </div>
                     </div>
                 <?php endforeach ?>

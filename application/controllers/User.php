@@ -11,8 +11,6 @@ class User extends CI_Controller
 
 	public function index()
 	{
-		$event = $this->Event_model->getEvent();
-		$ticket = $this->Ticket_model->getTicket();
 		$data['salah'] = 0;
 		$data['events'] = $this->Event_model->getEvent();
 		$this->load->view('template/header', $data);

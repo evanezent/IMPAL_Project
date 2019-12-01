@@ -58,5 +58,21 @@ class Event_model extends CI_Model {
         $query = $this->db->get();
         return $query->result_array();
     }
+
+    public function validationAccept($id)
+    {
+        $this->db->where('idEvent', $id);
+        $data['validasi'] = 1;
+        $this->db->update('events', $data);
+        redirect('Admin','refresh');
+    }
+
+    public function validationDecline($id)
+    {
+        $this->db->where('idEvent', $id);
+        $data['validasi'] = 0;
+        $this->db->update('events', $data);
+        redirect('Admin','refresh');
+    }
 }
 ?>

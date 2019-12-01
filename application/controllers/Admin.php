@@ -5,7 +5,9 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('template/header_admin');
+		$data['events'] = $this->Event_model->getEvent();
+		$data['tickets'] = $this->Ticket_model->getTicket();
+		$this->load->view('template/header_admin',$data);
 		$this->load->view('admin/admin');
 		$this->load->view('template/footer_admin');
 	}
@@ -44,6 +46,16 @@ class Admin extends CI_Controller {
 	{
 		$this->session->sess_destroy();
 		redirect('admin/login');
+	}
+
+	public function validationAccept($id)
+	{
+		$this->Event_model->validationAccept($id);
+	}
+
+	public function validationDecline($id)
+	{
+		$this->Event_model->validationDecline($id);
 	}
 }
 
