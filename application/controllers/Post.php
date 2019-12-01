@@ -13,15 +13,16 @@ class Post extends CI_Controller {
 	public function ticket($id)
 	{
 		$data['ticket']=$this->Ticket_model->getTicketID($id);
-		$this->load->view('template/header');
-		$this->load->view('user/detail_ticket', $data);
+		$this->load->view('template/header', $data);
+		$this->load->view('user/detail_ticket');
 		$this->load->view('template/footer');
 	}
 	public function event($id)
 	{
+		$data['salah'] = 0;
 		$data['events']=$this->Event_model->getEventID($id);
-		$this->load->view('template/header');
-		$this->load->view('user/detail_event',$data);
+		$this->load->view('template/header', $data);
+		$this->load->view('user/detail_event');
 		$this->load->view('template/footer');
 	}
 }
