@@ -1,8 +1,8 @@
 <body class="container-fluid">
-    <div class="searchbar">
-        <input class="search_input" type="text" name="keyword" placeholder="Search Event...">
-        <a href="<?php echo base_url(); ?>User/searchEvent" class="search_icon"><i class="fas fa-search"></i></a>
-    </div>
+    <form action="<?php echo base_url('User/searchEvent'); ?>" method="post" class="searchbar">
+        <input class="search_input" type="text" name="keyword" placeholder="Search Ticket...">
+        <input type="submit" value="Submit" class="search_icon fas fa-search">
+    </form>
 
     <div id="event-slide">
         <div id="demo" class="carousel slide" data-ride="carousel">

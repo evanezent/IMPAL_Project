@@ -55,7 +55,7 @@ class Ticket_model extends CI_Model {
     }
 
     public function SearchTicket(){
-        $keyword = $this->input->post('keyword',true);
+        $keyword = $this->input->post('keyword');
         $this->db->select('*');
         $this->db->from('ticket');
         $this->db->like('namaTicket',$keyword);

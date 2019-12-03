@@ -56,7 +56,7 @@ class Event_model extends CI_Model {
     }
 
     public function SearchEvent(){
-        $keyword = $this->input->post('keyword',true);
+        $keyword = $this->input->post('keyword');
         $this->db->select('*');
         $this->db->from('events');
         $this->db->like('namaEvent',$keyword);
