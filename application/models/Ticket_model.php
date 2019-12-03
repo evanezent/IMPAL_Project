@@ -55,11 +55,10 @@ class Ticket_model extends CI_Model {
     }
 
     public function SearchTicket(){
-        $keyword = $this->input->post('keyword', true);
-        $where = "namaTicket like '%" .$keyword. "%' ";
+        $keyword = $this->input->post('keyword',true);
         $this->db->select('*');
         $this->db->from('ticket');
-        $this->db->where($where);
+        $this->db->like('namaTicket',$keyword);
         $query = $this->db->get();
         return $query->result_array();
     }
