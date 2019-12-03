@@ -144,7 +144,7 @@
         </div>
         <div class="form-group">
             <label for="contatperson">Contact Person</label>
-            <input type="input" class="form-control" name="contactperson" required>
+            <input type="number" class="form-control" name="contactperson" required>
         </div>
         <div class="form-group">
             <label for="date">Tanggal Ticket</label>
