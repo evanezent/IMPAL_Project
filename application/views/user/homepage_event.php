@@ -1,7 +1,7 @@
 <body class="container-fluid">
     <div class="searchbar">
-        <input class="search_input" type="text" name="" placeholder="Search Event...">
-        <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+        <input class="search_input" type="text" name="keyword" placeholder="Search Event...">
+        <a href="<?php echo base_url(); ?>User/searchEvent" class="search_icon"><i class="fas fa-search"></i></a>
     </div>
 
     <div id="event-slide">
@@ -12,7 +12,7 @@
                 <?php for ($i = 0; $i < 5; $i++) { ?>
                     <li data-target="#demo" data-slide-to="<?php echo $i ?>" class="active"></li>
                     <!-- end for i -->
-                    <?php } ?>]
+                    <?php } ?>  
             </ul>
 
             <!-- The slideshow -->

@@ -123,14 +123,20 @@ class User extends CI_Controller
 
 	public function searchEvent()
 	{
-		$data['event'] = $this->Event_model->SearchNamaEvent();
-		$this->load->view('homepage_Event', $data);
+		$data['events'] = $this->Event_model->SearchEvent();
+		$data['salah'] = 0;
+		$this->load->view('template/header', $data);
+		$this->load->view('user/homepage_event');
+		$this->load->view('template/footer');
 	}
 
 	public function searchTicket()
 	{
-		$data['ticket'] = $this->Ticket_model->SearchNamaTicket();
-		$this->load->view('homepage_Ticket', $data);
+		$data['tickets'] = $this->Ticket_model->SearchTicket();
+		$data['salah'] = 0;
+		$this->load->view('template/header', $data);
+		$this->load->view('user/homepage_ticket');
+		$this->load->view('template/footer');
 	}
 
 	public function forbiden()

@@ -1,7 +1,7 @@
 <body class="container-fluid">
     <div class="searchbar">
-        <input class="search_input" type="text" name="" placeholder="Search Ticket...">
-        <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+        <input class="search_input" type="text" name="keyword" placeholder="Search Ticket...">
+        <a href="<?php echo base_url(); ?>User/searchTicket" class="search_icon"><i class="fas fa-search"></i></a>
     </div>
     <div class="jumbotron text-center mt-2">
         <div class="title-section">
