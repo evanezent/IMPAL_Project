@@ -62,17 +62,17 @@
     </div>
     <div id="list" class="container d-block">
         <!-- start foreach -->
-        <?php for ($i = 0; $i < count($events, 0); $i = $i + 2) { ?>
+        <?php for ($j = 0; $j < count($events, 0); $j = $j + 2) { ?>
             <div class="row">
-                <?php foreach (array_slice($events, $i, 2) as $ev) : ?>
+                <?php foreach (array_slice($events, $j, 2) as $event) : ?>
                     <div class="card">
                         <div class="img-card">
-                            <img class="card-img-top" src="<?php echo base_url(); ?>upload/event/<?php echo $ev['poster'] ?>" alt="Card image cap">
+                            <img class="card-img-top" src="<?php echo base_url(); ?>upload/event/<?php echo $event['poster'] ?>" alt="Card image cap">
                         </div>
-                        <div class="card-title"><?= $ev['namaEvent'] ?></div>
+                        <div class="card-title"><?= $event['namaEvent'] ?></div>
                         <div class="card-body text-center">
                             <a href="<?= base_url('Post/event/');
-                                                echo $ev['idEvent'] ?>" class="btn">Read More</a>
+                                                echo $event['idEvent'] ?>" class="btn">Read More</a>
                         </div>
                     </div>
                 <?php endforeach ?>
