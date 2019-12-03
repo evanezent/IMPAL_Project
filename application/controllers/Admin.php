@@ -14,8 +14,9 @@ class Admin extends CI_Controller {
 
 	public function login()
 	{
+		$data['salah'] = 0;
 		$this->load->view('template/header_admin');
-		$this->load->view('admin/login_admin');
+		$this->load->view('admin/login_admin', $data);
 		$this->load->view('template/footer_admin');
 	}
 
@@ -33,12 +34,11 @@ class Admin extends CI_Controller {
 			$this->session->set_userdata('user', $data_session);
 
 			redirect(base_url("admin"));
-		}else if ($username != "admin") {
-			$this->session->set_flashdata('salah_admin', 'Password salah !');
-			redirect(base_url("admin/login"));
 		}else{
-			$this->session->set_flashdata('salah_admin', 'Username salah !');
-			redirect(base_url("admin/login"));
+			$data['salah'] = 2;
+			$this->load->view('template/header_admin');
+			$this->load->view('admin/login_admin', $data);
+			$this->load->view('template/footer_admin');
 		}
 	}
 
