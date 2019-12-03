@@ -11,6 +11,8 @@
 				var selectedd = $('#sel1 option:selected');
 				var elm1 = document.getElementById("admin-event");
 				var elm2 = document.getElementById("admin-ticket");
+				console.log(selectedd.val());
+				console.log(elm2);
 				if (selectedd.val() == 'event'){
 					elm1.style.display = "block";
 					elm2.style.display = "none";
@@ -22,7 +24,7 @@
 					console.log(selectedd.val());
 				}
 				else{
-					elm2.style.display = "block";
+					elm2.style.display = "none";
 					elm1.style.display = "block";
 				}
 			});
