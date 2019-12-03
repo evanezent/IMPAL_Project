@@ -9,33 +9,47 @@
             <!-- Indicators -->
             <ul class="carousel-indicators">
                 <!-- start for i -->
-                <?php for ($i = 0; $i < 5; $i++) { ?>
-                    <li data-target="#demo" data-slide-to="<?php echo $i ?>" class="active"></li>
-                    <!-- end for i -->
-                    <?php } ?>  
+                <?php $i = 0;
+                foreach ($events as $ev) :
+                    ?>
+                    <?php if ($ev['Validasi'] == 1) { ?>
+                        <li data-target="#demo" data-slide-to="<?php echo $i ?>" class="active"></li>
+
+                    <?php $i++;
+                        } ?>
+                <?php endforeach ?>
             </ul>
 
             <!-- The slideshow -->
             <div class="carousel-inner text-center">
                 <!-- start foreach -->
-                <?php foreach ($events as $ev) : ?>
-                    <!-- TODO : BELOM JALAN, RUSAK LAGI -->
-                    <div class="carousel-item active" data-ride="false">
-                        <div class="bg-carousel" style="background:url('<?php echo base_url(); ?>upload/event/<?php echo $ev['poster'] ?>');filter: blur(8px);-webkit-filter: blur(8px);">
-                        </div>
-                        <div class="img-carousel">
-                            <img src="<?php echo base_url(); ?>upload/event/<?php echo $ev['poster'] ?>" alt="UNKNOWN" height="100%">
-                        </div>
+                <!-- UDAH JALAN TP HARUS DI KASIH 1 DATA DEFAULT -->
+                <div class="carousel-item active">
+                    <div class="bg-carousel" style="background:url('<?php echo base_url(); ?>upload/event/event4.jpg') ;filter: blur(8px);-webkit-filter: blur(8px);">
                     </div>
+                    <div class="img-carousel">
+                        <img src="<?php echo base_url(); ?>upload/event/event4.jpg" alt="UNKNOWN" height="100%">
+                    </div>
+                </div>
+                <?php foreach ($events as $ev) : ?>
+                    <?php if ($ev['Validasi'] == 1) { ?>
+                        <div class="carousel-item">
+                            <div class="bg-carousel" style="background:url('<?php echo base_url(); ?>upload/event/<?php echo $ev['poster'] ?>');filter: blur(8px);-webkit-filter: blur(8px);">
+                            </div>
+                            <div class="img-carousel">
+                                <img src="<?php echo base_url(); ?>upload/event/<?php echo $ev['poster'] ?>" alt="UNKNOWN" height="100%">
+                            </div>
+                        </div>
+                    <?php } ?>
                 <?php endforeach ?>
 
             </div>
 
             <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <a class="carousel-control-prev" href="#demo" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
             </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
+            <a class="carousel-control-next" href="#demo" role="button" data-slide="next">
                 <span class="carousel-control-next-icon"></span>
             </a>
 
@@ -57,7 +71,8 @@
                         </div>
                         <div class="card-title"><?= $ev['namaEvent'] ?></div>
                         <div class="card-body text-center">
-                            <a href="<?= base_url('Post/event/');echo $ev['idEvent'] ?>" class="btn">Read More</a>
+                            <a href="<?= base_url('Post/event/');
+                                                echo $ev['idEvent'] ?>" class="btn">Read More</a>
                         </div>
                     </div>
                 <?php endforeach ?>
