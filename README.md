@@ -21,7 +21,7 @@
 * Back-end :
 	- [x] Register ``` dont forget maket validation, is the username is already exists ```
 	- [x] Login
-	- [ ] Searching
+	- [x] Searching
 	- [x] Upload Event and Ticket
 	- [X] View Ticket and Event data for admin
 	- [X] Validation Ticket and Event data for admin
