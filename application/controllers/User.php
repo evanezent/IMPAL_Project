@@ -7,10 +7,15 @@ class User extends CI_Controller
 	// {
 	// 	parent::__construct();
 	// 	$this->load->library('form_validation');
+
 	// }
 
 	public function index()
 	{
+		// require('Admin.php');
+		// $admin = new Admin();
+		// $admin->deleteTime();
+
 		$data['salah'] = 0;
 		$data['events'] = $this->Event_model->getEvent();
 		$this->load->view('template/header', $data);

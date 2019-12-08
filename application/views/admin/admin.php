@@ -43,7 +43,6 @@
     </div>
     <!-- end for each -->
 
-
     <!-- TICKET -->
     <div id="admin-ticket" class="container" style="display:none; padding: 1em 0;">
         <?php for ($i = 0; $i < count($tickets, 0); $i = $i + 2) { ?>
