@@ -26,7 +26,7 @@
                 <div class="form-group">
                     <input type="password" class="form-control" name="pass-admin" placeholder="Password">
                 </div>
-                <button type="submit" class="user_button btn">Submit</button>
+                <button type="submit" class="user_button btn">Login</button>
             </form>
         </div>
     </div>

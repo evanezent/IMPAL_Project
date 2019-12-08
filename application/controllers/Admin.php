@@ -67,6 +67,26 @@ class Admin extends CI_Controller {
 	{
 		$this->Ticket_model->validationDecline($id);
 	}
+
+	public function deleteTime()
+	{
+		$events = $this->Event_model->getEvent();
+		$tickets = $this->Ticket_model->getTicket();
+
+		foreach ($events as $e) {
+			if (strtotime(date("Y-m-d")) > strtotime($e['tanggalEvent'])){
+				$tanggal_hapus = date("Y-m-d");
+				$this->Event_model->deleteEvent($e['idEvent'], $tanggal_hapus);
+			}
+		}
+
+		foreach ($tickets as $t) {
+			if (strtotime(date("Y-m-d")) > strtotime($t['tanggalTicket'])){
+				$tanggal_hapus = date("Y-m-d");
+				$this->Ticket_model->deleteTicket($t['idTicket'], $tanggal_hapus);
+			}
+		}
+	}
 }
 
 /* End of file Admin.php */

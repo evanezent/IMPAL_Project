@@ -55,9 +55,9 @@ body{
 }
 .card-title{
     margin-top: 10px;
-    background-color: #f4d041!important;
+    padding: 5px 0;
+    background-color: #c7ab3a!important;
     color: white!important;
-    font-weight: bold;
     text-align: center;
 }
 .searchbar{
@@ -69,37 +69,22 @@ body{
     padding: 10px;
     border: #f4d041 solid 1px;
     width: 70%;
+    color: #f4d041;
 }
 .search_input{
-    color: black;
+    color: #636363;
+    font-weight: bold;
     border: 0;
     outline: 0;
     background: none;
     width: 0;
-    caret-color:transparent;
-    line-height: 40px;
+    padding-left: 1rem;
+    width: 400px;
+    height: 2.5em;
+    background-color: white;
     transition: width 0.4s linear;
 }
-.searchbar:hover > .search_input{
-    padding: 0 10px;
-    width: 450px;
-    caret-color: #f4d041;
-    transition: width 0.4s linear;
-}
-.searchbar:hover > .search_icon{
-    background: #f4d041;
-    color: white;
-}
-.search_icon{
-    height: 40px;
-    width: 40px;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color:#f4d041;
-}
+
 #event-slide{
     margin:1vh 5vh;
     border: white solid 0.3em;
@@ -199,11 +184,17 @@ form{
     margin: 2vh auto;
 }
 #desc-header{
-    margin: 1em auto;
-    max-width: 50%;
-    background-color: white;
-    color: #f4d041;
+    margin-top: 2em;;
+    color: white;
     font-weight: bold;
+}
+#desc-header::after{
+    width: 150px;
+    display: block;
+    height: 5px;
+    background-color: white;
+    content: "";
+    margin:auto;
 }
 #desc{
     max-width: 60%;

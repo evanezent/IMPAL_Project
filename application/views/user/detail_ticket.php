@@ -13,7 +13,7 @@
                                 echo $ticket[0]['poster'] ?>" width="100%" alt="UNKNOWN">
                 </div>
                 <div>
-                    <table class="table d-flex justify-content-center">
+                    <table class="table table-responsive d-flex justify-content-center">
                         <tbody>
                             <tr>
                                 <td>

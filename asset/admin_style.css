@@ -170,7 +170,7 @@ body{
 }
 
 #ads .img-fluid{
-    height: 20em;
+    height: 25em!important;
     width: 100%;
 }
 

@@ -1,7 +1,7 @@
 <body class="container-fluid">
-    <form action="<?php echo base_url('User/searchTicket'); ?>" method="post" class="searchbar">
-        <input class="search_input" type="text" name="keyword" placeholder="Search Ticket...">
-        <input type="submit" value="Submit" class="search_icon fas fa-search">
+<form action="<?php echo base_url('User/searchTicket'); ?>" method="post" class="searchbar">
+        <input class="search_input" type="text" name="keyword">
+        <i class="fas fa-search" style="font-size: 1.5em"><input type="submit" hidden></i>
     </form>
     <div class="jumbotron text-center mt-2">
         <div class="title-section">

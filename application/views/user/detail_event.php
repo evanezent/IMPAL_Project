@@ -3,7 +3,7 @@
     <!-- select where idEvent -->
     <div id="description">
         <div id="desc-header" class="text-center">
-            <h3>DESCRIPTION</h3>
+            <h1>DESCRIPTION</h1>
         </div>
         <div id="isi-data">
             <div id="desc">
@@ -12,7 +12,7 @@
                                 echo $events[0]['poster'] ?>" width="100%" height="100%" alt="UNKNOWN">
                 </div>
                 <div>
-                    <table class="table d-flex justify-content-center">
+                    <table class="table table-responsive d-flex justify-content-center">
                         <tbody>
                             <tr>
                                 <td>

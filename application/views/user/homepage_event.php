@@ -1,9 +1,8 @@
 <body class="container-fluid">
     <form action="<?php echo base_url('User/searchEvent'); ?>" method="post" class="searchbar">
-        <input class="search_input" type="text" name="keyword" placeholder="Search Ticket...">
-        <input type="submit" value="Submit" class="search_icon fas fa-search">
+        <input class="search_input" type="text" name="keyword">
+        <i class="fas fa-search" style="font-size: 1.5em"><input type="submit" hidden></i>
     </form>
-
     <div id="event-slide">
         <div id="demo" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -67,9 +66,9 @@
                 <?php foreach (array_slice($events, $j, 2) as $event) : ?>
                     <div class="card">
                         <div class="img-card">
-                            <img class="card-img-top" src="<?php echo base_url(); ?>upload/event/<?php echo $event['poster'] ?>" alt="Card image cap">
+                            <img style="height: 25em;" class="card-img-top" src="<?php echo base_url(); ?>upload/event/<?php echo $event['poster'] ?>" alt="Card image cap">
                         </div>
-                        <div class="card-title"><?= $event['namaEvent'] ?></div>
+                        <div class="card-title"><h5 class="my-auto"><strong><?= $event['namaEvent'] ?></strong></h5></div>
                         <div class="card-body text-center">
                             <a href="<?= base_url('Post/event/');
                                                 echo $event['idEvent'] ?>" class="btn">Read More</a>

@@ -8,14 +8,14 @@
     }
     ?>
     <!-- EVENT -->
-    <div id="admin-event" class="container">
+    <div id="admin-event" class="container" style="padding: 1em 0;">
         <!-- Perulangan for each -->
         <?php for ($i = 0; $i < count($events, 0); $i = $i + 2) { ?>
             <div class="row" id="ads">
                 <?php foreach (array_slice($events, $i, 2) as $ev) : ?>
                     <div class="col-md-6 justify-content-center d-flex">
                         <div class="card rounded">
-                            <div class="card-image" style="height: 20em!important;">
+                            <div class="card-image" style="height: 25em!important;">
                                 <img class="img-fluid" src="<?php base_url(); ?>upload/event/<?php echo $ev['poster'] ?>" alt="UNKNOWN" />
                             </div>
                             <div class="card-body text-center">
@@ -45,7 +45,7 @@
 
 
     <!-- TICKET -->
-    <div id="admin-ticket" class="container" style="display:none;">
+    <div id="admin-ticket" class="container" style="display:none; padding: 1em 0;">
         <?php for ($i = 0; $i < count($tickets, 0); $i = $i + 2) { ?>
             <div class="row" id="ads">
                 <?php foreach (array_slice($tickets, $i, 2) as $tc) : ?>
