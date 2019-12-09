@@ -12,7 +12,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/admin');
 		$this->load->view('template/footer_admin');
 	}
-
+	
 	public function login()
 	{
 		$data['salah'] = 0;
