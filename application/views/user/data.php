@@ -45,6 +45,7 @@
                                 </ul>
                                 <div class="btn-card-list">
                                     <a href="<?php echo base_url(); ?>Member/editEvent/<?php echo $event['idEvent'] ?>" class="btn">Edit</a>
+                                    <a href="<?php echo base_url(); ?>Member/payment/<?php echo $event['idEvent'] ?>" class="btn">Upload</a>
                                     <a href="<?php echo base_url(); ?>Member/deleteEvent/<?php echo $event['idEvent'] ?>" class="btn btn-danger">Delete</a>
                                 </div>
                             </div>
@@ -76,6 +77,7 @@
                                 </ul>
                                 <div class="btn-card-list">
                                     <a href="<?php echo base_url(); ?>Member/editTicket/<?php echo $ticket['idTicket'] ?>" class="btn">Edit</a>
+                                    <a href="<?php echo base_url(); ?>Member/payment/<?php echo $ticket['idTicket'] ?>" class="btn">Upload</a>
                                     <a href="<?php echo base_url(); ?>Member/deleteTicket/<?php echo $ticket['idTicket'] ?>" class="btn btn-danger">Delete</a>
                                 </div>
                             </div>

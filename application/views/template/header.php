@@ -98,6 +98,15 @@
             </button>
         </div>
     </div>
+<?php } else if ($salah == 4) { ?>
+    <div class="justify-content-center d-flex">
+        <div class="alert alert-danger alert-dismissible fade show text-center" role="alert" style="width:50vw">
+            <b>Register Failed !</b>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
 <?php } ?>
 <script>
     $(".alert").fadeTo(2000, 500).slideUp(500, function() {

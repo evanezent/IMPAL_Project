@@ -70,8 +70,7 @@
                         </div>
                         <div class="card-title"><h5 class="my-auto"><strong><?= $event['namaEvent'] ?></strong></h5></div>
                         <div class="card-body text-center">
-                            <a href="<?= base_url('Post/event/');
-                                                echo $event['idEvent'] ?>" class="btn">Read More</a>
+                            <a href="<?= base_url('Post/event/');echo $event['idEvent'] ?>" class="btn">Read More</a>
                         </div>
                     </div>
                 <?php endforeach ?>

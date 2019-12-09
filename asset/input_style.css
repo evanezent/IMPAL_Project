@@ -113,9 +113,6 @@ footer{
     margin: auto;
     padding: auto;
 }
-#payment-btn{
-    padding-bottom: 5vw;
-}
 #payment-btn .btn{
     background-color: #f4d041;
     color: white;

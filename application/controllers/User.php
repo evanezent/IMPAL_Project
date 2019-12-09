@@ -3,12 +3,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class User extends CI_Controller
 {
-	// public function __construct()
-	// {
-	// 	parent::__construct();
-	// 	$this->load->library('form_validation');
-
-	// }
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->library('form_validation');
+	}
 
 	public function index()
 	{
@@ -34,48 +33,43 @@ class User extends CI_Controller
 
 	public function register()
 	{
-		// $this->form_validation->set_rules('fullname', 'FullName',  'required|trim');
-		// $this->form_validation->set_rules('email', 'Email',  'required|trim|valid_email');
-
-		// if ($this->form_validation->run() == false) {
 		$data['salah'] = 0;
 		$this->load->view('template/header', $data);
 		$this->load->view('user/register');
 		$this->load->view('template/footer');
-		// } else {
-		// 	$data = [
-		// 		"username" => $this->input->post('username', true),
-		// 		"namaMember" => $this->input->post('fullname', true),
-		// 		"email" => $this->input->post('email', true),
-		// 		"password" => md5($this->input->post('password', true)),
-		// 		"alamat" => $this->input->post('alamat', true),
-		// 		"noHp" => $this->input->post('phone', true),
-		// 	];
-		// 	$this->Member_model->register($data);
-		// 	redirect('User', 'refresh');
-		// }
 	}
 
 	public function register_db()
 	{
 		$username = $this->input->post('username', true);
 		$user = $this->Member_model->seachUsername($username);
-		if (empty($user)) {
-			$data = [
-				"username" => $this->input->post('username', true),
-				"namaMember" => $this->input->post('fullname', true),
-				"email" => $this->input->post('email', true),
-				"password" => md5($this->input->post('password', true)),
-				"alamat" => $this->input->post('alamat', true),
-				"noHp" => $this->input->post('phone', true),
-			];
-			$this->Member_model->register($data);
-			$data['salah'] = 1;
-			$this->load->view('template/header', $data);
-			$this->load->view('user/register');
-			$this->load->view('template/footer');
+		$this->form_validation->set_rules('fullname', 'FullName',  'required|trim');
+		$this->form_validation->set_rules('email', 'Email',  'required|trim|valid_email');
+
+		if ($this->form_validation->run() == false) {
+
+			if (empty($user)) {
+				$data = [
+					"username" => $this->input->post('username', true),
+					"namaMember" => $this->input->post('fullname', true),
+					"email" => $this->input->post('email', true),
+					"password" => md5($this->input->post('password', true)),
+					"alamat" => $this->input->post('alamat', true),
+					"noHp" => $this->input->post('phone', true),
+				];
+				$this->Member_model->register($data);
+				$data['salah'] = 1;
+				$this->load->view('template/header', $data);
+				$this->load->view('user/register');
+				$this->load->view('template/footer');
+			} else {
+				$data['salah'] = 3;
+				$this->load->view('template/header', $data);
+				$this->load->view('user/register');
+				$this->load->view('template/footer');
+			}
 		} else {
-			$data['salah'] = 3;
+			$data['salah'] = 4;
 			$this->load->view('template/header', $data);
 			$this->load->view('user/register');
 			$this->load->view('template/footer');
