@@ -46,8 +46,9 @@
                 `
             <?php echo form_open_multipart('member/confirm_payment'); ?>
             <div class="input-group mb-3">
+                <input type="hidden" name="id_event" value="<?= $event[0]['idEvent'] ?>">
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile02">
+                    <input type="file" class="custom-file-input" id="inputGroupFile02" name="foto_bayar">
                     <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
                 </div>
             </div>
@@ -65,8 +66,9 @@
             `
             <?php echo form_open_multipart('member/confirm_payment'); ?>
             <div class="input-group mb-3">
+                <input type="hidden" name="id_event" value="<?= $event[0]['idEvent'] ?>">
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile02">
+                    <input type="file" class="custom-file-input" id="inputGroupFile02" name="foto_bayar">
                     <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
                 </div>
             </div>

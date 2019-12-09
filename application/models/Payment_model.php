@@ -7,5 +7,9 @@ class Payment_model extends CI_Model {
         $query = $this->db->get();
         return $query->result();   
     }
+
+    public function inputPayment($data){
+        $this->db->insert('payment', $data);
+    }
 }
 ?>

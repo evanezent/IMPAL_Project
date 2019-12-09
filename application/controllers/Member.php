@@ -20,18 +20,59 @@ class Member extends CI_Controller
 		$this->load->view('template/footer_member');
 	}
 
-	public function payment()
+	public function payment($id)
 	{
-		$this->load->view('template/header_member');
+		$data['salah'] = 0;
+		$data['event'] = $this->Event_model->getEventID($id);
+		$this->load->view('template/header_member',$data);
 		$this->load->view('user/payment');
 		$this->load->view('template/footer_member');
 	}
 
 	public function confirm_payment()
 	{
-		$this->load->view('template/header_member');
-		$this->load->view('user/confirm_payment');
-		$this->load->view('template/footer_member');
+		$id_event = $this->input->post('id_event');
+		$gambar = $_FILES['foto_bayar']['name'];
+		$user =  $_SESSION['user']['nama'];
+		if ($gambar) {
+			$config['upload_path']          =  './upload/payment';
+			$config['allowed_types']        =  'gif|jpeg|jpg|png';
+			$config['max_size']             =  1000000000000;
+			$config['max_width']            =  5000;
+			$config['max_height']           =  5000;
+
+			$this->load->library('upload', $config);
+
+			if (!$this->upload->do_upload('foto_bayar')) {
+				$error = array('error' => $this->upload->display_errors());
+				echo $error;
+				$this->session->set_flashdata('fail_evt', 'Fail event');
+				redirect('Member', 'refresh');
+			} else {
+				$foto = $this->upload->data();
+				$namafile = $foto['file_name'];
+				// Random id
+				$id = random_string('alnum', 5);
+
+				$data = array(
+					'idTransaksi' => $id,
+					'idEvent' => $id_event,
+					'username' => $user,
+					'tanggalTransaksi' => date("Y-m-d"),
+					'foto_bayar' => $namafile,
+					'delete_at' => null
+				);
+				$this->Payment_model->inputPayment($data);
+				$this->session->set_flashdata('sukses_evt', 'Success event');
+				redirect('Member', 'refresh');
+			}
+		} else {
+			// Flash message foto kosong
+			echo "GAMBAR KOSONG";
+			$this->session->set_flashdata('fail_pic', 'Fail pic');
+			redirect('Member/payment/.echo $id_event', 'refresh');
+			// echo $error;
+		}
 	}
 
 	public function upload()
