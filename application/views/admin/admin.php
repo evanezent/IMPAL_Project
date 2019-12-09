@@ -22,15 +22,18 @@
                                 <div class="ad-title m-auto">
                                     <h5><?php echo $ev['namaEvent'] ?></h5>
                                     <h6><?php echo $ev['tanggalEvent'] ?></h6>
-
                                 </div>
                                 <div class="btn-action">
                                     <?php if ($ev['Validasi'] != 1) { ?>
-                                        <button class="btn btn-sm btn-success"><a href="<?php echo base_url('Admin/validationAcceptEvent/');
-                                                                                                    echo $ev['idEvent'] ?>">Accept</a></button>
+                                        <?php foreach ($payments as $payment) {
+                                            if ($ev['idEvent'] == $payment['idEvent']) {
+                                        ?>
+                                            <a style="color: blue" href="<?= base_url('upload/payment/');echo $payment['foto_bayar'] ?>">Bukti Transfer</a>
+                                        <?php }
+                                        } ?>
+                                        <button class="btn btn-sm btn-success"><a href="<?php echo base_url('Admin/validationAcceptEvent/');echo $ev['idEvent'] ?>">Accept</a></button>
                                     <?php } ?>
-                                    <button class="btn btn-sm btn-danger"><a href="<?php echo base_url('Admin/validationDeclineEvent/');
-                                                                                            echo $ev['idEvent'] ?>">Decline</a></button>
+                                    <!-- <button class="btn btn-sm btn-danger"><a href="<?php echo base_url('Admin/validationDeclineEvent/');echo $ev['idEvent'] ?>">Decline</a></button> -->
                                 </div>
                             </div>
                         </div>

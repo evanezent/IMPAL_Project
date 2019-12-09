@@ -7,6 +7,7 @@ class Admin extends CI_Controller {
 	{
 		$data['events'] = $this->Event_model->getEvent();
 		$data['tickets'] = $this->Ticket_model->getTicket();
+		$data['payments'] = $this->Payment_model->select();
 		$this->load->view('template/header_admin',$data);
 		$this->load->view('admin/admin');
 		$this->load->view('template/footer_admin');

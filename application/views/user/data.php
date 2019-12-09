@@ -37,13 +37,20 @@
                 <?php foreach ($events as $event) : ?>
                     <div>
                         <div class="card">
-                            <img src="<?= base_url() ?>upload/event/<?= $event['poster'] ?>" class="card-img-top" alt="...">
+                            <div style="position: relative">
+                            <?php if($event['Validasi'] == 1){ ?>
+                                <span class="label badge badge-success" style="position: absolute; font-size: 20px">
+                                    tervalidasi
+                                </span>
+                            <?php } ?>
+                                <img src="<?= base_url() ?>upload/event/<?= $event['poster'] ?>" class="card-img-top" alt="...">
+                            </div>
                             <div class="card-body">
                                 <h5 class="card-title"><?= $event['namaEvent'] ?></h5>
                                 <ul>
                                     <li><b>Tanggal Event</b> : <?= $event['tanggalEvent'] ?></li>
                                 </ul>
-                                <div class="btn-card-list">
+                                <div class="btn-card-list justify-content-between d-flex">
                                     <a href="<?php echo base_url(); ?>Member/editEvent/<?php echo $event['idEvent'] ?>" class="btn">Edit</a>
                                     <a href="<?php echo base_url(); ?>Member/payment/<?php echo $event['idEvent'] ?>" class="btn">Upload</a>
                                     <a href="<?php echo base_url(); ?>Member/deleteEvent/<?php echo $event['idEvent'] ?>" class="btn btn-danger">Delete</a>
