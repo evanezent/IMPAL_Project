@@ -26,7 +26,7 @@
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email" value="<?= set_value('email'); ?>" required>
-                <!-- <?= form_error("email", '<small class="text-danger pl-3">', '</small>'); ?>  -->
+                <?= form_error("email", '<small class="text-danger pl-3">', '</small>'); ?> 
             </div>
             <div class="form-group">
                 <label for="alamat">Alamat</label>
