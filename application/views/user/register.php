@@ -21,7 +21,7 @@
             <div class="form-group">
                 <label for="fullname">Nama Lengkap</label>
                 <input type="input" class="form-control" id="fullname" name="fullname" placeholder="Nama Lengkap" value="<?= set_value('fullname'); ?>" required>
-                <!-- <?= form_error("fullname", '<small class="text-danger pl-3">', '</small>'); ?>    -->
+                <?= form_error('fullname', '<small class="text-danger pl-3">', '</small>'); ?>   
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
@@ -30,11 +30,11 @@
             </div>
             <div class="form-group">
                 <label for="alamat">Alamat</label>
-                <textarea class="form-control" rows="3" id="alamat" name="alamat" placeholder="Alamat tinggal anda" required></textarea>
+                <textarea class="form-control" rows="3" id="alamat" name="alamat" placeholder="Alamat tinggal anda" value="<?= set_value('alamat'); ?>" required></textarea>
             </div>
             <div class="form-group">
                 <label for="phone">Nomor HP</label>
-                <input type="input" class="form-control" id="phone" name="phone" placeholder="Nomor HP aktif" required>
+                <input type="input" class="form-control" id="phone" name="phone" placeholder="Nomor HP aktif" value="<?= set_value('phone'); ?>" required>
             </div>
             <div class="form-group">
                 <label for="username">Username</label>
@@ -43,6 +43,11 @@
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                <?= form_error("password", '<small class="text-danger pl-3">', '</small>'); ?>
+            </div>
+            <div class="form-group">
+                <label for="password">Confirm Password</label>
+                <input type="password" class="form-control" id="repassword" name="repassword" placeholder="Confirm Password" required>
             </div>
             <div class="form-group">
                 <button type="button" class="btn mx-auto"><a href="<?= base_url();?>">Back</a></button>

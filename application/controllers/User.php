@@ -41,6 +41,11 @@ class User extends CI_Controller
 
 	public function register_db()
 	{
+		$this->form_validation->set_rules('fullname', 'FullName', 'required|trim');
+		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email'); 
+		$this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[6]|matches[repassword]'); 
+		$this->form_validation->set_rules('repassword', 'RePassword', 'required|trim||matches[password]'); 
+		
 		$username = $this->input->post('username', true);
 		$user = $this->Member_model->searchUsername($username);
 		
