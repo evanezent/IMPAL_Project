@@ -11,7 +11,7 @@
         </div>
         <div class="form-group">
             <label for="poster">Foto Event / Poster</label>
-            <input class="form-control" type="file" name="poster" value="<?= $events[0]['poster'] ?>" required>
+            <input class="form-control" type="file" name="poster" value="<?= $events[0]['poster'] ?>">
         </div>
         <div class="form-group">
             <button type="button" class="btn mx-auto"><a href="<?= base_url(); ?>">Back</a></button>

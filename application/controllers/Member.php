@@ -293,9 +293,9 @@ class Member extends CI_Controller
 
 			if (!$this->upload->do_upload('poster')) {
 				$error = array('error' => $this->upload->display_errors());
-				echo $error;
+				echo $error['error'];
 				$this->session->set_flashdata('fail_tkt', 'Fail ticket');
-				redirect('Member', 'refresh');
+				// redirect('Member', 'refresh');
 			} else {
 				$foto = $this->upload->data();
 				$namafile = $foto['file_name'];

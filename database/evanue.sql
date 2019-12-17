@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 09, 2019 at 04:13 PM
+-- Generation Time: Dec 17, 2019 at 05:22 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -45,11 +45,12 @@ CREATE TABLE `events` (
 INSERT INTO `events` (`idEvent`, `username`, `namaEvent`, `tanggalEvent`, `poster`, `Validasi`, `delete_at`) VALUES
 ('evt-17hCW', 'meliod', 'ini event dummy ', '2019-10-26', 'myhome.jpg', 1, NULL),
 ('evt-30gAB', 'esmeralda', 'Sabyan', '2019-09-28', 'event6.jpg', 1, '2019-09-25'),
-('evt-6ecbs', 'tagato', 'EVENTZ 2', '2019-12-20', 'IF.png', 1, NULL),
+('evt-6ecbs', 'tagato', 'HIMA IF 3', '2019-09-17', 'pikacu.png', 1, NULL),
 ('evt-6f3Fa', 'esmeralda', 'NYOBA SI', '2019-10-05', 'event4.jpg', 0, NULL),
 ('evt-6SPQI', 'esmeralda', 'NYOBA KOK', '2019-10-16', 'login.PNG', 0, '2019-10-01'),
 ('evt-8ZFgB', 'esmeralda', 'HMMMMMWKWK', '2019-10-17', 'login1.PNG', 0, NULL),
 ('evt-hKRov', 'esmeralda', 'SI NYOBA', '2019-10-04', 'event5.jpg', 1, NULL),
+('evt-Rg236', 'ardhito', 'Ardhitokustik', '2019-12-20', '59147.jpg', 0, NULL),
 ('evt-sd9vj', 'esmeralda', 'NYOBA LAGI', '2019-11-02', '44916249_2357618624253459_8748134120300740608_n.jpg', 0, '2019-10-01'),
 ('evt-SHwyf', 'esmeralda', 'AMAN KOK', '2019-10-19', 'menu_tiket_user.PNG', 0, '2019-10-01'),
 ('evt-ZHS3j', 'tagato', 'EVENTZ', '2019-12-11', '2016-06-11-0114.jpg', 1, NULL);
@@ -74,6 +75,7 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`username`, `namaMember`, `email`, `password`, `alamat`, `noHp`) VALUES
+('ardhito', 'Ardhito Pramono', 'arpram@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Jakarta', '081123456789'),
 ('esmeralda', 'Esmeralda Smith', 'esmeralda@gmail.com', 'TyU7h7bNm', 'Jalan Patimura no.1, NBandung, Jawa Barat', '08977456821'),
 ('meliod', 'meliodas', 'mel@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 'Sukabirus 1', '089123456789'),
 ('tagato', 'Pratama Yoga', 'pratamayo16@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Wisma Kos Al Muhayat, Sukabirus', '082226651838'),
@@ -131,6 +133,8 @@ INSERT INTO `ticket` (`idTicket`, `username`, `namaTicket`, `tanggalTicket`, `po
 ('tkt-10gFM', 'esmeralda', 'ini ticket', '2019-09-30', '1.PNG', '089234142134', 0, '2019-10-23'),
 ('tkt-2kHwa', 'esmeralda', 'TICKET', '2019-10-26', '44916249_2357618624253459_8748134120300740608_n.jpg', '0891981313', 0, NULL),
 ('tkt-I0ynj', 'esmeralda', 'TICKET again', '2019-10-19', 'dashboard_user.PNG', '0992137914', 1, NULL),
+('tkt-Nv8O1', 'ardhito', 'artkustik', '2019-12-20', 'wp2727923.jpg', '081123456789', 0, NULL),
+('tkt-o2Xtk', 'tagato', 'Tiket Hima IF Festival 2', '2019-10-01', 'JOXZjSb1.jpg', '0891981314', 0, NULL),
 ('tkt-Ulp8j', 'esmeralda', 'ahay', '2019-09-21', 'Alif.jpg', NULL, 0, '2019-10-01'),
 ('tkt-WYHv0', 'esmeralda', 'COBA 1', '2019-10-18', 'tick1.png', '098291091', 0, NULL);
 

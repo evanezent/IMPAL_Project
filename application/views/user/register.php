@@ -17,11 +17,11 @@
 <body class="container-fluid">
 
     <div id="form-register" class="d-flex justify-content-center">
-        <form action="register_db" method="post">
+        <form action="<?= base_url('user/register_db'); ?>" method="post">
             <div class="form-group">
                 <label for="fullname">Nama Lengkap</label>
                 <input type="input" class="form-control" id="fullname" name="fullname" placeholder="Nama Lengkap" value="<?= set_value('fullname'); ?>" required>
-                <?= form_error("fullname", '<small class="text-danger pl-3">', '</small>'); ?>   
+                <!-- <?= form_error("fullname", '<small class="text-danger pl-3">', '</small>'); ?>    -->
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
