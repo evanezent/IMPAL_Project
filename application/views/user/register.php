@@ -13,15 +13,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 </head>
-
+    
 <body class="container-fluid">
 
     <div id="form-register" class="d-flex justify-content-center">
-        <form action="register_db" method="post">
+        <form action="<?= base_url('user/register_db'); ?>" method="post">
             <div class="form-group">
                 <label for="fullname">Nama Lengkap</label>
                 <input type="input" class="form-control" id="fullname" name="fullname" placeholder="Nama Lengkap" value="<?= set_value('fullname'); ?>" required>
-                <?= form_error("fullname", '<small class="text-danger pl-3">', '</small>'); ?>   
+                <!-- <?= form_error("fullname", '<small class="text-danger pl-3">', '</small>'); ?>    -->
             </div>
             <div class="form-group">
                 <label for="email">Email</label>

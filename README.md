@@ -5,7 +5,7 @@
 1. [Pratama Yoga Santosa (1301170073)](https://evanezcent.github.io/)
 2. [Prana Pramudita Kusdiananggalih (1301174059)](https://github.com/pranapramudita)
 3. [Muhammad Fadhil Zakaria (1301174096)](https://github.com/Fadhilzkr)
-4. ----
+4. [Lula Minnatulmaula Aflah (1301170342)](https://github.com/lulaaflah)
 
 ## TODO :
 * Front-end :

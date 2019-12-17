@@ -3,11 +3,11 @@
         <input type="hidden" name="idevent" value="<?= $events[0]['idEvent'] ?>">
         <div class="form-group">
             <label for="eventname">Nama Event</label>
-            <input type="input" class="form-control" name="eventname" value="<?= $events[0]['namaEvent'] ?>">
+            <input type="input" class="form-control" name="eventname" value="<?= $events[0]['namaEvent'] ?>" required
         </div>
         <div class="form-group">
             <label for="date">Tanggal Event</label>
-            <input type="date" class="form-control" name="date" value="<?= $events[0]['tanggalEvent'] ?>">
+            <input type="date" class="form-control" name="date" value="<?= $events[0]['tanggalEvent'] ?>" required>
         </div>
         <div class="form-group">
             <label for="poster">Foto Event / Poster</label>
