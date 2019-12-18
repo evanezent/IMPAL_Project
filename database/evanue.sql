@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2019 at 05:22 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.3
+-- Generation Time: Dec 18, 2019 at 02:21 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -50,6 +50,7 @@ INSERT INTO `events` (`idEvent`, `username`, `namaEvent`, `tanggalEvent`, `poste
 ('evt-6SPQI', 'esmeralda', 'NYOBA KOK', '2019-10-16', 'login.PNG', 0, '2019-10-01'),
 ('evt-8ZFgB', 'esmeralda', 'HMMMMMWKWK', '2019-10-17', 'login1.PNG', 0, NULL),
 ('evt-hKRov', 'esmeralda', 'SI NYOBA', '2019-10-04', 'event5.jpg', 1, NULL),
+('evt-owPu3', 'pranapramudita', 'asdas', '2019-12-03', 'Login_UsernamePasswordSalah.PNG', 0, NULL),
 ('evt-Rg236', 'ardhito', 'Ardhitokustik', '2019-12-20', '59147.jpg', 0, NULL),
 ('evt-sd9vj', 'esmeralda', 'NYOBA LAGI', '2019-11-02', '44916249_2357618624253459_8748134120300740608_n.jpg', 0, '2019-10-01'),
 ('evt-SHwyf', 'esmeralda', 'AMAN KOK', '2019-10-19', 'menu_tiket_user.PNG', 0, '2019-10-01'),
@@ -78,6 +79,7 @@ INSERT INTO `member` (`username`, `namaMember`, `email`, `password`, `alamat`, `
 ('ardhito', 'Ardhito Pramono', 'arpram@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Jakarta', '081123456789'),
 ('esmeralda', 'Esmeralda Smith', 'esmeralda@gmail.com', 'TyU7h7bNm', 'Jalan Patimura no.1, NBandung, Jawa Barat', '08977456821'),
 ('meliod', 'meliodas', 'mel@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 'Sukabirus 1', '089123456789'),
+('pranapramudita', 'Prana Pramudita Kusdiananggalih', 'pranapramudita@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Pegadaian Cikudapateuh, Jl. Jendral Ahmad Yani, Su', '081273470046'),
 ('tagato', 'Pratama Yoga', 'pratamayo16@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Wisma Kos Al Muhayat, Sukabirus', '082226651838'),
 ('tamtam', 'Pratama Yoga', 'a@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Wisma Kos Al Muhayat, Sukabirus', '08220000000');
 
@@ -104,6 +106,7 @@ INSERT INTO `payment` (`idTransaksi`, `idEvent`, `username`, `tanggalTransaksi`,
 ('0172', '', 'esmeralda', '2019-03-14', NULL, NULL),
 ('45ZCE', 'evt-qC2L3', 'tagato', '2019-12-09', '1-128.jpg', NULL),
 ('mAeoj', 'evt-ZHS3j', 'tagato', '2019-12-09', '1_1_defineai_361736a3.png', NULL),
+('oGLq2', 'evt-owPu3', 'pranapramudita', '2019-12-18', 'Login_UsernamePasswordKosong.PNG', NULL),
 ('ol3Hx', 'evt-6ecbs', 'tagato', '2019-12-09', '408151.jpg', NULL);
 
 -- --------------------------------------------------------
