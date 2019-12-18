@@ -20,7 +20,7 @@
         <form action="<?= base_url('user/register_db'); ?>" method="post">
             <div class="form-group">
                 <label for="fullname">Nama Lengkap</label>
-                <input type="input" class="form-control" id="fullname" name="fullname" placeholder="Nama Lengkap" value="<?= set_value('fullname'); ?>" required>
+                <input type="input" class="form-control" id="fullname" name="fullname" placeholder="Nama Lengkap" value="<?= set_value('fullname'); ?>" >
                 <?= form_error('fullname', '<small class="text-danger pl-3">', '</small>'); ?>   
             </div>
             <div class="form-group">
@@ -34,7 +34,7 @@
             </div>
             <div class="form-group">
                 <label for="phone">Nomor HP</label>
-                <input type="input" class="form-control" id="phone" name="phone" placeholder="Nomor HP aktif" value="<?= set_value('phone'); ?>" required>
+                <input type="number" class="form-control" id="phone" name="phone" placeholder="Nomor HP aktif" value="<?= set_value('phone'); ?>" required min=0>
             </div>
             <div class="form-group">
                 <label for="username">Username</label>
